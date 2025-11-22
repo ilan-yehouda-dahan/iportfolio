@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Projet — Gestion des Brit Milah | Ilan Dahan</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Bootstrap / Icons / thème principal -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Styles spécifiques à la page projet -->
+    <style>
+        .project-page {
+            background: #f2f4f8; /* gris très clair */
+        }
+
+        .project-wrapper {
+            background: #f7f7f9;
+            border-radius: 24px;
+            padding: 2.5rem 2.5rem 3rem;
+            margin-top: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+        }
+
+        @media (max-width: 768px) {
+            .project-wrapper {
+                padding: 1.5rem 1.25rem 2rem;
+                border-radius: 18px;
+            }
+        }
+
+        .project-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .35rem .9rem;
+            border-radius: 999px;
+            background: rgba(13, 110, 253, 0.08);
+            color: #0d6efd;
+            font-size: .85rem;
+            font-weight: 500;
+            margin-bottom: .75rem;
+        }
+
+        .project-badge i {
+            font-size: 1rem;
+        }
+
+        .project-title {
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-bottom: .75rem;
+        }
+
+        .project-subtitle {
+            color: #6c757d;
+            max-width: 720px;
+        }
+
+        .project-section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: .35rem;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .project-section-title i {
+            color: #0d6efd;
+        }
+
+        .project-divider {
+            margin: 2.5rem 0 2rem;
+            border-top: 1px dashed #ced4da;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.4rem 1.6rem;
+            border: 1px solid #e3e6ef;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+            height: 100%;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-image {
+            border-radius: 18px;
+            box-shadow: 0 14px 35px rgba(15, 23, 42, 0.35);
+            border: 1px solid #111827;
+        }
+
+        .project-caption {
+            font-size: .8rem;
+            color: #6c757d;
+            margin-top: .4rem;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 0;
+        }
+
+        .pill-list li {
+            padding: .25rem .75rem;
+            border-radius: 999px;
+            border: 1px solid #d0d7e2;
+            background: #ffffff;
+            font-size: .8rem;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: .35rem;
+            font-size: .9rem;
+            text-decoration: none;
+            color: #6c757d;
+        }
+
+        .back-link:hover {
+            color: #0d6efd;
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+
+<body class="index-page project-page">
+
+<header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+        <img src="assets/img/my-profile-img.jpg" alt="Photo de profil d'Ilan Dahan" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+        <h1 class="sitename">Ilan Dahan</h1>
+    </a>
+
+    <div class="social-links text-center">
+        <a href="https://www.linkedin.com/in/ilan-dahan-56a4a22ab" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/ilan-yehouda-dahan" class="github" target="_blank"><i class="bi bi-github"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+        <ul>
+            <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Accueil</a></li>
+            <li><a href="index.html#about"><i class="bi bi-person navicon"></i> À propos</a></li>
+            <li><a href="index.html#skills"><i class="bi bi-bar-chart navicon"></i> Compétences</a></li>
+            <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Parcours</a></li>
+            <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Projets</a></li>
+            <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
+
+<main class="main">
+
+    <section class="section">
+        <div class="container">
+
+            <div class="project-wrapper">
+
+                <!-- Lien retour -->
+                <a href="index.html#portfolio" class="back-link mb-3">
+                    <i class="bi bi-arrow-left"></i> Retour aux projets
+                </a>
+
+                <!-- Header projet -->
+                <div class="mb-4">
+                    <div class="project-badge">
+                        <i class="bi bi-people-fill"></i> Projet familial — outil métier pour un mohel
+                    </div>
+                    <h1 class="project-title">Gestion des Brit Milah</h1>
+                    <p class="project-subtitle">
+                        Application complète pour un mohel : création rapide de dossiers, envoi automatique d’un formulaire aux parents,
+                        calcul des dates de Brit et dashboard de suivi avec actions WhatsApp.
+                    </p>
+
+                    <ul class="pill-list mt-3">
+                        <li><i class="bi bi-code-slash me-1"></i>Python / Flask</li>
+                        <li><i class="bi bi-database me-1"></i>PostgreSQL + SQLAlchemy</li>
+                        <li><i class="bi bi-filetype-pdf me-1"></i>Génération PDF (ReportLab)</li>
+                        <li><i class="bi bi-window-sidebar me-1"></i>HTML / CSS</li>
+                        <li><i class="bi bi-whatsapp me-1"></i>Intégration WhatsApp</li>
+                    </ul>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Problématique / Objectifs + dashboard -->
+                <div class="row gy-4 align-items-start">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-exclamation-circle"></i> Problématique
+                        </h2>
+                        <p>
+                            Avant l’outil, l’organisation d’une Brit Milah se faisait par messages WhatsApp, appels et notes papier.
+                            Résultat : risque d’erreurs de date, d’adresse ou d’oubli d’informations importantes (code d’entrée, étage, etc.).
+                        </p>
+
+                        <h2 class="project-section-title mt-4">
+                            <i class="bi bi-bullseye"></i> Objectifs
+                        </h2>
+                        <ul>
+                            <li>Centraliser toutes les Brit Milah dans un tableau de bord unique.</li>
+                            <li>Simplifier la saisie pour le mohel (création rapide du dossier).</li>
+                            <li>Laisser les parents compléter eux-mêmes toutes les informations détaillées.</li>
+                            <li>Automatiser les messages WhatsApp et l’export des données.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-6 text-center text-lg-end">
+                        <img src="assets/img/projets/brit-dashboard.png"
+                             alt="Dashboard Brit Milah"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Dashboard Brit Milah : prochaines Brit en haut, tableau complet en dessous,
+                            actions WhatsApp et export CSV à droite.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Étape 1 : Création rapide -->
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-1-circle"></i> Création rapide du dossier côté mohel
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                Depuis son espace sécurisé, le mohel peut créer un nouveau dossier en quelques secondes :
+                            </p>
+                            <ul>
+                                <li>Choix de la personne qui remplira le formulaire (père ou mère).</li>
+                                <li>Saisie minimale : nom, prénom, téléphone WhatsApp, date et heure prévues.</li>
+                                <li>Un bouton génère automatiquement un lien unique pour les parents.</li>
+                            </ul>
+                            <p class="mb-0">
+                                Ce lien est ensuite envoyé aux parents (WhatsApp/SMS). Toutes les futures
+                                informations seront directement associées à ce dossier.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2 order-1 text-center">
+                        <img src="assets/img/projets/brit-creation-rapide.png"
+                             alt="Création rapide d'une Brit Milah"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Création rapide avec génération d’un lien unique pour les parents.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Étape 2 : Formulaire parents + confirmation -->
+                <div class="row gy-4 align-items-start">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-2-circle"></i> Formulaire reçu par les parents
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                Les parents accèdent à une page dédiée, personnalisée avec leur nom et la date de la Brit.
+                                Le formulaire est structuré en sections claires :
+                            </p>
+                            <ul>
+                                <li><strong>Parents :</strong> coordonnées complètes du père et de la mère.</li>
+                                <li><strong>Mariage religieux :</strong> date, lieu, rabbin, etc.</li>
+                                <li><strong>Bébé :</strong> prénom, date et heure de naissance, lieu de naissance.</li>
+                                <li><strong>Lieu de la Brit :</strong> adresse, code, étage, précisions.</li>
+                            </ul>
+                            <p class="mb-0">
+                                Toutes les données sont stockées en base sans ressaisie par le mohel, ce qui réduit
+                                fortement les erreurs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <img src="assets/img/projets/brit-form-parents.png"
+                             alt="Formulaire Brit Milah pour les parents"
+                             class="img-fluid project-image mb-3">
+                        <p class="project-caption">
+                            Formulaire Brit Milah rempli par les parents : sections Parents, Mariage religieux,
+                            informations sur le bébé et adresse complète.
+                        </p>
+
+                        <img src="assets/img/projets/brit-confirmation.png"
+                             alt="Confirmation des informations Brit Milah"
+                             class="img-fluid project-image mt-3">
+                        <p class="project-caption">
+                            Page de confirmation récapitulative envoyée aux parents après validation du formulaire.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Étape 3 : Dashboard & automatisation + technique -->
+                <div class="row gy-4">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-3-circle"></i> Dashboard & automatisation
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                Côté mohel, toutes les Brit sont centralisées dans un dashboard :
+                            </p>
+                            <ul>
+                                <li>Bloc <strong>“Prochaines Brit Milah”</strong> avec les cérémonies à venir.</li>
+                                <li>Tableau détaillé : famille, bébé, date, adresse, statut de la fiche.</li>
+                                <li>Liens directs vers la fiche détaillée ou le formulaire parents.</li>
+                            </ul>
+
+                            <h6 class="mt-3 mb-1">Actions rapides :</h6>
+                            <ul class="mb-0">
+                                <li>Boutons WhatsApp préconfigurés (préparation, rappels, messages post-brit).</li>
+                                <li>Export CSV pour travailler les données dans Excel / Google Sheets.</li>
+                                <li>(Prévu) Vue calendrier pour visualiser les Brit sur un mois.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-gear-wide-connected"></i> Partie technique & compétences
+                        </h2>
+                        <div class="project-card mt-2">
+                            <h6>Stack technique</h6>
+                            <ul>
+                                <li>Back-end : Python / Flask (routes, login, génération des liens, API JSON).</li>
+                                <li>ORM : SQLAlchemy pour les modèles <code>BritMila</code> et <code>User</code>.</li>
+                                <li>Base de données : PostgreSQL (local + Railway).</li>
+                                <li>Front-end : HTML + CSS (interfaces dashboard + formulaires parents).</li>
+                                <li>PDF : ReportLab pour générer une fiche Brit Milah téléchargeable.</li>
+                                <li>Exports : CSV + endpoints JSON pour recherche et calendrier.</li>
+                                <li>Intégrations : liens WhatsApp pré-remplis pour envoyer le formulaire aux parents.</li>
+                            </ul>
+
+                            <h6 class="mt-3">Compétences mises en avant</h6>
+                            <ul class="mb-0">
+                                <li>Conception d’un vrai flux métier de bout en bout (mohel & parents).</li>
+                                <li>Gestion d’un CRUD complet avec ORM + base SQL.</li>
+                                <li>Travail sur des données sensibles (infos famille / santé) avec rigueur.</li>
+                                <li>Automatisation de tâches récurrentes (messages, exports, PDF).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.project-wrapper -->
+
+        </div>
+    </section>
+
+</main>
+
+<footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+        <div class="copyright text-center ">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">Ilan Dahan</strong> <span>All Rights Reserved</span></p>
+        </div>
+        <div class="credits"></div>
+    </div>
+
+</footer>
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/typed.js/typed.umd.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

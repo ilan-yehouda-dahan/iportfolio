@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Projet — Site Rosetta | Ilan Dahan</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Bootstrap / Icons / thème principal -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Styles spécifiques à la page projet -->
+    <style>
+        .project-page {
+            background: #f2f4f8;
+        }
+
+        .project-wrapper {
+            background: #f7f7f9;
+            border-radius: 24px;
+            padding: 2.5rem 2.5rem 3rem;
+            margin-top: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+        }
+
+        @media (max-width: 768px) {
+            .project-wrapper {
+                padding: 1.5rem 1.25rem 2rem;
+                border-radius: 18px;
+            }
+        }
+
+        .project-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .35rem .9rem;
+            border-radius: 999px;
+            background: rgba(13, 110, 253, 0.08);
+            color: #0d6efd;
+            font-size: .85rem;
+            font-weight: 500;
+            margin-bottom: .75rem;
+        }
+
+        .project-badge i {
+            font-size: 1rem;
+        }
+
+        .project-title {
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-bottom: .75rem;
+        }
+
+        .project-subtitle {
+            color: #6c757d;
+            max-width: 720px;
+        }
+
+        .project-section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: .35rem;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .project-section-title i {
+            color: #0d6efd;
+        }
+
+        .project-divider {
+            margin: 2.5rem 0 2rem;
+            border-top: 1px dashed #ced4da;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.4rem 1.6rem;
+            border: 1px solid #e3e6ef;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+            height: 100%;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-image {
+            border-radius: 18px;
+            box-shadow: 0 14px 35px rgba(15, 23, 42, 0.35);
+            border: 1px solid #111827;
+        }
+
+        .project-caption {
+            font-size: .8rem;
+            color: #6c757d;
+            margin-top: .4rem;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 0;
+        }
+
+        .pill-list li {
+            padding: .25rem .75rem;
+            border-radius: 999px;
+            border: 1px solid #d0d7e2;
+            background: #ffffff;
+            font-size: .8rem;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: .35rem;
+            font-size: .9rem;
+            text-decoration: none;
+            color: #6c757d;
+        }
+
+        .back-link:hover {
+            color: #0d6efd;
+            text-decoration: underline;
+        }
+
+        .project-actions {
+            margin-top: 1.75rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: .75rem;
+        }
+    </style>
+
+
+<body class="index-page project-page">
+
+<!-- même sidebar que le portfolio, mais SANS la classe dark-background -->
+<header id="header" class="header dark-background d-flex flex-column">
+    <div class="profile-img">
+        <img src="assets/img/my-profile-img.jpg" alt="Photo de profil d'Ilan Dahan" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+        <h1 class="sitename">Ilan Dahan</h1>
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+        <ul>
+            <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Accueil</a></li>
+            <li><a href="index.html#about"><i class="bi bi-person navicon"></i>À propos</a></li>
+            <li><a href="index.html#skills"><i class="bi bi-bar-chart navicon"></i>Compétences</a></li>
+            <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i>Parcours</a></li>
+            <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i>Projets</a></li>
+            <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main">
+
+    <section class="section">
+        <div class="container">
+
+            <div class="project-wrapper">
+
+                <!-- Lien retour -->
+                <a href="index.html#portfolio" class="back-link mb-3">
+                    <i class="bi bi-arrow-left"></i> Retour aux projets
+                </a>
+
+                <!-- Header projet -->
+                <div class="mb-4">
+                    <div class="project-badge">
+                        <i class="bi bi-shop"></i> Projet réel — gestion des réservations pour un restaurant
+                    </div>
+                    <h1 class="project-title">Rosetta — site de réservation de restaurant</h1>
+                    <p class="project-subtitle">
+                        Site complet pour le groupe de restaurants Rosetta : pages vitrines, menus illustrés,
+                        tunnel de réservation en plusieurs étapes et back-office pour gérer toutes les réservations.
+                    </p>
+
+                    <ul class="pill-list mt-3">
+                        <li><i class="bi bi-code-slash me-1"></i>PHP / HTML / CSS / JS</li>
+                        <li><i class="bi bi-database me-1"></i>MySQL</li>
+                        <li><i class="bi bi-envelope-check me-1"></i>Emails de confirmation</li>
+                        <li><i class="bi bi-grid-1x2-fill me-1"></i>Dashboard d’administration</li>
+                    </ul>
+
+                    <div class="project-actions">
+                        <a href="https://rosetta-web.rf.gd/index.html" target="_blank" rel="noopener"
+                           class="btn btn-primary btn-sm">
+                            <i class="bi bi-box-arrow-up-right me-1"></i> Voir le site en ligne
+                        </a>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Problématique / Objectifs + home -->
+                <div class="row gy-4 align-items-start">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-exclamation-circle"></i> Problématique
+                        </h2>
+                        <p>
+                            Rosetta avait besoin d’un site unique pour présenter ses trois restaurants
+                            (9ᵉ, 17ᵉ et 2ᵉ arrondissement) et surtout d’un système de réservation clair
+                            pour les clients et simple à gérer pour l’équipe.
+                        </p>
+                        <p>
+                            Avant ce projet, les réservations arrivaient par téléphone ou via des messages éparpillés,
+                            ce qui rendait le suivi compliqué (doubles réservations, oublis, manque de visibilité
+                            sur les services remplis).
+                        </p>
+
+                        <h2 class="project-section-title mt-4">
+                            <i class="bi bi-bullseye"></i> Objectifs
+                        </h2>
+                        <ul>
+                            <li>Avoir un <strong>site vitrine moderne</strong> pour les trois adresses.</li>
+                            <li>Mettre en place un <strong>tunnel de réservation complet</strong> (restaurant → date & heure → coordonnées → confirmation).</li>
+                            <li>Envoyer automatiquement un <strong>email de confirmation</strong> au client.</li>
+                            <li>Donner à l’équipe un <strong>dashboard de suivi des réservations</strong>.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-6 text-center text-lg-end">
+                        <img src="assets/img/projets/rosetta-home.png"
+                             alt="Page d'accueil du site Rosetta"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Page d’accueil Rosetta : présentation du groupe, ambiance visuelle et accès direct aux restaurants.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Étape 1 & 2 du tunnel -->
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-1-circle"></i> Choix du restaurant & de la date
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                Le client commence par choisir l’adresse qui l’intéresse (9ᵉ, 17ᵉ ou 2ᵉ). Chaque carte
+                                affiche l’ambiance, l’adresse, les informations pratiques et un bouton <em>“Découvrir le menu”</em>.
+                            </p>
+                            <p>
+                                Ensuite, il passe à la sélection de la date, de l’heure et du service (déjeuner ou dîner).
+                                Le formulaire guide le client étape par étape pour éviter les erreurs.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2 order-1 text-center">
+                        <img src="assets/img/projets/rosetta-choix-restaurant.png"
+                             alt="Étape de choix du restaurant"
+                             class="img-fluid project-image mb-3">
+                        <p class="project-caption">
+                            Étape 1 : choix du restaurant avec cartes détaillées pour chaque adresse.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Étape 3 & 4 + galerie/menu -->
+                <div class="row gy-4 align-items-start">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-2-circle"></i> Coordonnées & confirmation
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                À l’étape suivante, le client renseigne ses coordonnées (nom, téléphone, email,
+                                nombre de personnes, éventuels commentaires). Les données sont vérifiées côté front
+                                puis envoyées au serveur.
+                            </p>
+                            <p>
+                                Une fois la réservation enregistrée, une page de confirmation s’affiche et un
+                                <strong>email récapitulatif</strong> est envoyé automatiquement au client.
+                            </p>
+                        </div>
+
+                        <img src="assets/img/projets/rosetta-confirmation.png"
+                             alt="Confirmation de réservation Rosetta"
+                             class="img-fluid project-image mt-3">
+                        <p class="project-caption">
+                            Étape finale du tunnel : réservation confirmée + email envoyé au client.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-images"></i> Menus & galeries photos
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                Le site propose aussi un affichage des menus et des plats avec de vraies photos
+                                du restaurant. Les catégories (pizzas, pasta, desserts…) sont filtrables via un
+                                système d’onglets.
+                            </p>
+                        </div>
+
+                        <img src="assets/img/projets/rosetta-menu.png"
+                             alt="Galerie des plats et menus Rosetta"
+                             class="img-fluid project-image mt-3">
+                        <p class="project-caption">
+                            Menus et galerie : navigation par catégories et mise en avant des visuels des plats.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Dashboard + partie technique -->
+                <div class="row gy-4">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-3-circle"></i> Back-office de gestion des réservations
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                Côté administration, j’ai développé un dashboard pour l’équipe Rosetta :
+                            </p>
+                            <ul>
+                                <li>Vue globale du nombre total de réservations, à venir, en attente et confirmées.</li>
+                                <li>Filtre par restaurant, par statut et par date.</li>
+                                <li>Tableau détaillé (nom, email, téléphone, service, nombre de personnes…).</li>
+                                <li>Boutons d’action : <strong>confirmer</strong>, <strong>annuler</strong>, supprimer la réservation.</li>
+                                <li>Bouton pour <strong>nettoyer automatiquement les anciennes réservations</strong>.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 text-center">
+                        <img src="assets/img/projets/rosetta-dashboard.png"
+                             alt="Dashboard d'administration des réservations Rosetta"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Dashboard de gestion : statistiques en haut, filtres et tableau des réservations en temps réel.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Partie technique & compétences -->
+                <div class="row gy-4">
+                    <div class="col-lg-12">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-gear-wide-connected"></i> Partie technique & compétences
+                        </h2>
+                        <div class="project-card mt-2">
+                            <h6>Stack technique</h6>
+                            <ul>
+                                <li>Back-end : PHP (logique métier, sauvegarde des réservations, envoi d’emails).</li>
+                                <li>Base de données : MySQL (restaurants, créneaux, réservations, statuts).</li>
+                                <li>Front-end : HTML / CSS / JavaScript pour le tunnel en plusieurs étapes.</li>
+                                <li>Intégration : envoi automatique d’email de confirmation après chaque réservation.</li>
+                            </ul>
+
+                            <h6 class="mt-3">Ce que j’ai travaillé sur ce projet</h6>
+                            <ul>
+                                <li>Conception du tunnel de réservation de bout en bout (UX et logique).</li>
+                                <li>Création d’un dashboard admin avec filtres, actions rapides et compteurs.</li>
+                                <li>Gestion des statuts de réservation (en attente, confirmée, annulée).</li>
+                                <li>Intégration d’un design cohérent avec l’identité visuelle du restaurant.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.project-wrapper -->
+
+        </div>
+    </section>
+
+</main>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
