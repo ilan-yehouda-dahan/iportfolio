@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Projet — Organisation & sécurisation du serveur interne | Ilan Dahan</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Bootstrap / Icons / thème principal -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Styles spécifiques à la page projet -->
+    <style>
+        .project-page {
+            background: #f2f4f8;
+        }
+
+        .project-wrapper {
+            background: #f7f7f9;
+            border-radius: 24px;
+            padding: 2.5rem 2.5rem 3rem;
+            margin-top: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+        }
+
+        @media (max-width: 768px) {
+            .project-wrapper {
+                padding: 1.5rem 1.25rem 2rem;
+                border-radius: 18px;
+            }
+        }
+
+        .project-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .35rem .9rem;
+            border-radius: 999px;
+            background: rgba(13, 110, 253, 0.08);
+            color: #0d6efd;
+            font-size: .85rem;
+            font-weight: 500;
+            margin-bottom: .75rem;
+        }
+
+        .project-badge i {
+            font-size: 1rem;
+        }
+
+        .project-title {
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-bottom: .75rem;
+        }
+
+        .project-subtitle {
+            color: #6c757d;
+            max-width: 720px;
+        }
+
+        .project-section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: .35rem;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .project-section-title i {
+            color: #0d6efd;
+        }
+
+        .project-divider {
+            margin: 2.5rem 0 2rem;
+            border-top: 1px dashed #ced4da;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.4rem 1.6rem;
+            border: 1px solid #e3e6ef;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+            height: 100%;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-image {
+            border-radius: 18px;
+            box-shadow: 0 14px 35px rgba(15, 23, 42, 0.35);
+            border: 1px solid #111827;
+        }
+
+        .project-caption {
+            font-size: .8rem;
+            color: #6c757d;
+            margin-top: .4rem;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 0;
+        }
+
+        .pill-list li {
+            padding: .25rem .75rem;
+            border-radius: 999px;
+            border: 1px solid #d0d7e2;
+            background: #ffffff;
+            font-size: .8rem;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: .35rem;
+            font-size: .9rem;
+            text-decoration: none;
+            color: #6c757d;
+        }
+
+        .back-link:hover {
+            color: #0d6efd;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body class="index-page project-page">
+
+<!-- Sidebar identique au portfolio -->
+<header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+        <img src="assets/img/my-profile-img.jpg" alt="Photo de profil d'Ilan Dahan"
+             class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+        <h1 class="sitename">Ilan Dahan</h1>
+    </a>
+
+    <div class="social-links text-center">
+        <a href="https://www.linkedin.com/in/ilan-dahan-56a4a22ab" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/ilan-yehouda-dahan" class="github" target="_blank"><i class="bi bi-github"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+        <ul>
+            <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Accueil</a></li>
+            <li><a href="index.html#about"><i class="bi bi-person navicon"></i>À propos</a></li>
+            <li><a href="index.html#skills"><i class="bi bi-bar-chart navicon"></i>Compétences</a></li>
+            <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i>Parcours</a></li>
+            <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i>Projets</a></li>
+            <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main">
+
+    <section class="section">
+        <div class="container">
+
+            <div class="project-wrapper">
+
+                <!-- Lien retour -->
+                <a href="index.html#portfolio" class="back-link mb-3">
+                    <i class="bi bi-arrow-left"></i> Retour aux projets
+                </a>
+
+                <!-- Header projet -->
+                <div class="mb-4">
+                    <div class="project-badge">
+                        <i class="bi bi-building-lock"></i> Projet réel — Alternance chez Quick Source
+                    </div>
+                    <h1 class="project-title">Organisation & sécurisation du serveur interne</h1>
+                    <p class="project-subtitle">
+                        Mission d’alternance centrée sur la réorganisation, la sécurisation et le suivi du serveur de fichiers
+                        de l’entreprise Quick Source : arborescence propre, gestion fine des droits d’accès, scripts d’automatisation
+                        et documentation interne.
+                    </p>
+
+                    <ul class="pill-list mt-3">
+                        <li><i class="bi bi-pc-display me-1"></i>Serveur de fichiers Windows</li>
+                        <li><i class="bi bi-folder-lock me-1"></i>Permissions NTFS / partages réseau</li>
+                        <li><i class="bi bi-terminal me-1"></i>Scripts Batch / PowerShell</li>
+                        <li><i class="bi bi-shield-check me-1"></i>Bonnes pratiques de sécurité</li>
+                        <li><i class="bi bi-journal-text me-1"></i>Documentation interne</li>
+                    </ul>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Contexte / Objectifs -->
+                <div class="row gy-4 align-items-start">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-info-circle"></i> Contexte de la mission
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                Quand j’arrive chez <strong>Quick Source</strong>, le serveur interne est utilisé par toute l’équipe
+                                pour stocker des documents de travail : contrats, offres commerciales, procédures, livrables clients, etc.
+                            </p>
+                            <p class="mb-0">
+                                Avec le temps, l’arborescence s’est complexifiée : doublons, dossiers mal nommés, fichiers sensibles
+                                accessibles à trop de personnes… Mon rôle en alternance a été de <strong>remettre de l’ordre</strong>
+                                et d’appliquer des <strong>bonnes pratiques de sécurité</strong> tout en restant simple pour les utilisateurs.
+                            </p>
+                        </div>
+
+                        <h2 class="project-section-title mt-4">
+                            <i class="bi bi-bullseye"></i> Objectifs
+                        </h2>
+                        <ul>
+                            <li>Structurer une <strong>arborescence claire</strong> par pôles, projets et types de documents.</li>
+                            <li>Mettre en place des <strong>droits d’accès cohérents</strong> selon les équipes.</li>
+                            <li>Réduire les <strong>risques de fuite ou de mauvaise manipulation</strong> de fichiers sensibles.</li>
+                            <li>Automatiser certaines tâches répétitives (tri, renommage, inventaire de dossiers).</li>
+                            <li>Documenter le fonctionnement du serveur et les bonnes pratiques à suivre.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-6 text-center text-lg-end">
+                        <img src="assets/img/projets/quicksource-arborescence.png"
+                             alt="Nouvelle arborescence du serveur interne"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Exemple de nouvelle arborescence : dossiers organisés par service et type de document, plus lisible au quotidien.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Étape 1 : Réorganisation du serveur -->
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-1-circle"></i> Réorganisation de l’arborescence
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                Première étape : comprendre comment le serveur était réellement utilisé au quotidien par les équipes.
+                                J’ai fait un état des lieux :
+                            </p>
+                            <ul>
+                                <li>Repérage des <strong>dossiers obsolètes</strong> ou non utilisés.</li>
+                                <li>Identification des <strong>doublons</strong> et fichiers en plusieurs versions.</li>
+                                <li>Analyse des dossiers vraiment critiques (contrats, documents légaux, livrables clients).</li>
+                            </ul>
+                            <p class="mb-0">
+                                À partir de là, j’ai proposé une nouvelle arborescence, validée avec mon tuteur, puis
+                                j’ai progressivement <strong>déplacé, renommé et trié</strong> les dossiers, en faisant attention
+                                à ne rien casser pour les utilisateurs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 order-lg-2 order-1 text-center">
+                        <img src="assets/img/projets/quicksource-avant-apres.png"
+                             alt="Avant/Après réorganisation du serveur"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Avant / après : d’un serveur “fourre-tout” à une arborescence structurée par départements et projets.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Étape 2 : Gestion des droits d’accès -->
+                <div class="row gy-4 align-items-start">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-2-circle"></i> Gestion des droits d’accès & sécurité
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                Une fois l’arborescence stabilisée, l’enjeu a été de <strong>sécuriser les accès</strong> :
+                            </p>
+                            <ul>
+                                <li>Vérification des permissions existantes sur les dossiers partagés.</li>
+                                <li>Nettoyage des accès trop larges (tout le monde sur tout).</li>
+                                <li>Restriction de certains dossiers sensibles à quelques personnes seulement.</li>
+                                <li>Alignement des droits avec les équipes (commercial, technique, administratif…).</li>
+                            </ul>
+                            <p class="mb-0">
+                                L’objectif n’était pas de “bloquer tout le monde”, mais de trouver un équilibre :
+                                <strong>accès minimum nécessaire</strong> (principe du moindre privilège) tout en gardant
+                                un usage fluide pour les utilisateurs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 text-center">
+                        <img src="assets/img/projets/quicksource-droits.png"
+                             alt="Gestion des permissions sur les dossiers"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Exemple de travail sur les permissions : vérification et ajustement des droits par groupe d’utilisateurs.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Étape 3 : Suivi & scripts -->
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-3-circle"></i> Suivi du serveur & automatisation
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                Pour éviter que le serveur ne redevienne “le bazar”, j’ai mis en place un petit
+                                <strong>suivi régulier</strong> :
+                            </p>
+                            <ul>
+                                <li>Contrôle de l’espace disque disponible.</li>
+                                <li>Surveillance de certains dossiers critiques (taille, nouveaux fichiers, etc.).</li>
+                                <li>Nettoyage périodique de dossiers temporaires ou de travail.</li>
+                            </ul>
+                            <p>
+                                J’ai aussi commencé à écrire de petits scripts (Batch / PowerShell) pour :
+                            </p>
+                            <ul class="mb-0">
+                                <li>faire des listes de dossiers / fichiers (inventaires),</li>
+                                <li>renommer en série certains fichiers selon un modèle,</li>
+                                <li>préparer des rapports simples pour mon tuteur.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 order-lg-2 order-1 text-center">
+                        <img src="assets/img/projets/quicksource-scripts.png"
+                             alt="Exemple de scripts d'automatisation"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Exemples de scripts d’inventaire et de nettoyage : gain de temps sur les tâches répétitives.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Documentation & compétences -->
+                <div class="row gy-4">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-journal-check"></i> Documentation & accompagnement utilisateurs
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                Pour que le travail tienne dans le temps, j’ai rédigé des <strong>petites procédures internes</strong> :
+                            </p>
+                            <ul>
+                                <li>Plan de l’arborescence et explication des grandes zones.</li>
+                                <li>Comment accéder au serveur de fichiers selon son poste.</li>
+                                <li>Rappels de bonnes pratiques (ne pas stocker en local, éviter les doublons, etc.).</li>
+                                <li>Documentation sur les quelques scripts utilisés.</li>
+                            </ul>
+                            <p class="mb-0">
+                                Cela permet d’<strong>onboarder</strong> plus facilement les nouveaux arrivants et de garder une cohérence
+                                dans la façon d’utiliser le serveur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-lightbulb"></i> Compétences & apports
+                        </h2>
+                        <div class="project-card mt-2">
+                            <h6>Compétences techniques</h6>
+                            <ul>
+                                <li>Compréhension et gestion d’un <strong>serveur de fichiers Windows</strong>.</li>
+                                <li>Manipulation des <strong>permissions NTFS</strong> et des partages réseau.</li>
+                                <li>Écriture de <strong>scripts simples</strong> (Batch / PowerShell) pour automatiser des tâches.</li>
+                                <li>Application de <strong>bonnes pratiques de sécurité</strong> côté postes et serveur.</li>
+                            </ul>
+
+                            <h6 class="mt-3">Compétences transverses</h6>
+                            <ul class="mb-0">
+                                <li>Écoute des besoins utilisateurs et échanges réguliers avec mon tuteur.</li>
+                                <li>Capacité à proposer une solution, la faire valider, puis la déployer progressivement.</li>
+                                <li>Rigueur dans la manipulation de données professionnelles et parfois sensibles.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.project-wrapper -->
+
+        </div>
+    </section>
+
+</main>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1293,3 +1293,10 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+.header .profile-img img {
+    width: 120px;
+    height: 120px;        /* force un carré */
+    object-fit: cover;    /* centre et coupe proprement */
+    object-position: center 35%; /* remonte un peu l'image pour voir les cheveux */
+    border-radius: 50%;   /* cercle parfait */
+}
