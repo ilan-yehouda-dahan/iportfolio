@@ -539,17 +539,21 @@ section,
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
 .hero {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  padding: 80px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    background:
+            radial-gradient(circle at 0% 0%, rgba(20, 157, 221, 0.28), transparent 55%),
+            radial-gradient(circle at 100% 100%, rgba(148, 163, 184, 0.25), transparent 55%),
+            linear-gradient(135deg, #020617 0%, #030712 45%, #020617 100%);
+    overflow: hidden;
 }
 
 .hero img {
@@ -624,6 +628,22 @@ section,
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
+}
+.about-card {
+    background: linear-gradient(135deg, #0b1220 0%, #111827 40%, #0f172a 100%);
+    color: #f9fafb;
+}
+.about-card i {
+    color: #38bdf8;
+}
+
+.about-card h1,
+.about-card h2,
+.about-card h3,
+.about-card h4,
+.about-card h5,
+.about-card h6 {
+    color: #f9fafb;
 }
 
 .about .content ul {
