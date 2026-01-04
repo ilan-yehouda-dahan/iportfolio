@@ -501,28 +501,29 @@
 <!-- Main JS File -->
 <script src="assets/js/main.js"></script>
 
-<!-- EmailJS Contact form -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-browser@4/dist/email.min.js"></script>
+<!-- EmailJS (Contact form) -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-    const EMAILJSPUBLICKEY = "pkIoTu5M8gI9rSnIW";
-    const EMAILJSSERVICEID = "service6jtlffk";
-    const EMAILJSTEMPLATEID = "template0jvjkko";
+    // ✅ REMPLIS CES 3 VALEURS DEPUIS EMAILJS (Dashboard)
+    const EMAILJS_PUBLIC_KEY  = "pkIoTu5M8gI9rSnIW";
+    const EMAILJS_SERVICE_ID  = "service_6jtlffk";
+    const EMAILJS_TEMPLATE_ID = "template_0jvjkko";
 
-    function initEmailJS() {
-        emailjs.init(EMAILJSPUBLICKEY);
+    (function () {
+        // Init EmailJS
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+
         const form = document.getElementById("contact-form");
         if (!form) return;
 
         const loadingEl = form.querySelector(".loading");
-        const errorEl = form.querySelector(".error-message");
-        const sentEl = form.querySelector(".sent-message");
+        const errorEl   = form.querySelector(".error-message");
+        const sentEl    = form.querySelector(".sent-message");
 
+        // Ensure initial state (since we removed the template validate.js)
         if (loadingEl) loadingEl.style.display = "none";
-        if (errorEl) {
-            errorEl.style.display = "none";
-            errorEl.innerHTML = "";
-        }
-        if (sentEl) sentEl.style.display = "none";
+        if (errorEl)   errorEl.style.display   = "none";
+        if (sentEl)    sentEl.style.display    = "none";
 
         function ensureHidden(name, value) {
             let input = form.querySelector(`input[name="${name}"]`);
@@ -538,33 +539,31 @@
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
 
+            // UI
             if (loadingEl) loadingEl.style.display = "block";
-            if (errorEl) {
-                errorEl.style.display = "none";
-                errorEl.innerHTML = "";
-            }
-            if (sentEl) sentEl.style.display = "none";
+            if (errorEl)   { errorEl.style.display = "none"; errorEl.innerHTML = ""; }
+            if (sentEl)    sentEl.style.display = "none";
 
+            // Extra variables for your EmailJS template
             ensureHidden("time", new Date().toLocaleString("fr-FR"));
-            ensureHidden("pageurl", window.location.href);
+            ensureHidden("page_url", window.location.href);
 
             try {
-                await emailjs.sendForm(EMAILJSSERVICEID, EMAILJSTEMPLATEID, form);
+                await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
+
                 if (loadingEl) loadingEl.style.display = "none";
-                if (sentEl) sentEl.style.display = "block";
+                if (sentEl)    sentEl.style.display = "block";
                 form.reset();
             } catch (err) {
-                console.error("EmailJS error", err);
+                console.error("EmailJS error:", err);
                 if (loadingEl) loadingEl.style.display = "none";
                 if (errorEl) {
                     errorEl.style.display = "block";
-                    errorEl.innerHTML = "Erreur lors de l'envoi. Vérifie tes IDs EmailJS et réessaie.";
+                    errorEl.innerHTML = "Erreur lors de l’envoi. Vérifie tes IDs EmailJS et réessaie.";
                 }
             }
         });
-    }
-
-    document.addEventListener("DOMContentLoaded", initEmailJS);
+    })();
 </script>
 
 </body>
