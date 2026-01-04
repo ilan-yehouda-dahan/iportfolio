@@ -20,9 +20,9 @@
 
 /* Global Colors - Palette sophistiquée et moderne */
 :root {
-    --background-color: #0a0e27;
-    --default-color: #e2e8f0;
-    --heading-color: #f8fafc;
+    --background-color: #030d33;
+    --default-color: #ffffff;
+    --heading-color: #051e57;
     --accent-color: #3b82f6;
     --accent-secondary: #8b5cf6;
     --surface-color: #1e293b;
@@ -52,7 +52,7 @@
 }
 
 .dark-background {
-    --background-color: #0a0e27;
+    --background-color: #a4aab1;
     --default-color: #000000;
     --heading-color: #f8fafc;
     --surface-color: #1e293b;
@@ -131,7 +131,7 @@ a:not(.btn):not(.social-links a):not(.navmenu a):hover::after {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--heading-color);
+    color: #7390d0;
     font-family: var(--heading-font);
     font-weight: 700;
     line-height: 1.2;
@@ -769,7 +769,7 @@ section,
     margin: 30px 0 0 0;
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     font-weight: 400;
-    color: #cbd5e1;
+    color: #ffffff;
     animation: fadeInUp 1s ease-out 0.2s backwards;
 }
 
@@ -1064,7 +1064,6 @@ section,
 # Resume Section - Timeline Premium
 --------------------------------------------------------------*/
 .resume .resume-title {
-    color: var(--heading-color);
     font-size: 28px;
     font-weight: 800;
     margin-top: 30px;
@@ -1094,7 +1093,7 @@ section,
     line-height: 1.4;
     font-size: 20px;
     font-weight: 700;
-    color: var(--heading-color);
+
     margin-bottom: 12px;
 }
 
@@ -1675,7 +1674,7 @@ section,
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 900;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+    background: linear-gradient(135deg, #255160 0%, #15324c 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
