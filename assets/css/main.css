@@ -1419,7 +1419,7 @@ section,
 
 .contact .info-item i {
     font-size: 24px;
-    color: var(--accent-color);
+    color:white;
     background: rgba(59, 130, 246, 0.1);
     width: 56px;
     height: 56px;
@@ -2089,7 +2089,7 @@ body,
 
 .php-email-form input,
 .php-email-form textarea {
-    background: #0f172a !important;
+    background: #162139 !important;
     color: #e2e8f0 !important;
     border: 2px solid #475569 !important;
 }
