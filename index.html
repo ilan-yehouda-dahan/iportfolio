@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Portfolio - Ilan Dahan</title>
-    <meta content="Portfolio d'Ilan Dahan, étudiant BTS SIO SLAM et alternant en cybersécurité, futur ingénieur informatique." name="description">
-    <meta content="Ilan Dahan, BTS SIO, SLAM, Java, Python, cybersécurité, portfolio" name="keywords">
+    <title>Portfolio - Ilan Dahan | BTS SIO SLAM</title>
+    <meta content="Portfolio d'Ilan Dahan, alternant développeur chez Quick Source, étudiant BTS SIO SLAM" name="description">
+    <meta content="Ilan Dahan, BTS SIO, SLAM, Quick Source, développeur" name="keywords">
 
     <link href="assets/img/logoidd.png" rel="icon">
     <link href="assets/img/logoidd.png" rel="apple-touch-icon">
@@ -15,7 +15,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,15 +26,204 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a1a1a;
+            background-color: #1e293b;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .hero {
+            background: #1e293b;
+            min-height: 100vh;
+        }
+
+        .section {
+            padding: 80px 0;
+            background: #1e293b;
+        }
+
+        /* Sections blanches */
+        .section-white {
+            background: #ffffff !important;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+
+        /* Titres pour sections blanches */
+        .section-white .section-title h2 {
+            color: #1a1a1a;
+        }
+
+        .section-white .section-title p {
+            color: #666;
+        }
+
+        .simple-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .simple-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transform: translateY(-3px);
+        }
+
+        .simple-card h3 {
+            color: #1a1a1a;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #1e40af;
+        }
+
+        .btn-outline-primary {
+            border: 2px solid #2563eb;
+            color: #2563eb;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 500;
+            background: transparent;
+        }
+
+        .btn-outline-primary:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        .tech-badge {
+            background: #f3f4f6;
+            color: #1a1a1a;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin: 4px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .bg-light-section {
+            background-color: #1e293b;
+        }
+
+        /* Compétences avec icônes */
+        .skill-category {
+            background: white;
+            border: 1px solid #e5e7eb;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .skill-category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .skill-category-icon {
+            width: 50px;
+            height: 50px;
+            background: #eff6ff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .skill-category-icon i {
+            font-size: 1.5rem;
+            color: #2563eb;
+        }
+
+        .skill-category h5 {
+            color: #1a1a1a;
+            font-size: 1.1rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .skill-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-badge {
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            padding-bottom: 30px;
+            border-left: 2px solid #e5e7eb;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #2563eb;
+        }
+
+        .timeline-item:last-child {
+            border-left: none;
+        }
+
+        /* Pour section blanche */
+        .section-white .timeline-item {
+            border-left-color: #e5e7eb;
+        }
+    </style>
 </head>
 
 <body class="index-page">
 
-<header id="header" class="header dark-background d-flex flex-column">
+<header id="header" class="header d-flex flex-column" style="background: #1e293b;">
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-        <img src="assets/moi.jpg" alt="Photo de profil d'Ilan Dahan" class="img-fluid rounded-circle">
+        <img src="assets/moi.jpg" alt="Ilan Dahan" class="img-fluid rounded-circle">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
@@ -50,7 +239,8 @@
         <ul>
             <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Accueil</a></li>
             <li><a href="#about"><i class="bi bi-person navicon"></i>À propos</a></li>
-            <li><a href="#skills"><i class="bi bi-bar-chart navicon"></i>Compétences</a></li>
+            <li><a href="#entreprise"><i class="bi bi-building navicon"></i>Entreprise</a></li>
+            <li><a href="#skills"><i class="bi bi-code-slash navicon"></i>Compétences</a></li>
             <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i>Parcours</a></li>
             <li><a href="#portfolio"><i class="bi bi-images navicon"></i>Projets</a></li>
             <li><a href="#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
@@ -61,91 +251,105 @@
 <main class="main">
 
     <!-- HERO -->
-    <section id="hero" class="hero section dark-background d-flex align-items-center">
+    <section id="hero" class="hero section d-flex align-items-center">
         <div class="container">
-            <div class="row gy-4 justify-content-center align-items-center">
-
-                <div class="col-lg-7 text-center text-lg-start" data-aos="fade-up" data-aos-delay="100">
-                    <p class="mb-1 text-uppercase" style="letter-spacing: .15em; font-size: 0.8rem; color:#74b5ff;">
-                        Portfolio • BTS SIO SLAM
-                    </p>
-                    <h1 class="mb-3" style="font-size: 3rem;">
-                        Bonjour, moi c'est <span style="color:#4ea5ff;">Ilan</span>
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <p class="text-white-50 mb-2" style="font-size: 0.95rem; letter-spacing: 2px;">BTS SIO SLAM • ALTERNANT DÉVELOPPEUR</p>
+                    <h1 class="text-white mb-3" style="font-size: 3rem; font-weight: 700;">
+                        Bonjour, je suis Ilan Dahan
                     </h1>
-                    <p style="font-size: 1.05rem;">
-                        Étudiant en BTS SIO SLAM et alternant en cybersécurité. Je développe des applications utiles et sécurise les environnements de travail.
+                    <p class="text-white mb-4" style="font-size: 1.15rem; line-height: 1.7; max-width: 700px; margin: 0 auto;">
+                        Alternant développeur chez Quick Source, je conçois des applications
+                        et des outils pour améliorer les processus de l'entreprise.
                     </p>
 
-                    <div class="mt-4 d-flex flex-column flex-sm-row gap-2 justify-content-center justify-content-lg-start">
-                        <a href="#portfolio" class="btn btn-primary">
-                            <i class="bi bi-code-slash me-1"></i> Voir mes projets
+                    <div class="d-flex gap-3 justify-content-center mt-4">
+                        <a href="#portfolio" class="btn btn-light btn-lg">
+                            <i class="bi bi-code-slash me-2"></i>Mes projets
                         </a>
-                        <a href="#contact" class="btn btn-outline-light">
-                            <i class="bi bi-send me-1"></i> Me contacter
+                        <a href="#contact" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-send me-2"></i>Me contacter
                         </a>
                     </div>
                 </div>
-
-
-
             </div>
-
-        </div>q
         </div>
     </section>
 
-    <!-- A PROPOS -->
+    <!-- À PROPOS -->
     <section id="about" class="about section">
         <div class="container">
 
-            <div class="section-title" data-aos="fade-up">
+            <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>À propos</h2>
-                <p>Étudiant en informatique, orienté développement et cybersécurité.</p>
+                <p>Étudiant BTS SIO SLAM et développeur en alternance</p>
             </div>
 
-            <div class="row gy-4">
+            <div class="row g-4">
 
                 <div class="col-lg-5" data-aos="fade-right">
-                    <div class="about-card p-4 h-100">
-                        <h3 class="mb-3">Profil rapide</h3>
-                        <p class="mb-3">
-                            Étudiant en BTS SIO SLAM et alternant en cybersécurité. Je travaille sur des besoins concrets : outils internes, automatisation et sécurisation de données.
+                    <div class="simple-card">
+                        <h3 class="mb-3">Profil</h3>
+
+                        <p style="color: #4b5563; line-height: 1.8; margin-bottom: 25px;">
+                            Je suis actuellement en deuxième année de BTS SIO option SLAM à l'ORT de Montreuil,
+                            en alternance chez Quick Source.
                         </p>
-                        <ul class="mb-0">
-                            <li><i class="bi bi-geo-alt"></i><strong> Localisation :</strong> Paris, France</li>
-                            <li><i class="bi bi-envelope"></i><strong> Email :</strong> ilandahan@gmail.com</li>
-                            <li><i class="bi bi-bullseye"></i><strong> Objectif :</strong> Devenir ingénieur informatique</li>
-                        </ul>
-                        <div class="text-center mt-3">
-                            <a href="assets/docs/CV_Ilan_Dahan_Alternance%20copie.pdf" class="btn btn-primary" style="width: 80%;" download>
-                                <i class="bi bi-download me-2"></i> Télécharger mon CV
-                            </a>
+
+                        <div style="line-height: 2; color: #1a1a1a; margin-bottom: 25px;">
+                            <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i> Paris, France</p>
+                            <p class="mb-2"><i class="bi bi-envelope text-primary me-2"></i> ilandahan@gmail.com</p>
+                            <p class="mb-2"><i class="bi bi-briefcase text-primary me-2"></i> Quick Source</p>
+                            <p class="mb-0"><i class="bi bi-trophy text-primary me-2"></i> Futur ingénieur informatique</p>
                         </div>
+
+                        <a href="assets/docs/CV_Ilan_Dahan_Alternance%20copie.pdf" class="btn btn-primary w-100" download>
+                            <i class="bi bi-download me-2"></i>Télécharger mon CV
+                        </a>
                     </div>
                 </div>
 
-                <div class="col-lg-7 content" data-aos="fade-left">
-                    <h2>Étudiant BTS SIO SLAM & alternant</h2>
-                    <p class="fst-italic">
-                        Je conçois des outils simples, utilisables par les équipes métier, en gardant toujours en tête la sécurité et la fiabilité.
-                    </p>
-                    <p>
-                        Mon objectif : continuer dans le développement et la cybersécurité pour évoluer vers un poste d’ingénieur informatique.
-                    </p>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Formation :</strong> BTS SIO SLAM</li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Alternance :</strong> Quick Source</li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Langages :</strong> Java, Python, Web</li>
-                            </ul>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="simple-card">
+                        <h3 class="mb-4">Développeur d'applications</h3>
+
+                        <p style="font-size: 1.05rem; line-height: 1.8; color: #1a1a1a; margin-bottom: 20px;">
+                            Mon quotidien : développer des applications métier, créer des outils internes
+                            et automatiser des processus pour améliorer la productivité.
+                        </p>
+
+                        <p style="font-size: 1.05rem; line-height: 1.8; color: #1a1a1a; margin-bottom: 30px;">
+                            Je m'intéresse aussi à l'administration système et à la sécurité des infrastructures.
+                        </p>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px;">
+                                    <i class="bi bi-mortarboard me-2 text-primary"></i>Formation
+                                </h5>
+                                <ul style="line-height: 2; color: #1a1a1a;">
+                                    <li>BTS SIO SLAM (2024-2026)</li>
+                                    <li>Alternance Quick Source</li>
+                                    <li>Bac Général (2023)</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px;">
+                                    <i class="bi bi-code-slash me-2 text-primary"></i>Langages
+                                </h5>
+                                <ul style="line-height: 2; color: #1a1a1a;">
+                                    <li>Java / JavaFX</li>
+                                    <li>Python</li>
+                                    <li>PHP / Symfony</li>
+                                    <li>HTML / CSS / JavaScript</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="col-lg-6">
-                            <ul>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Intérêt :</strong> Cybersécurité</li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Ville :</strong> Paris</li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Mobilité :</strong> France & Israël</li>
-                            </ul>
+
+                        <div class="alert alert-light border" style="border-color: #e5e7eb !important; background: #f9fafb;">
+                            <i class="bi bi-globe text-primary me-2"></i>
+                            <strong>Mobilité :</strong> Disponible en France et en Israël après le BTS
                         </div>
                     </div>
                 </div>
@@ -155,173 +359,277 @@
         </div>
     </section>
 
-    <!-- COMPETENCES -->
-    <section id="skills" class="skills section light-background">
+    <!-- ENTREPRISE -->
+    <section id="entreprise" class="entreprise section bg-light-section">
         <div class="container">
 
-            <div class="section-title" data-aos="fade-up">
-                <h2>Compétences</h2>
-                <p>Compétences techniques acquises en formation, en alternance et sur mes projets personnels.</p>
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h2>Mon Entreprise</h2>
+                <p>Alternance développeur chez Quick Source</p>
             </div>
 
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="row skills-content skills-animation">
+            <div class="row g-4 mb-5">
 
-                    <div class="col-lg-6">
-
-                        <div class="progress">
-                            <span class="skill"><span>Java / JavaFX</span> <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="simple-card">
+                        <div class="text-center mb-4">
+                            <i class="bi bi-building" style="font-size: 3rem; color: #2563eb;"></i>
                         </div>
+                        <h3 class="text-center mb-3">Quick Source</h3>
+                        <p class="text-center mb-4" style="color: #4b5563;">Solutions informatiques pour les PME</p>
 
-                        <div class="progress">
-                            <span class="skill"><span>Python</span> <i class="val">75%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
+                        <div style="line-height: 2; color: #1a1a1a;">
+                            <p class="mb-2"><strong>Début :</strong> Septembre 2025</p>
+                            <p class="mb-2"><strong>Poste :</strong> Alternant Développeur</p>
+                            <p class="mb-2"><strong>Rythme :</strong> 1 semaine/1 semaine</p>
+                            <p class="mb-0"><strong>Équipe :</strong> 2 développeurs</p>
                         </div>
-
-                        <div class="progress">
-                            <span class="skill"><span>HTML / CSS / JS</span> <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
                     </div>
-
-                    <div class="col-lg-6">
-
-                        <div class="progress">
-                            <span class="skill"><span>MySQL / Bases de données</span> <i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill"><span>Git &amp; Docker</span> <i class="val">75%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill"><span>Cybersécurité (bases, SOC, durcissement)</span> <i class="val">60%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
+
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="simple-card">
+                        <h3 class="mb-4">Mes missions de développement</h3>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="me-3">
+                                        <i class="bi bi-code-slash" style="font-size: 2rem; color: #2563eb;"></i>
+                                    </div>
+                                    <div>
+                                        <h5 style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;">Développement d'outils</h5>
+                                        <p style="color: #4b5563; margin: 0;">Scripts Python/PowerShell pour automatiser les tâches</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="me-3">
+                                        <i class="bi bi-server" style="font-size: 2rem; color: #2563eb;"></i>
+                                    </div>
+                                    <div>
+                                        <h5 style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;">Administration système</h5>
+                                        <p style="color: #4b5563; margin: 0;">Gestion serveur et droits d'accès</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="me-3">
+                                        <i class="bi bi-shield-check" style="font-size: 2rem; color: #2563eb;"></i>
+                                    </div>
+                                    <div>
+                                        <h5 style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;">Sécurisation</h5>
+                                        <p style="color: #4b5563; margin: 0;">Mise en place de sauvegardes et règles de sécurité</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="me-3">
+                                        <i class="bi bi-file-text" style="font-size: 2rem; color: #2563eb;"></i>
+                                    </div>
+                                    <div>
+                                        <h5 style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;">Documentation</h5>
+                                        <p style="color: #4b5563; margin: 0;">Rédaction de procédures techniques</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Projet phare -->
+            <div class="row" data-aos="fade-up">
+                <div class="col-12">
+                    <div class="simple-card" style="border-left: 4px solid #2563eb;">
+                        <h3 class="mb-4">Projet principal : Genia</h3>
+
+                        <div class="row">
+                            <div class="col-lg-8 mb-4">
+                                <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px;">Le projet</h5>
+                                <p style="color: #1a1a1a; line-height: 1.8;">
+                                    Développement du projet Genia en équipe de 2 développeurs.
+                                    Projet en cours de développement chez Quick Source.
+                                </p>
+
+                                <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px; margin-top: 25px;">Mon rôle</h5>
+                                <ul style="line-height: 2; color: #1a1a1a;">
+                                    <li>Développement backend et frontend</li>
+                                    <li>Architecture et conception</li>
+                                    <li>Collaboration en équipe</li>
+                                    <li>Tests et déploiement</li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div style="background: #f9fafb; padding: 25px; border-radius: 10px; border: 1px solid #e5e7eb;">
+                                    <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px;">Technologies</h5>
+                                    <div class="mb-4">
+                                        <span class="tech-badge">Python</span>
+                                        <span class="tech-badge">JavaScript</span>
+                                        <span class="tech-badge">Base de données</span>
+                                    </div>
+
+                                    <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px;">Contexte</h5>
+                                    <p style="margin-bottom: 8px; color: #1a1a1a;">• Équipe : 2 développeurs</p>
+                                    <p style="margin-bottom: 8px; color: #1a1a1a;">• Rythme : 1 sem/1 sem</p>
+                                    <p style="margin: 0; color: #1a1a1a;">• Projet en cours</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="projet-genia.html" class="btn btn-outline-primary mt-3">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- COMPÉTENCES -->
+    <section id="skills" class="skills section">
+        <div class="container">
+
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h2>Compétences</h2>
+                <p>Technologies et outils maîtrisés</p>
+            </div>
+
+            <div class="row g-4" data-aos="fade-up">
+
+                <div class="col-lg-6">
+                    <!-- Langages -->
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <i class="bi bi-code-square"></i>
+                            </div>
+                            <h5>Langages de programmation</h5>
+                        </div>
+                        <div class="skill-badges">
+                            <span class="skill-badge">Java</span>
+                            <span class="skill-badge">JavaFX</span>
+                            <span class="skill-badge">Python</span>
+                            <span class="skill-badge">PHP</span>
+                            <span class="skill-badge">HTML/CSS</span>
+                            <span class="skill-badge">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks -->
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <i class="bi bi-layers"></i>
+                            </div>
+                            <h5>Frameworks & bibliothèques</h5>
+                        </div>
+                        <div class="skill-badges">
+                            <span class="skill-badge">Symfony</span>
+                            <span class="skill-badge">Bootstrap</span>
+                            <span class="skill-badge">Tkinter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Bases de données -->
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <i class="bi bi-database"></i>
+                            </div>
+                            <h5>Bases de données</h5>
+                        </div>
+                        <div class="skill-badges">
+                            <span class="skill-badge">MySQL</span>
+                            <span class="skill-badge">PostgreSQL</span>
+                            <span class="skill-badge">SQLite</span>
+                        </div>
+                    </div>
+
+                    <!-- Outils -->
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <i class="bi bi-tools"></i>
+                            </div>
+                            <h5>Outils & environnements</h5>
+                        </div>
+                        <div class="skill-badges">
+                            <span class="skill-badge">Git</span>
+                            <span class="skill-badge">Docker</span>
+                            <span class="skill-badge">Windows Server</span>
+                            <span class="skill-badge">PowerShell</span>
+                            <span class="skill-badge">Linux</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
     </section>
 
     <!-- PARCOURS -->
-    <section id="resume" class="resume section">
+    <section id="resume" class="resume section section-white">
         <div class="container">
 
-            <div class="section-title" data-aos="fade-up">
-                <h2>Parcours</h2>
-                <p>Formation en informatique, alternance en cybersécurité et premières expériences professionnelles.</p>
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h2>Mon Parcours</h2>
+                <p>Formation et expériences professionnelles</p>
             </div>
 
-            <div class="row">
+            <div class="row g-5">
 
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="resume-title">Profil</h3>
-                    <div class="resume-item pb-0">
-                        <h4>Ilan Dahan</h4>
-                        <p><em>Étudiant en BTS SIO SLAM et alternant en cybersécurité. Je travaille sur des projets concrets pour aider les équipes métier au quotidien.</em></p>
-                        <ul>
-                            <li>Paris, France</li>
-                            <li>ilandahan@gmail.com</li>
-                            <li>Objectif : ingénieur informatique</li>
-                        </ul>
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h3 class="h4 mb-4" style="color: #1a1a1a;"><i class="bi bi-mortarboard me-2 text-primary"></i>Formation</h3>
+
+                    <div class="timeline-item">
+                        <h4 class="h5" style="color: #1a1a1a;">BTS SIO — Option SLAM</h4>
+                        <p class="text-muted mb-2">2024 - 2026 • ORT de Montreuil</p>
+                        <p style="color: #1a1a1a;">Développement d'applications, bases de données, administration système.</p>
                     </div>
 
-                    <h3 class="resume-title">Éducation</h3>
-                    <div class="resume-item">
-                        <h4>BTS SIO — Option SLAM</h4>
-                        <h5>2024 - 2026</h5>
-                        <p><em>ORT de Montreuil</em></p>
-                        <p>Développement d’applications (Java, Python, Web), bases de données, sécurité et gestion de projet.</p>
-                    </div>
-
-                    <div class="resume-item">
-                        <h4>Baccalauréat Général</h4>
-                        <h5>2023</h5>
-                        <p><em>Lycée Ozar Hatorah, Créteil</em></p>
-                        <p>Spécialités : SVT et Mathématiques.</p>
-                    </div>
-
-                    <h3 class="resume-title">Qualités personnelles</h3>
-                    <div class="resume-item">
-                        <ul>
-                            <li>Adaptabilité : prise en main rapide de nouveaux environnements.</li>
-                            <li>Travail d’équipe : échanges réguliers avec profils techniques et métier.</li>
-                            <li>Résolution de problèmes : approche structurée et pragmatique.</li>
-                        </ul>
+                    <div class="timeline-item">
+                        <h4 class="h5" style="color: #1a1a1a;">Baccalauréat Général</h4>
+                        <p class="text-muted mb-2">2023 • Lycée Ozar Hatorah, Créteil</p>
+                        <p style="color: #1a1a1a;">Spécialités : SVT et Mathématiques</p>
                     </div>
                 </div>
 
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="resume-title">Expériences professionnelles</h3>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h3 class="h4 mb-4" style="color: #1a1a1a;"><i class="bi bi-briefcase me-2 text-primary"></i>Expériences</h3>
 
-                    <div class="resume-item">
-                        <h4>Alternant Développeur / Cybersécurité</h4>
-                        <h5>Depuis septembre 2025</h5>
-                        <p><em>Quick Source</em></p>
-                        <ul>
-                            <li>Réorganisation et sécurisation du serveur interne.</li>
-                            <li>Gestion des droits d’accès et des sauvegardes.</li>
-                            <li>Mise en place de règles simples de durcissement.</li>
-                            <li>Rédaction de procédures internes.</li>
-                        </ul>
+                    <div class="timeline-item">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h4 class="h5 mb-0" style="color: #1a1a1a;">Alternant Développeur</h4>
+                            <span class="badge" style="background: #2563eb;">En cours</span>
+                        </div>
+                        <p class="text-muted mb-2">Depuis sept. 2025 • Quick Source</p>
+                        <p style="color: #1a1a1a;">Développement d'outils, scripts d'automatisation, administration système.</p>
                     </div>
 
-                    <div class="resume-item">
-                        <h4>Stage de développement — Coffre-fort Python</h4>
-                        <h5>Juin 2025</h5>
-                        <p><em>MHD Conseil</em></p>
-                        <ul>
-                            <li>Développement d’un coffre-fort de mots de passe en Python.</li>
-                            <li>Chiffrement des données et interface simple pour l’utilisateur.</li>
-                        </ul>
+                    <div class="timeline-item">
+                        <h4 class="h5" style="color: #1a1a1a;">Stage Développement Python</h4>
+                        <p class="text-muted mb-2">Juin 2025 • MHD Conseil</p>
+                        <p style="color: #1a1a1a;">Développement d'un coffre-fort de mots de passe sécurisé.</p>
                     </div>
 
-                    <div class="resume-item">
-                        <h4>Banque Privée - Emploi d’été</h4>
-                        <h5>Juillet 2024 &amp; 2022</h5>
-                        <p><em>Oddo BHF</em></p>
-                        <ul>
-                            <li>Remédiation client et conformité KYC.</li>
-                            <li>Ouvertures / clôtures de comptes et archivage de documents.</li>
-                        </ul>
-                    </div>
-
-                    <div class="resume-item">
-                        <h4>Restauration — Traiteur Yhoma</h4>
-                        <h5>Juin – Juillet 2023</h5>
-                        <p><em>Paris</em></p>
-                        <ul>
-                            <li>Préparation, service et encaissement.</li>
-                        </ul>
-                    </div>
-
-                    <div class="resume-item">
-                        <h4>Bénévolat — Association Mazone</h4>
-                        <h5>Avril 2023</h5>
-                        <p><em>Paris</em></p>
-                        <ul>
-                            <li>Préparation et conditionnement de colis alimentaires.</li>
-                        </ul>
+                    <div class="timeline-item">
+                        <h4 class="h5" style="color: #1a1a1a;">Emploi d'été — Banque</h4>
+                        <p class="text-muted mb-2">Juillet 2024 & 2022 • Oddo BHF</p>
+                        <p style="color: #1a1a1a;">Conformité KYC et gestion documentaire.</p>
                     </div>
                 </div>
 
@@ -331,144 +639,165 @@
     </section>
 
     <!-- PROJETS -->
-    <section id="portfolio" class="portfolio section light-background">
+    <section id="portfolio" class="portfolio section">
         <div class="container">
 
-            <div class="section-title" data-aos="fade-up">
-                <h2>Projets</h2>
-                <p>Quelques projets qui montrent mon travail en développement et en cybersécurité.</p>
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h2>Mes Projets</h2>
+                <p>Réalisations académiques et professionnelles</p>
             </div>
 
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="row gy-4">
+            <div class="row g-4">
 
-                    <div class="col-lg-6">
-                        <div class="p-4 border rounded-3 h-100 light-background">
-                            <h3>Gestion des brit milot</h3>
-                            <p>Application pour gérer les Brit Milah : dossiers, formulaires parents, dates et suivi.</p>
-                            <a href="projet-brit-milot.html" class="btn btn-outline-primary mt-2">Voir le projet</a>
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="simple-card">
+                        <h3>Serveur Quick Source</h3>
+                        <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
+                            Développement de scripts Python et PowerShell pour automatiser la gestion du serveur,
+                            les sauvegardes et les droits d'accès.
+                        </p>
+
+                        <div class="mb-3">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">PowerShell</span>
+                            <span class="tech-badge">Windows Server</span>
                         </div>
-                    </div>
 
-                    <div class="col-lg-6">
-                        <div class="p-4 border rounded-3 h-100 light-background">
-                            <h3>Organisation du serveur Quick Source</h3>
-                            <p>Réorganisation du serveur de fichiers, sécurisation des accès et scripts d’automatisation.</p>
-                            <a href="quick-source-Alternance.html" class="btn btn-outline-primary mt-2">Voir le projet</a>
-                        </div>
+                        <a href="quick-source-Alternance.html" class="btn btn-outline-primary">Voir le projet</a>
                     </div>
-
-                    <div class="col-lg-6">
-                        <div class="p-4 border rounded-3 h-100 light-background">
-                            <h3>Site Restaurant — Réservations</h3>
-                            <p>Site vitrine avec module de réservation en ligne, déployé et utilisé par un restaurant.</p>
-                            <a href="https://rosetta-web.rf.gd/index.html" target="_blank" class="btn btn-primary me-2">Voir le site</a>
-                            <a href="projet-site-restaurant.html" class="btn btn-outline-primary mt-2">Voir le projet</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="p-4 border rounded-3 h-100 light-background">
-                            <h3>Coffre-fort de mots de passe</h3>
-                            <p>Application Python pour stocker des mots de passe chiffrés avec mot de passe maître.</p>
-                            <a href="projet-coffre-fort-python.html" class="btn btn-outline-primary mt-2">Voir le projet</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="p-4 border rounded-3 h-100 light-background">
-                            <h3>GestTravaux Pro — Release 1</h3>
-                            <p>Application de gestion de travaux immobiliers (Java + Symfony + MySQL).</p>
-                            <a href="projet-gesttravaux-pro.html" class="btn btn-outline-primary mt-2">Voir le projet</a>
-                        </div>
-                    </div>
-
                 </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="simple-card">
+                        <h3>Gestion Brit Milot</h3>
+                        <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
+                            Application Java/JavaFX pour gérer les cérémonies : formulaires, dossiers et planification.
+                        </p>
+
+                        <div class="mb-3">
+                            <span class="tech-badge">Java</span>
+                            <span class="tech-badge">JavaFX</span>
+                            <span class="tech-badge">MySQL</span>
+                        </div>
+
+                        <a href="projet-brit-milot.html" class="btn btn-outline-primary">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="simple-card">
+                        <h3>Coffre-fort Python</h3>
+                        <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
+                            Application de gestion sécurisée de mots de passe avec chiffrement AES-256.
+                        </p>
+
+                        <div class="mb-3">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Cryptographie</span>
+                            <span class="tech-badge">Tkinter</span>
+                        </div>
+
+                        <a href="projet-coffre-fort-python.html" class="btn btn-outline-primary">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="simple-card">
+                        <h3>Site Restaurant Rosetta</h3>
+                        <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
+                            Site web avec système de réservation en ligne, déployé et utilisé en production.
+                        </p>
+
+                        <div class="mb-3">
+                            <span class="tech-badge">HTML/CSS/JS</span>
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">MySQL</span>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <a href="https://rosetta-web.rf.gd/index.html" target="_blank" class="btn btn-primary flex-grow-1">Voir le site</a>
+                            <a href="projet-site-restaurant.html" class="btn btn-outline-primary flex-grow-1">Détails</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="contact section">
+    <section id="contact" class="contact section section-white">
         <div class="container">
 
-            <div class="section-title" data-aos="fade-up">
-                <h2>Contact</h2>
-                <p>Basé à Paris, ouvert aux opportunités en France et en Israël.</p>
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h2>Me Contacter</h2>
+                <p>Je suis disponible pour échanger</p>
             </div>
 
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="row gy-4">
+            <div class="row g-4 mb-5">
 
-                    <div class="col-lg-5">
-                        <div class="info-wrap">
-                            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                                <div>
-                                    <h3>Adresse</h3>
-                                    <p>Paris, Île-de-France</p>
-                                </div>
-                            </div>
-
-                            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                                <i class="bi bi-telephone flex-shrink-0"></i>
-                                <div>
-                                    <h3>Téléphone</h3>
-                                    <p>Sur demande après premier contact par email</p>
-                                </div>
-                            </div>
-
-                            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                                <i class="bi bi-envelope flex-shrink-0"></i>
-                                <div>
-                                    <h3>Email</h3>
-                                    <p>ilandahan@gmail.com</p>
-                                </div>
-                            </div>
-
-                            <div data-aos="fade-up" data-aos-delay="500">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999180805632!2d2.3488!3d48.8534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d877b6c6ff%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sfr!2sfr!4v1700000000000"
-                                        frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                        </div>
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="simple-card text-center">
+                        <i class="bi bi-geo-alt mb-3" style="font-size: 2.5rem; color: #2563eb;"></i>
+                        <h5 style="color: #1a1a1a;">Localisation</h5>
+                        <p style="color: #1a1a1a;">Paris, Île-de-France</p>
                     </div>
+                </div>
 
-                    <div class="col-lg-7">
-                        <form id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-                            <div class="row gy-4">
+                <div class="col-lg-4" data-aos="fade-up">
+                    <div class="simple-card text-center">
+                        <i class="bi bi-envelope mb-3" style="font-size: 2.5rem; color: #2563eb;"></i>
+                        <h5 style="color: #1a1a1a;">Email</h5>
+                        <p style="color: #1a1a1a;">ilandahan@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-left">
+                    <div class="simple-card text-center">
+                        <i class="bi bi-linkedin mb-3" style="font-size: 2.5rem; color: #2563eb;"></i>
+                        <h5 style="color: #1a1a1a;">LinkedIn</h5>
+                        <p><a href="https://www.linkedin.com/in/ilan-dahan-56a4a22ab" target="_blank" style="color: #2563eb; text-decoration: none;">Me connecter</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" data-aos="fade-up">
+                <div class="col-lg-8 mx-auto">
+                    <div class="simple-card">
+                        <h3 class="text-center mb-4">Envoyez-moi un message</h3>
+
+                        <form id="contact-form" class="php-email-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Votre nom" required style="padding: 12px; border-radius: 8px; border: 1px solid #e5e7eb;">
+                                </div>
 
                                 <div class="col-md-6">
-                                    <label for="name-field" class="pb-2">Votre nom</label>
-                                    <input type="text" name="name" id="name-field" class="form-control" required>
+                                    <input type="email" name="email" class="form-control" placeholder="Votre email" required style="padding: 12px; border-radius: 8px; border: 1px solid #e5e7eb;">
                                 </div>
 
-                                <div class="col-md-6">
-                                    <label for="email-field" class="pb-2">Votre email</label>
-                                    <input type="email" class="form-control" name="email" id="email-field" required>
+                                <div class="col-12">
+                                    <input type="text" name="subject" class="form-control" placeholder="Objet" required style="padding: 12px; border-radius: 8px; border: 1px solid #e5e7eb;">
                                 </div>
 
-                                <div class="col-md-12">
-                                    <label for="subject-field" class="pb-2">Objet</label>
-                                    <input type="text" class="form-control" name="subject" id="subject-field" required>
+                                <div class="col-12">
+                                    <textarea name="message" class="form-control" rows="6" placeholder="Votre message" required style="padding: 12px; border-radius: 8px; border: 1px solid #e5e7eb;"></textarea>
                                 </div>
 
-                                <div class="col-md-12">
-                                    <label for="message-field" class="pb-2">Message</label>
-                                    <textarea class="form-control" name="message" rows="10" id="message-field" required></textarea>
-                                </div>
+                                <div class="col-12 text-center">
+                                    <div class="loading" style="display: none; color: #2563eb;">Envoi en cours...</div>
+                                    <div class="error-message" style="display: none; color: #dc2626;"></div>
+                                    <div class="sent-message" style="display: none; color: #16a34a;">Message envoyé avec succès !</div>
 
-                                <div class="col-md-12 text-center">
-                                    <div class="loading">Chargement</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Votre message a été envoyé. Merci !</div>
-                                    <button type="submit">Envoyer le message</button>
+                                    <button type="submit" class="btn btn-primary btn-lg px-5 mt-3">
+                                        <i class="bi bi-send me-2"></i>Envoyer
+                                    </button>
                                 </div>
-
                             </div>
                         </form>
                     </div>
-
                 </div>
             </div>
 
@@ -477,20 +806,20 @@
 
 </main>
 
-<footer id="footer" class="footer position-relative light-background">
-    <div class="container">
-        <div class="copyright text-center">
-            <p><span>©</span> <strong class="px-1 sitename">Ilan Dahan</strong> <span>Tous droits réservés</span></p>
+<footer class="footer py-4" style="background: #1e293b; color: #ffffff; border-top: 1px solid #334155;">
+    <div class="container text-center">
+        <p class="mb-2" style="color: #ffffff;">© 2026 Ilan Dahan - Tous droits réservés</p>
+        <p class="small mb-3" style="color: #94a3b8;">Étudiant BTS SIO SLAM • Alternant développeur chez Quick Source</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/ilan-dahan-56a4a22ab" target="_blank" style="color: #2563eb; margin: 0 10px; font-size: 1.3rem;"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/ilan-yehouda-dahan" target="_blank" style="color: #ffffff; margin: 0 10px; font-size: 1.3rem;"><i class="bi bi-github"></i></a>
         </div>
-        <div class="credits"></div>
     </div>
 </footer>
 
 <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
     <i class="bi bi-arrow-up-short"></i>
 </a>
-
-<div id="preloader"></div>
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -506,69 +835,38 @@
 <!-- Main JS File -->
 <script src="assets/js/main.js"></script>
 
-<!-- EmailJS (Contact form) -->
+<!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-    // ✅ REMPLIS CES 3 VALEURS DEPUIS EMAILJS (Dashboard)
     const EMAILJS_PUBLIC_KEY  = "pkIoTu5M8gI9rSnIW";
     const EMAILJS_SERVICE_ID  = "service_6jtlffk";
     const EMAILJS_TEMPLATE_ID = "template_0jvjkko";
 
-    (function () {
-        // Init EmailJS
-        emailjs.init(EMAILJS_PUBLIC_KEY);
+    emailjs.init(EMAILJS_PUBLIC_KEY);
 
-        const form = document.getElementById("contact-form");
-        if (!form) return;
+    document.getElementById("contact-form").addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-        const loadingEl = form.querySelector(".loading");
-        const errorEl   = form.querySelector(".error-message");
-        const sentEl    = form.querySelector(".sent-message");
+        const form = e.target;
+        const loading = form.querySelector(".loading");
+        const error = form.querySelector(".error-message");
+        const success = form.querySelector(".sent-message");
 
-        // Ensure initial state (since we removed the template validate.js)
-        if (loadingEl) loadingEl.style.display = "none";
-        if (errorEl)   errorEl.style.display   = "none";
-        if (sentEl)    sentEl.style.display    = "none";
+        loading.style.display = "block";
+        error.style.display = "none";
+        success.style.display = "none";
 
-        function ensureHidden(name, value) {
-            let input = form.querySelector(`input[name="${name}"]`);
-            if (!input) {
-                input = document.createElement("input");
-                input.type = "hidden";
-                input.name = name;
-                form.appendChild(input);
-            }
-            input.value = value;
+        try {
+            await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
+            loading.style.display = "none";
+            success.style.display = "block";
+            form.reset();
+        } catch (err) {
+            loading.style.display = "none";
+            error.style.display = "block";
+            error.textContent = "Erreur lors de l'envoi. Réessayez ou contactez-moi par email.";
         }
-
-        form.addEventListener("submit", async (e) => {
-            e.preventDefault();
-
-            // UI
-            if (loadingEl) loadingEl.style.display = "block";
-            if (errorEl)   { errorEl.style.display = "none"; errorEl.innerHTML = ""; }
-            if (sentEl)    sentEl.style.display = "none";
-
-            // Extra variables for your EmailJS template
-            ensureHidden("time", new Date().toLocaleString("fr-FR"));
-            ensureHidden("page_url", window.location.href);
-
-            try {
-                await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
-
-                if (loadingEl) loadingEl.style.display = "none";
-                if (sentEl)    sentEl.style.display = "block";
-                form.reset();
-            } catch (err) {
-                console.error("EmailJS error:", err);
-                if (loadingEl) loadingEl.style.display = "none";
-                if (errorEl) {
-                    errorEl.style.display = "block";
-                    errorEl.innerHTML = "Erreur lors de l’envoi. Vérifie tes IDs EmailJS et réessaie.";
-                }
-            }
-        });
-    })();
+    });
 </script>
 
 </body>
