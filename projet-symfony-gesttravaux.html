@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Projet — GestTravaux Pro (Symfony) | Ilan Dahan</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Bootstrap / Icons / thème principal -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Styles spécifiques à la page projet -->
+    <style>
+        .project-page {
+            background: #f2f4f8; /* gris très clair */
+        }
+
+        .project-wrapper {
+            background: #f7f7f9;
+            border-radius: 24px;
+            padding: 2.5rem 2.5rem 3rem;
+            margin-top: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+        }
+
+        @media (max-width: 768px) {
+            .project-wrapper {
+                padding: 1.5rem 1.25rem 2rem;
+                border-radius: 18px;
+            }
+        }
+
+        .project-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .35rem .9rem;
+            border-radius: 999px;
+            background: rgba(13, 110, 253, 0.08);
+            color: #0d6efd;
+            font-size: .85rem;
+            font-weight: 500;
+            margin-bottom: .75rem;
+        }
+
+        .project-badge i {
+            font-size: 1rem;
+        }
+
+        .project-title {
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-bottom: .75rem;
+        }
+
+        .project-subtitle {
+            color: #6c757d;
+            max-width: 720px;
+        }
+
+        .project-section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: .35rem;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .project-section-title i {
+            color: #0d6efd;
+        }
+
+        .project-divider {
+            margin: 2.5rem 0 2rem;
+            border-top: 1px dashed #ced4da;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.4rem 1.6rem;
+            border: 1px solid #e3e6ef;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+            height: 100%;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-image {
+            border-radius: 18px;
+            box-shadow: 0 14px 35px rgba(15, 23, 42, 0.35);
+            border: 1px solid #111827;
+        }
+
+        .project-caption {
+            font-size: .8rem;
+            color: #6c757d;
+            margin-top: .4rem;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 0;
+        }
+
+        .pill-list li {
+            padding: .25rem .75rem;
+            border-radius: 999px;
+            border: 1px solid #d0d7e2;
+            background: #ffffff;
+            font-size: .8rem;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: .35rem;
+            font-size: .9rem;
+            text-decoration: none;
+            color: #6c757d;
+        }
+
+        .back-link:hover {
+            color: #0d6efd;
+            text-decoration: underline;
+        }
+        .section {
+            color: #000000;
+            background-color: var(--background-color);
+            padding: 100px 0;
+            overflow: clip;
+            position: relative;}
+    </style>
+
+</head>
+
+<body class="index-page project-page">
+
+<header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+        <img src="assets/moi.jpg" alt="Photo de profil d'Ilan Dahan" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+        <h1 class="sitename">Ilan Dahan</h1>
+    </a>
+
+    <div class="social-links text-center">
+        <a href="https://www.linkedin.com/in/ilan-dahan-56a4a22ab" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/ilan-yehouda-dahan" class="github" target="_blank"><i class="bi bi-github"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+        <ul>
+            <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Accueil</a></li>
+            <li><a href="index.html#about"><i class="bi bi-person navicon"></i> À propos</a></li>
+            <li><a href="index.html#skills"><i class="bi bi-bar-chart navicon"></i> Compétences</a></li>
+            <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Parcours</a></li>
+            <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Projets</a></li>
+            <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main class="main">
+
+    <section class="section">
+        <div class="container">
+
+            <div class="project-wrapper">
+
+                <!-- Lien retour -->
+                <a href="index.html#portfolio" class="back-link mb-3">
+                    <i class="bi bi-arrow-left"></i> Retour aux projets
+                </a>
+
+                <!-- Header projet -->
+                <div class="mb-4">
+                    <div class="project-badge">
+                        <i class="bi bi-code-slash"></i> Projet BTS SIO — Application web Symfony
+                    </div>
+                    <h1 class="project-title">GestTravaux Pro - Web</h1>
+                    <p class="project-subtitle">
+                        Application web développée avec Symfony pour la digitalisation des travaux immobiliers. 
+                        Interface pour inspecteurs, entrepreneurs et propriétaires avec gestion complète 
+                        des chantiers, devis et communications.
+                    </p>
+
+                    <ul class="pill-list mt-3">
+                        <li><i class="bi bi-code-slash me-1"></i>PHP / Symfony</li>
+                        <li><i class="bi bi-database me-1"></i>PostgreSQL</li>
+                        <li><i class="bi bi-window me-1"></i>HTML / CSS / JavaScript</li>
+                        <li><i class="bi bi-palette me-1"></i>Bootstrap</li>
+                        <li><i class="bi bi-shield-lock me-1"></i>Authentification sécurisée</li>
+                    </ul>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Contexte et objectifs -->
+                <div class="row gy-4 align-items-start">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-exclamation-circle"></i> Contexte du projet
+                        </h2>
+                        <p>
+                            Dans le cadre du projet GestTravaux Pro pour le syndic IMMOSYNC, 
+                            j'ai développé l'application web Symfony qui sert d'interface principale 
+                            pour les différents acteurs de la gestion des travaux immobiliers.
+                        </p>
+
+                        <h2 class="project-section-title mt-4">
+                            <i class="bi bi-bullseye"></i> Objectifs de l'application web
+                        </h2>
+                        <ul>
+                            <li>Fournir une interface intuitive pour inspecteurs, entrepreneurs et propriétaires.</li>
+                            <li>Permettre la consultation des chantiers selon le rôle de chaque utilisateur.</li>
+                            <li>Faciliter le dépôt de documents (photos, diagnostics énergétiques).</li>
+                            <li>Centraliser les communications et les validations en temps réel.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-6 text-center text-lg-end">
+                        <img src="assets/img/projets/gesttravauxpro-webapp.png"
+                             alt="Application web Symfony GestTravaux Pro"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Interface web Symfony avec tableau de bord principal 
+                            et accès personnalisé selon le rôle utilisateur.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Fonctionnalités par rôle -->
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-1-circle"></i> Authentification et accès
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                L'application web commence par une page d'authentification sécurisée :
+                            </p>
+                            <ul>
+                                <li><strong>Connexion sécurisée</strong> : email et mot de passe chiffrés.</li>
+                                <li><strong>Gestion des rôles</strong> : attribution automatique des permissions.</li>
+                                <li><strong>Interface professionnelle</strong> : branding IMMOSYNC intégré.</li>
+                                <li><strong>Sessions sécurisées</strong> : timeout automatique et déconnexion.</li>
+                            </ul>
+                            <p class="mb-0">
+                                Chaque utilisateur accède ensuite à son tableau de bord personnalisé 
+                                selon son rôle (inspecteur, entrepreneur, propriétaire, gestionnaire).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2 order-1 text-center">
+                        <img src="assets/img/projets/gesttravauxpro-login.png"
+                             alt="Page de connexion GestTravaux Pro"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Page d'authentification de l'application web Symfony 
+                            avec interface professionnelle et sécurisée.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Fonctionnalités par rôle -->
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-2-circle"></i> Fonctionnalités par rôle
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                L'application web adapte son interface selon le profil utilisateur :
+                            </p>
+                            <ul>
+                                <li><strong>Inspecteurs</strong> : consultation chantiers assignés, ajout observations, photos, documents.</li>
+                                <li><strong>Entrepreneurs</strong> : consultation demandes travaux, envoi devis en ligne.</li>
+                                <li><strong>Propriétaires</strong> : suivi travaux, validation décisions, messagerie.</li>
+                                <li><strong>Gestionnaires</strong> : vue d'ensemble, validation finale, rapports.</li>
+                            </ul>
+                            <p class="mb-0">
+                                Chaque rôle dispose d'un tableau de bord personnalisé avec les actions 
+                                pertinentes et les informations adaptées à ses besoins spécifiques.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2 order-1 text-center">
+                        <img src="assets/img/projets/gesttravauxpro-roles.png"
+                             alt="Fonctionnalités par rôle GestTravaux Pro"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Interfaces adaptées selon le rôle : inspecteur, entrepreneur, 
+                            propriétaire et gestionnaire avec accès spécifiques.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Architecture Symfony et technique -->
+                <div class="row gy-4">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-2-circle"></i> Architecture Symfony
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                L'application repose sur une architecture MVC robuste avec Symfony :
+                            </p>
+                            <ul>
+                                <li><strong>Structure MVC</strong> : séparation claire entre modèles, vues et contrôleurs.</li>
+                                <li><strong>Base de données PostgreSQL</strong> : accès centralisé via Doctrine ORM.</li>
+                                <li><strong>Système d'authentification</strong> : gestion sécurisée des rôles et permissions.</li>
+                                <li><strong>API REST</strong> : endpoints pour communication avec application desktop.</li>
+                            </ul>
+
+                            <h6 class="mt-3 mb-1">Compétences Symfony mises en avant :</h6>
+                            <ul class="mb-0">
+                                <li>Développement d'applications web professionnelles.</li>
+                                <li>Gestion de base de données avec Doctrine ORM.</li>
+                                <li>Sécurité et gestion des droits d'accès.</li>
+                                <li>Conception d'interfaces responsive avec Bootstrap.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-gear-wide-connected"></i> Réalisations techniques
+                        </h2>
+                        <div class="project-card mt-2">
+                            <h6>Modules développés</h6>
+                            <ul>
+                                <li>Module de gestion des chantiers avec statuts en temps réel.</li>
+                                <li>Système de gestion des documents et photos.</li>
+                                <li>Messagerie interne entre les différents acteurs.</li>
+                                <li>Interface de comparaison des devis et validation.</li>
+                                <li>Génération automatique des procès-verbaux de réception.</li>
+                            </ul>
+
+                            <h6 class="mt-3">Points forts du développement Symfony :</h6>
+                            <ul class="mb-0">
+                                <li>Code propre et maintenable avec architecture standard.</li>
+                                <li>Performance optimisée avec cache et requêtes efficaces.</li>
+                                <li>Interface utilisateur moderne et intuitive.</li>
+                                <li>Scalabilité pour évolutions futures.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lien vers version Java -->
+                <div class="text-center mt-5">
+                    <a href="projet-java-gesttravaux.html" class="btn btn-outline-primary">
+                        <i class="bi bi-arrow-right me-2"></i>
+                        Voir la version application desktop Java
+                    </a>
+                </div>
+
+            </div><!-- /.project-wrapper -->
+
+        </div>
+    </section>
+
+</main>
+
+<footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+        <div class="copyright text-center ">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">Ilan Dahan</strong> <span>All Rights Reserved</span></p>
+        </div>
+        <div class="credits"></div>
+    </div>
+
+</footer>
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/typed.js/typed.umd.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

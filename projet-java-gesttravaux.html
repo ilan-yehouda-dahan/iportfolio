@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Projet — GestTravaux Pro (Java) | Ilan Dahan</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Bootstrap / Icons / thème principal -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Styles spécifiques à la page projet -->
+    <style>
+        .project-page {
+            background: #f2f4f8; /* gris très clair */
+        }
+
+        .project-wrapper {
+            background: #f7f7f9;
+            border-radius: 24px;
+            padding: 2.5rem 2.5rem 3rem;
+            margin-top: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+        }
+
+        @media (max-width: 768px) {
+            .project-wrapper {
+                padding: 1.5rem 1.25rem 2rem;
+                border-radius: 18px;
+            }
+        }
+
+        .project-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .35rem .9rem;
+            border-radius: 999px;
+            background: rgba(13, 110, 253, 0.08);
+            color: #0d6efd;
+            font-size: .85rem;
+            font-weight: 500;
+            margin-bottom: .75rem;
+        }
+
+        .project-badge i {
+            font-size: 1rem;
+        }
+
+        .project-title {
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-bottom: .75rem;
+        }
+
+        .project-subtitle {
+            color: #6c757d;
+            max-width: 720px;
+        }
+
+        .project-section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: .35rem;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .project-section-title i {
+            color: #0d6efd;
+        }
+
+        .project-divider {
+            margin: 2.5rem 0 2rem;
+            border-top: 1px dashed #ced4da;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.4rem 1.6rem;
+            border: 1px solid #e3e6ef;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+            height: 100%;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-image {
+            border-radius: 18px;
+            box-shadow: 0 14px 35px rgba(15, 23, 42, 0.35);
+            border: 1px solid #111827;
+        }
+
+        .project-caption {
+            font-size: .8rem;
+            color: #6c757d;
+            margin-top: .4rem;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 0;
+        }
+
+        .pill-list li {
+            padding: .25rem .75rem;
+            border-radius: 999px;
+            border: 1px solid #d0d7e2;
+            background: #ffffff;
+            font-size: .8rem;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: .35rem;
+            font-size: .9rem;
+            text-decoration: none;
+            color: #6c757d;
+        }
+
+        .back-link:hover {
+            color: #0d6efd;
+            text-decoration: underline;
+        }
+        .section {
+            color: #000000;
+            background-color: var(--background-color);
+            padding: 100px 0;
+            overflow: clip;
+            position: relative;}
+    </style>
+
+</head>
+
+<body class="index-page project-page">
+
+<header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+        <img src="assets/moi.jpg" alt="Photo de profil d'Ilan Dahan" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+        <h1 class="sitename">Ilan Dahan</h1>
+    </a>
+
+    <div class="social-links text-center">
+        <a href="https://www.linkedin.com/in/ilan-dahan-56a4a22ab" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/ilan-yehouda-dahan" class="github" target="_blank"><i class="bi bi-github"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+        <ul>
+            <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Accueil</a></li>
+            <li><a href="index.html#about"><i class="bi bi-person navicon"></i> À propos</a></li>
+            <li><a href="index.html#skills"><i class="bi bi-bar-chart navicon"></i> Compétences</a></li>
+            <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Parcours</a></li>
+            <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Projets</a></li>
+            <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main class="main">
+
+    <section class="section">
+        <div class="container">
+
+            <div class="project-wrapper">
+
+                <!-- Lien retour -->
+                <a href="index.html#portfolio" class="back-link mb-3">
+                    <i class="bi bi-arrow-left"></i> Retour aux projets
+                </a>
+
+                <!-- Header projet -->
+                <div class="mb-4">
+                    <div class="project-badge">
+                        <i class="bi bi-window"></i> Projet BTS SIO — Application desktop JavaFX
+                    </div>
+                    <h1 class="project-title">GestTravaux Pro - Desktop</h1>
+                    <p class="project-subtitle">
+                        Application desktop développée en JavaFX pour les gestionnaires du syndic IMMOSYNC. 
+                        Interface de pilotage complet avec analyse comparative des devis, visualisation 
+                        des chantiers et outils de décision avancés.
+                    </p>
+
+                    <ul class="pill-list mt-3">
+                        <li><i class="bi bi-code-slash me-1"></i>Java / JavaFX</li>
+                        <li><i class="bi bi-database me-1"></i>PostgreSQL</li>
+                        <li><i class="bi bi-window me-1"></i>Interface desktop native</li>
+                        <li><i class="bi bi-graph-up me-1"></i>Analyse comparative</li>
+                        <li><i class="bi bi-shield-lock me-1"></i>Connexion sécurisée BDD</li>
+                    </ul>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Contexte et objectifs -->
+                <div class="row gy-4 align-items-start">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-exclamation-circle"></i> Rôle de l'application desktop
+                        </h2>
+                        <p>
+                            L'application desktop JavaFX est destinée aux gestionnaires de la société IMMOSYNC 
+                            pour piloter l'ensemble des chantiers et prendre les décisions stratégiques 
+                            basées sur l'analyse des devis reçus.
+                        </p>
+
+                        <h2 class="project-section-title mt-4">
+                            <i class="bi bi-bullseye"></i> Objectifs spécifiques
+                        </h2>
+                        <ul>
+                            <li>Centraliser la gestion de tous les chantiers en une interface.</li>
+                            <li>Permettre l'analyse comparative des devis selon plusieurs critères.</li>
+                            <li>Faciliter la prise de décision pour les gestionnaires.</li>
+                            <li>Assurer la cohérence des données avec l'application web.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-6 text-center text-lg-end">
+                        <img src="assets/img/projets/gesttravauxpro-desktop.png"
+                             alt="Application desktop JavaFX GestTravaux Pro"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Interface desktop JavaFX avec tableau de bord gestionnaire 
+                            et outils d'analyse comparative des devis.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Fonctionnalités principales -->
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-1-circle"></i> Accès et authentification
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                L'application desktop nécessite une authentification sécurisée :
+                            </p>
+                            <ul>
+                                <li><strong>Connexion base de données</strong> : accès direct PostgreSQL.</li>
+                                <li><strong>Identifiants sécurisés</strong> : chiffrement des credentials.</li>
+                                <li><strong>Interface de login</strong> : écran d'authentification professionnel.</li>
+                                <li><strong>Sessions persistantes</strong> : mémorisation de la connexion.</li>
+                            </ul>
+                            <p class="mb-0">
+                                Une fois authentifié, le gestionnaire accède au tableau de bord 
+                                avec synchronisation temps réel des données de l'application web.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2 order-1 text-center">
+                        <img src="assets/img/projets/gesttravauxpro-desktop-login.png"
+                             alt="Page de connexion application desktop GestTravaux Pro"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Écran d'authentification de l'application desktop JavaFX 
+                            avec connexion sécurisée à la base de données PostgreSQL.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Fonctionnalités principales -->
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-2-circle"></i> Fonctionnalités de gestion
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                L'application desktop offre des fonctionnalités avancées de gestion :
+                            </p>
+                            <ul>
+                                <li><strong>Tableau de bord complet</strong> : vue d'ensemble de tous les chantiers.</li>
+                                <li><strong>Analyse des devis</strong> : comparaison selon prix, date, spécialité.</li>
+                                <li><strong>Suivi en temps réel</strong> : synchronisation avec application web.</li>
+                                <li><strong>Génération de rapports</strong> : bilans périodiques et statistiques.</li>
+                            </ul>
+                            <p class="mb-0">
+                                Les gestionnaires peuvent ainsi piloter efficacement l'activité 
+                                et prendre des décisions éclairées basées sur des données objectives.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2 order-1 text-center">
+                        <img src="assets/img/projets/gesttravauxpro-analyse.png"
+                             alt="Analyse comparative GestTravaux Pro"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Module d'analyse comparative des devis avec critères multiples 
+                            et aide à la décision pour les gestionnaires.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Architecture JavaFX et technique -->
+                <div class="row gy-4">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-2-circle"></i> Architecture JavaFX
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                L'application desktop repose sur une architecture Java robuste :
+                            </p>
+                            <ul>
+                                <li><strong>JavaFX</strong> : interface moderne et responsive pour desktop.</li>
+                                <li><strong>Connexion PostgreSQL</strong> : accès direct à la base de données partagée.</li>
+                                <li><strong>Architecture MVC</strong> : séparation logique métier et présentation.</li>
+                                <li><strong>Synchronisation</strong> : échanges temps réel avec application web.</li>
+                            </ul>
+
+                            <h6 class="mt-3 mb-1">Compétences Java mises en avant :</h6>
+                            <ul class="mb-0">
+                                <li>Développement d'applications desktop natives.</li>
+                                <li>Gestion de base de données avec JDBC.</li>
+                                <li>Conception d'interfaces utilisateur avec JavaFX.</li>
+                                <li>Architecture client-serveur robuste.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-gear-wide-connected"></i> Réalisations techniques
+                        </h2>
+                        <div class="project-card mt-2">
+                            <h6>Modules développés</h6>
+                            <ul>
+                                <li>Module d'analyse comparative multi-critères des devis.</li>
+                                <li>Tableau de bord avec graphiques et statistiques.</li>
+                                <li>Système de synchronisation avec base de données centrale.</li>
+                                <li>Interface de validation et de décision des chantiers.</li>
+                                <li>Génération automatique de rapports PDF.</li>
+                            </ul>
+
+                            <h6 class="mt-3">Points forts du développement Java :</h6>
+                            <ul class="mb-0">
+                                <li>Performance optimisée pour traitement rapide des données.</li>
+                                <li>Interface utilisateur intuitive et professionnelle.</li>
+                                <li>Gestion robuste des erreurs et des exceptions.</li>
+                                <li>Scalabilité pour grandes volumes de données.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lien vers version Symfony -->
+                <div class="text-center mt-5">
+                    <a href="projet-symfony-gesttravaux.html" class="btn btn-outline-primary">
+                        <i class="bi bi-arrow-left me-2"></i>
+                        Voir la version application web Symfony
+                    </a>
+                </div>
+
+            </div><!-- /.project-wrapper -->
+
+        </div>
+    </section>
+
+</main>
+
+<footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+        <div class="copyright text-center ">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">Ilan Dahan</strong> <span>All Rights Reserved</span></p>
+        </div>
+        <div class="credits"></div>
+    </div>
+
+</footer>
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/typed.js/typed.umd.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
