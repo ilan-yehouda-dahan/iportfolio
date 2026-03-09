@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Projet — GENIA | Ilan Dahan</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Bootstrap / Icons / thème principal -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Styles spécifiques à la page projet -->
+    <style>
+        .project-page {
+            background: #f2f4f8; /* gris très clair */
+        }
+
+        .project-wrapper {
+            background: #f7f7f9;
+            border-radius: 24px;
+            padding: 2.5rem 2.5rem 3rem;
+            margin-top: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+        }
+
+        @media (max-width: 768px) {
+            .project-wrapper {
+                padding: 1.5rem 1.25rem 2rem;
+                border-radius: 18px;
+            }
+        }
+
+        .project-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .35rem .9rem;
+            border-radius: 999px;
+            background: rgba(13, 110, 253, 0.08);
+            color: #0d6efd;
+            font-size: .85rem;
+            font-weight: 500;
+            margin-bottom: .75rem;
+        }
+
+        .project-badge i {
+            font-size: 1rem;
+        }
+
+        .project-title {
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-bottom: .75rem;
+        }
+
+        .project-subtitle {
+            color: #6c757d;
+            max-width: 720px;
+        }
+
+        .project-section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: .35rem;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .project-section-title i {
+            color: #0d6efd;
+        }
+
+        .project-divider {
+            margin: 2.5rem 0 2rem;
+            border-top: 1px dashed #ced4da;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.4rem 1.6rem;
+            border: 1px solid #e3e6ef;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+            height: 100%;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-image {
+            border-radius: 18px;
+            box-shadow: 0 14px 35px rgba(15, 23, 42, 0.35);
+            border: 1px solid #111827;
+        }
+
+        .project-caption {
+            font-size: .8rem;
+            color: #6c757d;
+            margin-top: .4rem;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 0;
+        }
+
+        .pill-list li {
+            padding: .25rem .75rem;
+            border-radius: 999px;
+            border: 1px solid #d0d7e2;
+            background: #ffffff;
+            font-size: .8rem;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: .35rem;
+            font-size: .9rem;
+            text-decoration: none;
+            color: #6c757d;
+        }
+
+        .back-link:hover {
+            color: #0d6efd;
+            text-decoration: underline;
+        }
+        .section {
+            color: #000000;
+            background-color: var(--background-color);
+            padding: 100px 0;
+            overflow: clip;
+            position: relative;}
+    </style>
+
+</head>
+
+<body class="index-page project-page">
+
+<header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+        <img src="assets/moi.jpg" alt="Photo de profil d'Ilan Dahan" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+        <h1 class="sitename">Ilan Dahan</h1>
+    </a>
+
+    <div class="social-links text-center">
+        <a href="https://www.linkedin.com/in/ilan-dahan-56a4a22ab" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/ilan-yehouda-dahan" class="github" target="_blank"><i class="bi bi-github"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+        <ul>
+            <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Accueil</a></li>
+            <li><a href="index.html#about"><i class="bi bi-person navicon"></i> À propos</a></li>
+            <li><a href="index.html#skills"><i class="bi bi-bar-chart navicon"></i> Compétences</a></li>
+            <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Parcours</a></li>
+            <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Projets</a></li>
+            <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main class="main">
+
+    <section class="section">
+        <div class="container">
+
+            <div class="project-wrapper">
+
+                <!-- Lien retour -->
+                <a href="index.html#portfolio" class="back-link ">
+                    <i class="bi bi-arrow-left"></i> Retour aux projets
+                </a>
+
+                <!-- Header projet -->
+                <div class="mb-4">
+                    <div class="project-badge">
+                        <i class="bi bi-cpu"></i> Projet d'entreprise — Intelligence Artificielle locale sécurisée
+                    </div>
+                    <h1 class="project-title">GENIA</h1>
+                    <p class="project-subtitle">
+                        Solution d'intelligence artificielle qui s'installe sur les serveurs locaux des entreprises 
+                        pour garantir la confidentialité des données. Analyse de documents, Q&A intelligent, 
+                        rédaction assistée et automatisation - le tout sans jamais quitter l'infrastructure cliente.
+                    </p>
+
+                    <ul class="pill-list ">
+                        <li><i class="bi bi-code-slash me-1"></i>PHP / Symfony</li>
+                        <li><i class="bi bi-database me-1"></i>PostgreSQL</li>
+                        <li><i class="bi bi-window me-1"></i>JavaScript / HTML / CSS</li>
+                        <li><i class="bi bi-box me-1"></i>Docker</li>
+                        <li><i class="bi bi-shield-lock me-1"></i>Chiffrement AES-256</li>
+                    </ul>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Problématique / Objectifs + interface -->
+                <div class="row gy-4 align-items-start">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-exclamation-circle"></i> Problématique
+                        </h2>
+                        <p>
+                            Les entreprises hésitent à utiliser les IA cloud à cause des risques de confidentialité 
+                            sur leurs données sensibles. Elles perdent ainsi les bénéfices de l'IA 
+                            pour l'analyse de documents, l'assistance à la rédaction et l'automatisation.
+                        </p>
+
+                        <h2 class="project-section-title mt-4">
+                            <i class="bi bi-bullseye"></i> Objectifs
+                        </h2>
+                        <ul>
+                            <li>Garantir 100% de confidentialité avec une IA locale.</li>
+                            <li>Offrir les mêmes fonctionnalités qu'une IA cloud (analyse, Q&A, rédaction).</li>
+                            <li>Interface intuitive pour les utilisateurs non techniques.</li>
+                            <li>Déployer facilement sur l'infrastructure existante du client.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-6 text-center text-lg-end">
+                        <img src="assets/img/projets/genia-interface.jpg"
+                             alt="Interface GENIA"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Interface principale GENIA : gestion des dossiers, documents et chat IA.
+                            Les données restent 100% sur les serveurs locaux de l'entreprise.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Étape 1 : Authentification et navigation -->
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-1-circle"></i> Authentification sécurisée et navigation
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                L'application commence par une page de connexion sécurisée :
+                            </p>
+                            <ul>
+                                <li>Formulaire d'authentification avec email et mot de passe.</li>
+                                <li>Option "Se souvenir de mes informations" pour faciliter l'accès.</li>
+                                <li>Interface professionnelle avec branding CAPADYN/AdaGenIA.</li>
+                                <li>Accès direct à l'espace de travail après connexion.</li>
+                            </ul>
+                            <p class="mb-0">
+                                Toutes les communications sont chiffrées et les sessions gérées localement 
+                                sans dépendance à des services externes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2 order-1 text-center">
+                        <img src="assets/img/projets/loginGenia.jpg"
+                             alt="Page de connexion GENIA"
+                             class="img-fluid project-image">
+                        <p class="project-caption">
+                            Page de connexion sécurisée avec option de mémorisation des informations.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Étape 2 : Gestion des dossiers et documents -->
+                <div class="row gy-4 align-items-start">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-2-circle"></i> Organisation des dossiers et documents
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                L'interface principale permet d'organiser le travail de manière structurée :
+                            </p>
+                            <ul>
+                                <li><strong>Mes Dossiers</strong> : Création et gestion des projets avec bouton "Nouveau dossier".</li>
+                                <li><strong>Dossiers Partagés</strong> : Collaboration en équipe avec accès contrôlé.</li>
+                                <li><strong>Mes Documents</strong> : Upload de fichiers PDF comme "leadership.pdf".</li>
+                                <li><strong>Mes Notes</strong> : Annotations personnelles sur les documents.</li>
+                            </ul>
+                            <p class="mb-0">
+                                Chaque dossier affiche la date de création et le nombre de documents, 
+                                permettant une navigation rapide et intuitive.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <img src="assets/img/projets/genia-dossiers.jpg"
+                             alt="Gestion des dossiers GENIA"
+                             class="img-fluid project-image ">
+                        <p class="project-caption">
+                            Interface de gestion des dossiers avec organisation claire et accès rapide.
+                        </p>
+
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Étape 3 : Interface IA et fonctionnalités avancées -->
+                <div class="row gy-4">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-3-circle"></i> Interface IA et fonctionnalités avancées
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                Le cœur de l'application : l'interface conversationnelle avec l'IA :
+                            </p>
+                            <ul>
+                                <li><strong>Zone de chat</strong> : "Commencez à écrire..." pour poser des questions.</li>
+                                <li><strong>Mode conversationnel</strong> : Dialogue naturel avec l'IA.</li>
+                                <li><strong>Expliquer+</strong> : Explications contextuelles approfondies.</li>
+                                <li><strong>Utilisation des résumés</strong> : Génération et exploitation automatique.</li>
+                            </ul>
+
+                            <h6 class=" mb-1">Options avancées :</h6>
+                            <ul class="mb-0">
+                                <li><strong>Niveau d'expertise</strong> : Adaptation des réponses au contexte utilisateur.</li>
+                                <li><strong>Questions suggérées</strong> : Suggestions basées sur le contenu des documents.</li>
+                                <li><strong>Indicateur de documents</strong> : "Docs 0/1" montrant les fichiers utilisés.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-gear-wide-connected"></i> Partie technique & compétences
+                        </h2>
+                        <div class="project-card mt-2">
+                            <h6>Stack technique</h6>
+                            <ul>
+                                <li>Back-end : PHP / Symfony (API REST, moteur IA, chiffrement).</li>
+                                <li>Base de données : PostgreSQL avec indexation plein texte pour la recherche.</li>
+                                <li>Front-end : JavaScript vanilla avec interface responsive.</li>
+                                <li>Docker : Containerisation pour déploiement simplifié.</li>
+                                <li>Sécurité : Chiffrement AES-256, authentification JWT, isolation réseau.</li>
+                            </ul>
+
+                            <h6 class="">Compétences mises en avant</h6>
+                            <ul class="mb-0">
+                                <li>Architecture d'IA locale avec respect de la confidentialité.</li>
+                                <li>Conception d'interface utilisateur intuitive et professionnelle.</li>
+                                <li>Gestion de documents PDF avec indexation et recherche.</li>
+                                <li>Déploiement sur infrastructure cliente sans dépendances cloud.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.project-wrapper -->
+
+        </div>
+    </section>
+
+</main>
+
+<footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+        <div class="copyright text-center ">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">Ilan Dahan</strong> <span>All Rights Reserved</span></p>
+        </div>
+        <div class="credits"></div>
+    </div>
+
+</footer>
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/typed.js/typed.umd.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
