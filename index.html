@@ -4,216 +4,50 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
     <title>Portfolio - Ilan Dahan | BTS SIO SLAM</title>
     <meta content="Portfolio d'Ilan Dahan, alternant développeur chez Quick Source, étudiant BTS SIO SLAM" name="description">
     <meta content="Ilan Dahan, BTS SIO, SLAM, Quick Source, développeur" name="keywords">
-
     <link href="assets/img/logoidd.png" rel="icon">
     <link href="assets/img/logoidd.png" rel="apple-touch-icon">
-
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
 
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #1a1a1a;
-            background-color: #1e293b;
-            font-size: 16px;
-            line-height: 1.7;
-        }
-
-        .hero {
-            background: #1e293b;
-            min-height: 100vh;
-        }
-
-        .section {
-            padding: 80px 0;
-            background: #1e293b;
-        }
-
-        /* Sections blanches */
-        .section-white {
-            background: #ffffff !important;
-        }
-
-        .section-title h2 {
-            font-size: 2.2rem;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #ffffff;
-            font-size: 1.1rem;
-        }
-
-        /* Titres pour sections blanches */
-        .section-white .section-title h2 {
-            color: #1a1a1a;
-        }
-
-        .section-white .section-title p {
-            color: #666;
-        }
-
-        .simple-card {
-            background: #fff;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 30px;
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-
-        .simple-card:hover {
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transform: translateY(-3px);
-        }
-
-        .simple-card h3 {
-            color: #1a1a1a;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .btn-primary {
-            background: #2563eb;
-            border: none;
-            padding: 12px 28px;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-
-        .btn-primary:hover {
-            background: #1e40af;
-        }
-
-        .btn-outline-primary {
-            border: 2px solid #2563eb;
-            color: #2563eb;
-            padding: 12px 28px;
-            border-radius: 8px;
-            font-weight: 500;
-            background: transparent;
-        }
-
-        .btn-outline-primary:hover {
-            background: #2563eb;
-            color: white;
-        }
-
-        .tech-badge {
-            background: #f3f4f6;
-            color: #1a1a1a;
-            padding: 6px 14px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            display: inline-block;
-            margin: 4px;
-            border: 1px solid #e5e7eb;
-        }
-
-        .bg-light-section {
-            background-color: #1e293b;
-        }
-
-        /* Compétences avec icônes */
-        .skill-category {
-            background: white;
-            border: 1px solid #e5e7eb;
-            padding: 25px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-
-        .skill-category-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .skill-category-icon {
-            width: 50px;
-            height: 50px;
-            background: #eff6ff;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-        }
-
-        .skill-category-icon i {
-            font-size: 1.5rem;
-            color: #2563eb;
-        }
-
-        .skill-category h5 {
-            color: #1a1a1a;
-            font-size: 1.1rem;
-            margin: 0;
-            font-weight: 600;
-        }
-
-        .skill-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-badge {
-            background: #eff6ff;
-            color: #2563eb;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 30px;
-            padding-bottom: 30px;
-            border-left: 2px solid #e5e7eb;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -6px;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #2563eb;
-        }
-
-        .timeline-item:last-child {
-            border-left: none;
-        }
-
-        /* Pour section blanche */
-        .section-white .timeline-item {
-            border-left-color: #e5e7eb;
-        }
+        body { font-family: 'Inter', sans-serif; color: #1a1a1a; background-color: #1e293b; font-size: 16px; line-height: 1.7; }
+        .hero { background: #1e293b; min-height: 100vh; }
+        .section { padding: 80px 0; background: #1e293b; }
+        .section-white { background: #ffffff !important; }
+        .section-title h2 { font-size: 2.2rem; font-weight: 600; color: #ffffff; margin-bottom: 10px; }
+        .section-title p { color: #ffffff; font-size: 1.1rem; }
+        .section-white .section-title h2 { color: #1a1a1a; }
+        .section-white .section-title p { color: #666; }
+        .simple-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 30px; transition: all 0.3s ease; height: 100%; }
+        .simple-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); transform: translateY(-3px); }
+        .simple-card h3 { color: #1a1a1a; font-size: 1.4rem; margin-bottom: 15px; font-weight: 600; }
+        .btn-primary { background: #2563eb; border: none; padding: 12px 28px; border-radius: 8px; font-weight: 500; transition: all 0.3s; }
+        .btn-primary:hover { background: #1e40af; }
+        .btn-outline-primary { border: 2px solid #2563eb; color: #2563eb; padding: 12px 28px; border-radius: 8px; font-weight: 500; background: transparent; }
+        .btn-outline-primary:hover { background: #2563eb; color: white; }
+        .tech-badge { background: #f3f4f6; color: #1a1a1a; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; display: inline-block; margin: 4px; border: 1px solid #e5e7eb; }
+        .bg-light-section { background-color: #1e293b; }
+        .skill-category { background: white; border: 1px solid #e5e7eb; padding: 25px; border-radius: 12px; margin-bottom: 20px; }
+        .skill-category-header { display: flex; align-items: center; margin-bottom: 20px; }
+        .skill-category-icon { width: 50px; height: 50px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 15px; }
+        .skill-category-icon i { font-size: 1.5rem; color: #2563eb; }
+        .skill-category h5 { color: #1a1a1a; font-size: 1.1rem; margin: 0; font-weight: 600; }
+        .skill-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill-badge { background: #eff6ff; color: #2563eb; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
+        .timeline-item { position: relative; padding-left: 30px; padding-bottom: 30px; border-left: 2px solid #e5e7eb; }
+        .timeline-item::before { content: ''; position: absolute; left: -6px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: #2563eb; }
+        .timeline-item:last-child { border-left: none; }
+        .section-white .timeline-item { border-left-color: #e5e7eb; }
     </style>
 </head>
 
@@ -221,28 +55,25 @@
 
 <header id="header" class="header d-flex flex-column" style="background: #1e293b;">
     <i class="header-toggle d-xl-none bi bi-list"></i>
-
     <div class="profile-img">
         <img src="assets/moi.jpg" alt="Ilan Dahan" class="img-fluid rounded-circle">
     </div>
-
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
         <h1 class="sitename">Ilan Dahan</h1>
     </a>
-
     <div class="social-links text-center">
         <a href="https://www.linkedin.com/in/ilan-dahan-56a4a22ab" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
         <a href="https://github.com/ilan-yehouda-dahan" class="github" target="_blank"><i class="bi bi-github"></i></a>
     </div>
-
     <nav id="navmenu" class="navmenu">
         <ul>
             <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Accueil</a></li>
             <li><a href="#about"><i class="bi bi-person navicon"></i>À propos</a></li>
-            <li><a href="#entreprise"><i class="bi bi-building navicon"></i>Entreprise</a></li>
-            <li><a href="#skills"><i class="bi bi-code-slash navicon"></i>Compétences</a></li>
             <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i>Parcours</a></li>
+            <li><a href="#skills"><i class="bi bi-code-slash navicon"></i>Compétences</a></li>
+            <li><a href="#entreprise"><i class="bi bi-building navicon"></i>Entreprise</a></li>
             <li><a href="#portfolio"><i class="bi bi-images navicon"></i>Projets</a></li>
+            <li><a href="veille.html"><i class="bi bi-newspaper navicon"></i>Veille</a></li>
             <li><a href="#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
         </ul>
     </nav>
@@ -250,84 +81,63 @@
 
 <main class="main">
 
-    <!-- HERO -->
+    <!-- ===== HERO ===== -->
     <section id="hero" class="hero section d-flex align-items-center">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
-                    <p class="text-white-50 mb-2" style="font-size: 0.95rem; letter-spacing: 2px;">BTS SIO SLAM • ALTERNANT DÉVELOPPEUR</p>
-                    <h1 class="text-white mb-3" style="font-size: 3rem; font-weight: 700;">
-                        Bonjour, je suis Ilan Dahan
-                    </h1>
+                    <p class="text-white-50 mb-2" style="font-size: 0.95rem; letter-spacing: 2px;">BTS SIO SLAM &bull; ALTERNANT DÉVELOPPEUR</p>
+                    <h1 class="text-white mb-3" style="font-size: 3rem; font-weight: 700;">Bonjour, je suis Ilan Dahan</h1>
                     <p class="text-white mb-4" style="font-size: 1.15rem; line-height: 1.7; max-width: 700px; margin: 0 auto;">
                         Alternant développeur chez Quick Source, je conçois des applications
                         et des outils pour améliorer les processus de l'entreprise.
                     </p>
-
                     <div class="d-flex gap-3 justify-content-center mt-4">
-                        <a href="#portfolio" class="btn btn-light btn-lg">
-                            <i class="bi bi-code-slash me-2"></i>Mes projets
-                        </a>
-                        <a href="#contact" class="btn btn-outline-light btn-lg">
-                            <i class="bi bi-send me-2"></i>Me contacter
-                        </a>
+                        <a href="#portfolio" class="btn btn-light btn-lg"><i class="bi bi-code-slash me-2"></i>Mes projets</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg"><i class="bi bi-send me-2"></i>Me contacter</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- À PROPOS -->
+    <!-- ===== À PROPOS ===== -->
     <section id="about" class="about section">
         <div class="container">
-
             <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>À propos</h2>
                 <p>Étudiant BTS SIO SLAM et développeur en alternance</p>
             </div>
-
             <div class="row g-4">
-
                 <div class="col-lg-5" data-aos="fade-right">
                     <div class="simple-card">
                         <h3 class="mb-3">Profil</h3>
-
                         <p style="color: #4b5563; line-height: 1.8; margin-bottom: 25px;">
-                            Je suis actuellement en deuxième année de BTS SIO option SLAM à l'ORT de Montreuil,
-                            en alternance chez Quick Source.
+                            Je suis actuellement en deuxième année de BTS SIO option SLAM à l'ORT de Montreuil, en alternance chez Quick Source.
                         </p>
-
                         <div style="line-height: 2; color: #1a1a1a; margin-bottom: 25px;">
                             <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i> Paris, France</p>
                             <p class="mb-2"><i class="bi bi-envelope text-primary me-2"></i> ilandahan@gmail.com</p>
                             <p class="mb-2"><i class="bi bi-briefcase text-primary me-2"></i> Quick Source</p>
                             <p class="mb-0"><i class="bi bi-trophy text-primary me-2"></i> Futur ingénieur informatique</p>
                         </div>
-
-                        <a href="assets/docs/CV_Ilan_Dahan_1%20copie.pdf" class="btn btn-primary w-100" download>
+                        <a href="assets/docs/CV_Ilan_Dahan_Alternance%20copie.pdf" class="btn btn-primary w-100" download>
                             <i class="bi bi-download me-2"></i>Télécharger mon CV
                         </a>
                     </div>
                 </div>
-
                 <div class="col-lg-7" data-aos="fade-left">
                     <div class="simple-card">
                         <h3 class="mb-4">Développeur d'applications</h3>
-
                         <p style="font-size: 1.05rem; line-height: 1.8; color: #1a1a1a; margin-bottom: 20px;">
-                            Mon quotidien : développer des applications métier, créer des outils internes
-                            et automatiser des processus pour améliorer la productivité.
+                            Mon quotidien : développer des applications métier, créer des outils internes et automatiser des processus pour améliorer la productivité.
                         </p>
-
                         <p style="font-size: 1.05rem; line-height: 1.8; color: #1a1a1a; margin-bottom: 30px;">
                             Je m'intéresse aussi à l'administration système et à la sécurité des infrastructures.
                         </p>
-
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px;">
-                                    <i class="bi bi-mortarboard me-2 text-primary"></i>Formation
-                                </h5>
+                                <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px;"><i class="bi bi-mortarboard me-2 text-primary"></i>Formation</h5>
                                 <ul style="line-height: 2; color: #1a1a1a;">
                                     <li>BTS SIO SLAM (2024-2026)</li>
                                     <li>Alternance Quick Source</li>
@@ -335,9 +145,7 @@
                                 </ul>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px;">
-                                    <i class="bi bi-code-slash me-2 text-primary"></i>Langages
-                                </h5>
+                                <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px;"><i class="bi bi-code-slash me-2 text-primary"></i>Langages</h5>
                                 <ul style="line-height: 2; color: #1a1a1a;">
                                     <li>Java / JavaFX</li>
                                     <li>Python</li>
@@ -346,176 +154,74 @@
                                 </ul>
                             </div>
                         </div>
-
                         <div class="alert alert-light border" style="border-color: #e5e7eb !important; background: #f9fafb;">
                             <i class="bi bi-globe text-primary me-2"></i>
                             <strong>Mobilité :</strong> Disponible en France et en Israël après le BTS
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
 
-    <!-- ENTREPRISE -->
-    <section id="entreprise" class="entreprise section bg-light-section">
+    <!-- ===== PARCOURS ===== -->
+    <section id="resume" class="resume section section-white">
         <div class="container">
-
             <div class="section-title text-center mb-5" data-aos="fade-up">
-                <h2>Mon Entreprise</h2>
-                <p>Alternance développeur chez Quick Source</p>
+                <h2>Mon Parcours</h2>
+                <p>Formation et expériences professionnelles</p>
             </div>
-
-            <div class="row g-4 mb-5">
-
-                <div class="col-lg-4" data-aos="fade-right">
-                    <div class="simple-card">
-                        <div class="text-center mb-4">
-                            <i class="bi bi-building" style="font-size: 3rem; color: #2563eb;"></i>
-                        </div>
-                        <h3 class="text-center mb-3">Quick Source</h3>
-                        <p class="text-center mb-4" style="color: #4b5563;">Solutions informatiques pour les PME</p>
-
-                        <div style="line-height: 2; color: #1a1a1a;">
-                            <p class="mb-2"><strong>Début :</strong> Septembre 2025</p>
-                            <p class="mb-2"><strong>Poste :</strong> Alternant Développeur</p>
-                            <p class="mb-2"><strong>Rythme :</strong> 1 semaine/1 semaine</p>
-                            <p class="mb-0"><strong>Équipe :</strong> 2 développeurs</p>
-                        </div>
+            <div class="row g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h3 class="h4 mb-4" style="color: #1a1a1a;"><i class="bi bi-mortarboard me-2 text-primary"></i>Formation</h3>
+                    <div class="timeline-item">
+                        <h4 class="h5" style="color: #1a1a1a;">BTS SIO — Option SLAM</h4>
+                        <p class="text-muted mb-2">2024 - 2026 &bull; ORT de Montreuil</p>
+                        <p style="color: #1a1a1a;">Développement d'applications, bases de données, administration système.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4 class="h5" style="color: #1a1a1a;">Baccalauréat Général</h4>
+                        <p class="text-muted mb-2">2023 &bull; Lycée Ozar Hatorah, Créteil</p>
+                        <p style="color: #1a1a1a;">Spécialités : SVT et Mathématiques</p>
                     </div>
                 </div>
-
-                <div class="col-lg-8" data-aos="fade-left">
-                    <div class="simple-card">
-                        <h3 class="mb-4">Mes missions de développement</h3>
-
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="d-flex">
-                                    <div class="me-3">
-                                        <i class="bi bi-code-slash" style="font-size: 2rem; color: #2563eb;"></i>
-                                    </div>
-                                    <div>
-                                        <h5 style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;">Développement d'outils</h5>
-                                        <p style="color: #4b5563; margin: 0;">Scripts Python/PowerShell pour automatiser les tâches</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="d-flex">
-                                    <div class="me-3">
-                                        <i class="bi bi-server" style="font-size: 2rem; color: #2563eb;"></i>
-                                    </div>
-                                    <div>
-                                        <h5 style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;">Administration système</h5>
-                                        <p style="color: #4b5563; margin: 0;">Gestion serveur et droits d'accès</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="d-flex">
-                                    <div class="me-3">
-                                        <i class="bi bi-shield-check" style="font-size: 2rem; color: #2563eb;"></i>
-                                    </div>
-                                    <div>
-                                        <h5 style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;">Sécurisation</h5>
-                                        <p style="color: #4b5563; margin: 0;">Mise en place de sauvegardes et règles de sécurité</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="d-flex">
-                                    <div class="me-3">
-                                        <i class="bi bi-file-text" style="font-size: 2rem; color: #2563eb;"></i>
-                                    </div>
-                                    <div>
-                                        <h5 style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;">Documentation</h5>
-                                        <p style="color: #4b5563; margin: 0;">Rédaction de procédures techniques</p>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h3 class="h4 mb-4" style="color: #1a1a1a;"><i class="bi bi-briefcase me-2 text-primary"></i>Expériences</h3>
+                    <div class="timeline-item">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h4 class="h5 mb-0" style="color: #1a1a1a;">Alternant Développeur</h4>
+                            <span class="badge" style="background: #2563eb;">En cours</span>
                         </div>
+                        <p class="text-muted mb-2">Depuis sept. 2025 &bull; Quick Source</p>
+                        <p style="color: #1a1a1a;">Développement d'outils, scripts d'automatisation, administration système.</p>
                     </div>
-                </div>
-
-            </div>
-
-            <!-- Projet phare GENIA -->
-            <div class="row" data-aos="fade-up">
-                <div class="col-12">
-                    <div class="simple-card" style="border-left: 4px solid #2563eb;">
-                        <h3 class="mb-4">Projet principal : Genia</h3>
-
-                        <div class="row">
-                            <div class="col-lg-8 mb-4">
-                                <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px;">Le projet</h5>
-                                <p style="color: #1a1a1a; line-height: 1.8;">
-                                    Développement de Genia, une intelligence artificielle locale pour entreprises.
-                                    Solution sécurisée qui s'installe sur serveurs locaux pour garantir la confidentialité
-                                    des données avec analyse de documents, Q&A intelligent et rédaction assistée.
-                                </p>
-
-                                <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px; margin-top: 25px;">Mon rôle</h5>
-                                <ul style="line-height: 2; color: #1a1a1a;">
-                                    <li>Développement backend et frontend</li>
-                                    <li>Architecture et conception</li>
-                                    <li>Implémentation sécurité et chiffrement</li>
-                                    <li>Tests et déploiement local</li>
-                                </ul>
-                            </div>
-
-                            <div class="col-lg-4">
-                                <div style="background: #f9fafb; padding: 25px; border-radius: 10px; border: 1px solid #e5e7eb;">
-                                    <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px;">Technologies</h5>
-                                    <div class="mb-4">
-                                        <span class="tech-badge">PHP</span>
-                                        <span class="tech-badge">Symfony</span>
-                                        <span class="tech-badge">PostgreSQL</span>
-                                        <span class="tech-badge">Docker</span>
-                                    </div>
-
-                                    <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px;">Contexte</h5>
-                                    <p style="margin-bottom: 8px; color: #1a1a1a;">• Équipe : 2 développeurs</p>
-                                    <p style="margin-bottom: 8px; color: #1a1a1a;">• Rythme : 1 sem/1 sem</p>
-                                    <p style="margin: 0; color: #1a1a1a;">• Projet en cours</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <a href="projet-genia.html" class="btn btn-outline-primary mt-3">
-                            En savoir plus
-                        </a>
+                    <div class="timeline-item">
+                        <h4 class="h5" style="color: #1a1a1a;">Stage Développement Python</h4>
+                        <p class="text-muted mb-2">Juin 2025 &bull; MHD Conseil</p>
+                        <p style="color: #1a1a1a;">Développement d'un coffre-fort de mots de passe sécurisé.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4 class="h5" style="color: #1a1a1a;">Emploi d'été — Banque</h4>
+                        <p class="text-muted mb-2">Juillet 2024 &amp; 2022 &bull; Oddo BHF</p>
+                        <p style="color: #1a1a1a;">Conformité KYC et gestion documentaire.</p>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-
-    <!-- COMPÉTENCES -->
+    <!-- ===== COMPÉTENCES ===== -->
     <section id="skills" class="skills section">
         <div class="container">
-
             <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>Compétences</h2>
                 <p>Technologies et outils maîtrisés</p>
             </div>
-
             <div class="row g-4" data-aos="fade-up">
-
                 <div class="col-lg-6">
-                    <!-- Langages -->
                     <div class="skill-category">
                         <div class="skill-category-header">
-                            <div class="skill-category-icon">
-                                <i class="bi bi-code-square"></i>
-                            </div>
+                            <div class="skill-category-icon"><i class="bi bi-code-square"></i></div>
                             <h5>Langages de programmation</h5>
                         </div>
                         <div class="skill-badges">
@@ -527,14 +233,10 @@
                             <span class="skill-badge">JavaScript</span>
                         </div>
                     </div>
-
-                    <!-- Frameworks -->
                     <div class="skill-category">
                         <div class="skill-category-header">
-                            <div class="skill-category-icon">
-                                <i class="bi bi-layers"></i>
-                            </div>
-                            <h5>Frameworks & bibliothèques</h5>
+                            <div class="skill-category-icon"><i class="bi bi-layers"></i></div>
+                            <h5>Frameworks &amp; bibliothèques</h5>
                         </div>
                         <div class="skill-badges">
                             <span class="skill-badge">Symfony</span>
@@ -543,14 +245,10 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-6">
-                    <!-- Bases de données -->
                     <div class="skill-category">
                         <div class="skill-category-header">
-                            <div class="skill-category-icon">
-                                <i class="bi bi-database"></i>
-                            </div>
+                            <div class="skill-category-icon"><i class="bi bi-database"></i></div>
                             <h5>Bases de données</h5>
                         </div>
                         <div class="skill-badges">
@@ -559,14 +257,10 @@
                             <span class="skill-badge">SQLite</span>
                         </div>
                     </div>
-
-                    <!-- Outils -->
                     <div class="skill-category">
                         <div class="skill-category-header">
-                            <div class="skill-category-icon">
-                                <i class="bi bi-tools"></i>
-                            </div>
-                            <h5>Outils & environnements</h5>
+                            <div class="skill-category-icon"><i class="bi bi-tools"></i></div>
+                            <h5>Outils &amp; environnements</h5>
                         </div>
                         <div class="skill-badges">
                             <span class="skill-badge">Git</span>
@@ -577,192 +271,243 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
 
-    <!-- PARCOURS -->
-    <section id="resume" class="resume section section-white">
+    <!-- ===== ENTREPRISE ===== -->
+    <section id="entreprise" class="entreprise section bg-light-section">
         <div class="container">
-
             <div class="section-title text-center mb-5" data-aos="fade-up">
-                <h2>Mon Parcours</h2>
-                <p>Formation et expériences professionnelles</p>
+                <h2>Mon Entreprise</h2>
+                <p>Alternance développeur chez Quick Source</p>
             </div>
 
-            <div class="row g-5">
-
-                <div class="col-lg-6" data-aos="fade-right">
-                    <h3 class="h4 mb-4" style="color: #1a1a1a;"><i class="bi bi-mortarboard me-2 text-primary"></i>Formation</h3>
-
-                    <div class="timeline-item">
-                        <h4 class="h5" style="color: #1a1a1a;">BTS SIO — Option SLAM</h4>
-                        <p class="text-muted mb-2">2024 - 2026 • ORT de Montreuil</p>
-                        <p style="color: #1a1a1a;">Développement d'applications, bases de données, administration système.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h4 class="h5" style="color: #1a1a1a;">Baccalauréat Général</h4>
-                        <p class="text-muted mb-2">2023 • Lycée Ozar Hatorah, Créteil</p>
-                        <p style="color: #1a1a1a;">Spécialités : SVT et Mathématiques</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6" data-aos="fade-left">
-                    <h3 class="h4 mb-4" style="color: #1a1a1a;"><i class="bi bi-briefcase me-2 text-primary"></i>Expériences</h3>
-
-                    <div class="timeline-item">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h4 class="h5 mb-0" style="color: #1a1a1a;">Alternant Développeur</h4>
-                            <span class="badge" style="background: #2563eb;">En cours</span>
+            <!-- Ligne 1 : carte identité QS + infos entreprise -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="simple-card">
+                        <div class="text-center mb-4">
+                            <i class="bi bi-building" style="font-size: 3rem; color: #2563eb;"></i>
                         </div>
-                        <p class="text-muted mb-2">Depuis sept. 2025 • Quick Source</p>
-                        <p style="color: #1a1a1a;">Développement d'outils, scripts d'automatisation, administration système.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h4 class="h5" style="color: #1a1a1a;">Stage Développement Python</h4>
-                        <p class="text-muted mb-2">Juin 2025 • MHD Conseil</p>
-                        <p style="color: #1a1a1a;">Développement d'un coffre-fort de mots de passe sécurisé.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h4 class="h5" style="color: #1a1a1a;">Emploi d'été — Banque</h4>
-                        <p class="text-muted mb-2">Juillet 2024 & 2022 • Oddo BHF</p>
-                        <p style="color: #1a1a1a;">Conformité KYC et gestion documentaire.</p>
+                        <h3 class="text-center mb-3">Quick Source</h3>
+                        <p class="text-center mb-4" style="color: #4b5563;">Solutions informatiques pour les PME</p>
+                        <div style="line-height: 2; color: #1a1a1a;">
+                            <p class="mb-2"><strong>Début :</strong> Septembre 2025</p>
+                            <p class="mb-2"><strong>Poste :</strong> Alternant Développeur</p>
+                            <p class="mb-2"><strong>Rythme :</strong> 1 semaine/1 semaine</p>
+                            <p class="mb-0"><strong>Équipe :</strong> 2 développeurs</p>
+                        </div>
                     </div>
                 </div>
 
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="simple-card">
+                        <h3 class="mb-4">Informations sur l'entreprise</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="me-3"><i class="bi bi-building" style="font-size: 2rem; color: #2563eb;"></i></div>
+                                    <div>
+                                        <h5 style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;">Activité</h5>
+                                        <p style="color: #4b5563; margin: 0;">Entreprise de services numériques (ESN) spécialisée dans le développement d'outils métiers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="me-3"><i class="bi bi-people" style="font-size: 2rem; color: #2563eb;"></i></div>
+                                    <div>
+                                        <h5 style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;">Clients</h5>
+                                        <p style="color: #4b5563; margin: 0;">Petites et moyennes entreprises (PME) cherchant à moderniser et automatiser leurs process.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="me-3"><i class="bi bi-diagram-3" style="font-size: 2rem; color: #2563eb;"></i></div>
+                                    <div>
+                                        <h5 style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;">Taille de l'entreprise</h5>
+                                        <p style="color: #4b5563; margin: 0;">Structure à taille humaine (moins de 10 personnes) favorisant la proximité avec les clients.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="me-3"><i class="bi bi-geo-alt" style="font-size: 2rem; color: #2563eb;"></i></div>
+                                    <div>
+                                        <h5 style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;">Localisation</h5>
+                                        <p style="color: #4b5563; margin: 0;">Basée à Paris, Île-de-France, intervenant principalement dans la région parisienne.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="me-3"><i class="bi bi-cash-stack" style="font-size: 2rem; color: #2563eb;"></i></div>
+                                    <div>
+                                        <h5 style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;">Chiffre d'affaires</h5>
+                                        <p style="color: #4b5563; margin: 0;">Environ 1 million d'euros annuel, correspondant à une ESN de taille moyenne sur ce segment.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="me-3"><i class="bi bi-file-earmark-text" style="font-size: 2rem; color: #2563eb;"></i></div>
+                                    <div>
+                                        <h5 style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;">Statut juridique</h5>
+                                        <p style="color: #4b5563; margin: 0;">Société française de type SARL, créée au milieu des années 2000.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ligne 2 : projet principal Genia -->
+            <div class="row" data-aos="fade-up">
+                <div class="col-12">
+                    <div class="simple-card" style="border-left: 4px solid #2563eb;">
+                        <h3 class="mb-4">Projet principal : Genia</h3>
+                        <div class="row">
+                            <div class="col-lg-8 mb-4">
+                                <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px;">Le projet</h5>
+                                <p style="color: #1a1a1a; line-height: 1.8;">
+                                    Application web développée en Symfony permettant d'interroger une IA à partir de documents internes.
+                                    L'IA est déployée directement sur le serveur de l'entreprise via une API —
+                                    aucune donnée ne sort du réseau interne, garantissant une confidentialité totale des documents.
+                                </p>
+                                <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px; margin-top: 25px;">Mon rôle</h5>
+                                <ul style="line-height: 2; color: #1a1a1a;">
+                                    <li>Développement backend Symfony (controllers, services, API)</li>
+                                    <li>Intégration de l'API IA locale</li>
+                                    <li>Interface utilisateur (upload de documents, chat)</li>
+                                    <li>Tests et déploiement sur le serveur interne</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <div style="background: #f9fafb; padding: 25px; border-radius: 10px; border: 1px solid #e5e7eb;">
+                                    <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px;">Technologies</h5>
+                                    <div class="mb-4">
+                                        <span class="tech-badge">Symfony</span>
+                                        <span class="tech-badge">PHP</span>
+                                        <span class="tech-badge">API IA</span>
+                                        <span class="tech-badge">JavaScript</span>
+                                        <span class="tech-badge">MySQL</span>
+                                    </div>
+                                    <h5 style="color: #1a1a1a; font-size: 1.05rem; margin-bottom: 15px;">Contexte</h5>
+                                    <p style="margin-bottom: 8px; color: #1a1a1a;">&bull; Équipe : 2 développeurs</p>
+                                    <p style="margin-bottom: 8px; color: #1a1a1a;">&bull; Rythme : 1 sem/1 sem</p>
+                                    <p style="margin: 0; color: #1a1a1a;">&bull; Projet en cours</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="projet-genia.html" class="btn btn-outline-primary mt-3">En savoir plus</a>
+                    </div>
+                </div>
             </div>
 
         </div>
     </section>
 
-    <!-- PROJETS -->
+    <!-- ===== PROJETS ===== -->
     <section id="portfolio" class="portfolio section">
         <div class="container">
-
             <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>Mes Projets</h2>
                 <p>Réalisations académiques et professionnelles</p>
             </div>
-
             <div class="row g-4">
-
                 <div class="col-lg-6" data-aos="fade-up">
                     <div class="simple-card">
                         <h3>GestTravaux Pro (Symfony)</h3>
                         <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
-                            Application web Symfony pour digitaliser les travaux immobiliers : gestion des chantiers,
-                            devis, et communication entre inspecteurs, entrepreneurs et propriétaires.
+                            Application web Symfony pour digitaliser les travaux immobiliers : gestion des chantiers, devis,
+                            et communication entre inspecteurs, entrepreneurs et propriétaires.
                         </p>
-
                         <div class="mb-3">
+                            <span class="tech-badge">Symfony 7</span>
                             <span class="tech-badge">PHP</span>
-                            <span class="tech-badge">Symfony</span>
-                            <span class="tech-badge">PostgreSQL</span>
-                            <span class="tech-badge">Bootstrap</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">PWA</span>
                         </div>
-
                         <a href="projet-symfony-gesttravaux.html" class="btn btn-outline-primary">Voir le projet</a>
                     </div>
                 </div>
-
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="simple-card">
                         <h3>GestTravaux Pro (Java)</h3>
                         <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
                             Application desktop JavaFX pour gestionnaires : analyse comparative des devis,
-                            tableau de bord pilotage et outils de décision avancés.
+                            tableau de bord pilotage et planning Gantt interactif.
                         </p>
-
                         <div class="mb-3">
                             <span class="tech-badge">Java</span>
                             <span class="tech-badge">JavaFX</span>
-                            <span class="tech-badge">PostgreSQL</span>
-                            <span class="tech-badge">JDBC</span>
+                            <span class="tech-badge">Hibernate</span>
+                            <span class="tech-badge">MySQL</span>
                         </div>
-
                         <a href="projet-java-gesttravaux.html" class="btn btn-outline-primary">Voir le projet</a>
                     </div>
                 </div>
-
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="simple-card">
-                        <h3>Gestion Brit Milot</h3>
+                        <h3>Gestion Brit Milah</h3>
                         <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
-                            Application Java/Flask pour gérer les cérémonies : formulaires, dossiers et planification.
-                            Dashboard administratif avec intégration WhatsApp pour les parents.
+                            Application Python/Flask pour gérer les cérémonies : formulaires parents, dossiers,
+                            dashboard administratif et intégration WhatsApp.
                         </p>
-
                         <div class="mb-3">
-                            <span class="tech-badge">Java</span>
+                            <span class="tech-badge">Python</span>
                             <span class="tech-badge">Flask</span>
                             <span class="tech-badge">PostgreSQL</span>
-                            <span class="tech-badge">ReportLab</span>
                         </div>
-
                         <a href="projet-brit-milot.html" class="btn btn-outline-primary">Voir le projet</a>
                     </div>
                 </div>
-
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="simple-card">
                         <h3>Coffre-fort Python</h3>
                         <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
                             Application de gestion sécurisée de mots de passe avec chiffrement AES-256.
-                            Interface Tkinter pour stockage et génération de mots de passe complexes.
                         </p>
-
                         <div class="mb-3">
                             <span class="tech-badge">Python</span>
                             <span class="tech-badge">Cryptographie</span>
                             <span class="tech-badge">Tkinter</span>
                         </div>
-
                         <a href="projet-coffre-fort-python.html" class="btn btn-outline-primary">Voir le projet</a>
                     </div>
                 </div>
-
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="simple-card">
                         <h3>Site Restaurant Rosetta</h3>
                         <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
                             Site web avec système de réservation en ligne, déployé et utilisé en production.
-                            Interface moderne avec gestion des tables et des commandes.
                         </p>
-
                         <div class="mb-3">
                             <span class="tech-badge">HTML/CSS/JS</span>
                             <span class="tech-badge">PHP</span>
                             <span class="tech-badge">MySQL</span>
                         </div>
-
                         <div class="d-flex gap-2">
                             <a href="https://rosetta-web.rf.gd/index.html" target="_blank" class="btn btn-primary flex-grow-1">Voir le site</a>
                             <a href="projet-site-restaurant.html" class="btn btn-outline-primary flex-grow-1">Détails</a>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- ===== CONTACT ===== -->
     <section id="contact" class="contact section section-white">
         <div class="container">
-
             <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>Me Contacter</h2>
                 <p>Je suis disponible pour échanger</p>
             </div>
-
             <div class="row g-4 mb-5">
-
                 <div class="col-lg-4" data-aos="fade-right">
                     <div class="simple-card text-center">
                         <i class="bi bi-geo-alt mb-3" style="font-size: 2.5rem; color: #2563eb;"></i>
@@ -770,7 +515,6 @@
                         <p style="color: #1a1a1a;">Paris, Île-de-France</p>
                     </div>
                 </div>
-
                 <div class="col-lg-4" data-aos="fade-up">
                     <div class="simple-card text-center">
                         <i class="bi bi-envelope mb-3" style="font-size: 2.5rem; color: #2563eb;"></i>
@@ -778,7 +522,6 @@
                         <p style="color: #1a1a1a;">ilandahan@gmail.com</p>
                     </div>
                 </div>
-
                 <div class="col-lg-4" data-aos="fade-left">
                     <div class="simple-card text-center">
                         <i class="bi bi-linkedin mb-3" style="font-size: 2.5rem; color: #2563eb;"></i>
@@ -786,37 +529,29 @@
                         <p><a href="https://www.linkedin.com/in/ilan-dahan-56a4a22ab" target="_blank" style="color: #2563eb; text-decoration: none;">Me connecter</a></p>
                     </div>
                 </div>
-
             </div>
-
             <div class="row" data-aos="fade-up">
                 <div class="col-lg-8 mx-auto">
                     <div class="simple-card">
                         <h3 class="text-center mb-4">Envoyez-moi un message</h3>
-
                         <form id="contact-form" class="php-email-form">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <input type="text" name="name" class="form-control" placeholder="Votre nom" required style="padding: 12px; border-radius: 8px; border: 1px solid #e5e7eb;">
                                 </div>
-
                                 <div class="col-md-6">
                                     <input type="email" name="email" class="form-control" placeholder="Votre email" required style="padding: 12px; border-radius: 8px; border: 1px solid #e5e7eb;">
                                 </div>
-
                                 <div class="col-12">
                                     <input type="text" name="subject" class="form-control" placeholder="Objet" required style="padding: 12px; border-radius: 8px; border: 1px solid #e5e7eb;">
                                 </div>
-
                                 <div class="col-12">
                                     <textarea name="message" class="form-control" rows="6" placeholder="Votre message" required style="padding: 12px; border-radius: 8px; border: 1px solid #e5e7eb;"></textarea>
                                 </div>
-
                                 <div class="col-12 text-center">
                                     <div class="loading" style="display: none; color: #2563eb;">Envoi en cours...</div>
                                     <div class="error-message" style="display: none; color: #dc2626;"></div>
                                     <div class="sent-message" style="display: none; color: #16a34a;">Message envoyé avec succès !</div>
-
                                     <button type="submit" class="btn btn-primary btn-lg px-5 mt-3">
                                         <i class="bi bi-send me-2"></i>Envoyer
                                     </button>
@@ -826,7 +561,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -834,8 +568,8 @@
 
 <footer class="footer py-4" style="background: #1e293b; color: #ffffff; border-top: 1px solid #334155;">
     <div class="container text-center">
-        <p class="mb-2" style="color: #ffffff;">© 2026 Ilan Dahan - Tous droits réservés</p>
-        <p class="small mb-3" style="color: #94a3b8;">Étudiant BTS SIO SLAM • Alternant développeur chez Quick Source</p>
+        <p class="mb-2" style="color: #ffffff;">&copy; 2026 Ilan Dahan - Tous droits réservés</p>
+        <p class="small mb-3" style="color: #94a3b8;">Étudiant BTS SIO SLAM &bull; Alternant développeur chez Quick Source</p>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/ilan-dahan-56a4a22ab" target="_blank" style="color: #2563eb; margin: 0 10px; font-size: 1.3rem;"><i class="bi bi-linkedin"></i></a>
             <a href="https://github.com/ilan-yehouda-dahan" target="_blank" style="color: #ffffff; margin: 0 10px; font-size: 1.3rem;"><i class="bi bi-github"></i></a>
@@ -847,7 +581,6 @@
     <i class="bi bi-arrow-up-short"></i>
 </a>
 
-<!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/aos/aos.js"></script>
 <script src="assets/vendor/typed.js/typed.umd.js"></script>
@@ -857,31 +590,23 @@
 <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-<!-- Main JS File -->
 <script src="assets/js/main.js"></script>
 
-<!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
     const EMAILJS_PUBLIC_KEY  = "pkIoTu5M8gI9rSnIW";
     const EMAILJS_SERVICE_ID  = "service_6jtlffk";
     const EMAILJS_TEMPLATE_ID = "template_0jvjkko";
-
     emailjs.init(EMAILJS_PUBLIC_KEY);
-
     document.getElementById("contact-form").addEventListener("submit", async (e) => {
         e.preventDefault();
-
         const form = e.target;
         const loading = form.querySelector(".loading");
         const error = form.querySelector(".error-message");
         const success = form.querySelector(".sent-message");
-
         loading.style.display = "block";
         error.style.display = "none";
         success.style.display = "none";
-
         try {
             await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
             loading.style.display = "none";
