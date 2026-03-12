@@ -73,7 +73,7 @@
             <li><a href="#skills"><i class="bi bi-code-slash navicon"></i>Compétences</a></li>
             <li><a href="#entreprise"><i class="bi bi-building navicon"></i>Entreprise</a></li>
             <li><a href="#portfolio"><i class="bi bi-images navicon"></i>Projets</a></li>
-            <li><a href="veille.html"><i class="bi bi-newspaper navicon"></i>Veille</a></li>
+            <li><a href="#veille"><i class="bi bi-newspaper navicon"></i>Veille</a></li>
             <li><a href="#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
         </ul>
     </nav>
@@ -346,7 +346,7 @@
                                     <div class="me-3"><i class="bi bi-cash-stack" style="font-size: 2rem; color: #2563eb;"></i></div>
                                     <div>
                                         <h5 style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;">Chiffre d'affaires</h5>
-                                        <p style="color: #4b5563; margin: 0;">Environ 2 million d'euros annuel, correspondant à une ESN de taille moyenne sur ce segment.</p>
+                                        <p style="color: #4b5563; margin: 0;">Environ 1 million d'euros annuel, correspondant à une ESN de taille moyenne sur ce segment.</p>
                                     </div>
                                 </div>
                             </div>
@@ -500,118 +500,144 @@
         </div>
     </section>
 
+
     <!-- ===== VEILLE TECHNOLOGIQUE ===== -->
-    <section id="veille" class="veille section">
+    <section id="veille" class="veille section section-white">
         <div class="container">
             <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>Veille Technologique</h2>
-                <p>Suivi des tendances et innovations technologiques</p>
+                <p>La sécurité dans le développement web</p>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-6" data-aos="fade-up">
-                    <div class="simple-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="me-3">
-                                <i class="bi bi-cpu" style="font-size: 2rem; color: #2563eb;"></i>
-                            </div>
-                            <h3>Intelligence Artificielle</h3>
-                        </div>
-                        <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
-                            Suivi des avancées en IA générative, machine learning et intégration d'API IA dans les applications métiers.
+
+            <!-- Intro sujet -->
+            <div class="row mb-4" data-aos="fade-up">
+                <div class="col-lg-10 mx-auto">
+                    <div class="simple-card" style="border-left: 4px solid #2563eb;">
+                        <h3 class="mb-3">Mon sujet : la cybersécurité pour les développeurs</h3>
+                        <p style="color: #4b5563; line-height: 1.8; margin: 0;">
+                            La sécurité dans le développement web consiste à intégrer les bonnes pratiques de cybersécurité
+                            directement dans le code des applications. C'est un sujet que j'ai abordé concrètement dans
+                            mes projets : chiffrement AES-256 dans mon coffre-fort Python, confidentialité des données
+                            avec l'IA locale Genia, et gestion des accès multi-rôles dans GestTravaux Pro.
+                            Je suis ce sujet régulièrement via plusieurs sources spécialisées.
                         </p>
-                        <div class="mb-3">
-                            <span class="tech-badge">OpenAI API</span>
-                            <span class="tech-badge">LangChain</span>
-                            <span class="tech-badge">TensorFlow</span>
-                        </div>
-                        <div class="mb-3">
-                            <h6 style="color: #1a1a1a; margin-bottom: 10px;">Ressources :</h6>
-                            <div class="d-flex flex-wrap gap-2">
-                                <a href="https://openai.com/blog" target="_blank" class="btn btn-outline-primary btn-sm">OpenAI Blog</a>
-                                <a href="https://huggingface.co/blog" target="_blank" class="btn btn-outline-primary btn-sm">Hugging Face</a>
-                                <a href="https://www.tensorflow.org/blog" target="_blank" class="btn btn-outline-primary btn-sm">TensorFlow Blog</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            </div>
+
+            <!-- Sources -->
+            <div class="row g-4" data-aos="fade-up">
+
+                <div class="col-md-6 col-lg-4">
                     <div class="simple-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="me-3">
-                                <i class="bi bi-shield-check" style="font-size: 2rem; color: #2563eb;"></i>
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div style="width:45px;height:45px;background:#eff6ff;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <i class="bi bi-shield-fill-check" style="font-size:1.4rem;color:#2563eb;"></i>
                             </div>
-                            <h3>Cybersécurité</h3>
+                            <div>
+                                <h5 style="margin:0;font-size:1rem;color:#1a1a1a;">OWASP.org</h5>
+                                <small style="color:#6c757d;">owasp.org</small>
+                            </div>
                         </div>
-                        <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
-                            Veille sur les menaces actuelles, meilleures pratiques de sécurité et protection des données applicatives.
+                        <p style="color:#4b5563;font-size:0.88rem;margin:0;line-height:1.7;">
+                            La référence mondiale en sécurité web. Publie le <strong>Top 10 des failles</strong> les plus courantes
+                            (injection SQL, XSS, mauvaise authentification...). Indispensable pour tout développeur.
                         </p>
-                        <div class="mb-3">
-                            <span class="tech-badge">Cryptographie</span>
-                            <span class="tech-badge">OWASP</span>
-                            <span class="tech-badge">Sécurité API</span>
-                        </div>
-                        <div class="mb-3">
-                            <h6 style="color: #1a1a1a; margin-bottom: 10px;">Ressources :</h6>
-                            <div class="d-flex flex-wrap gap-2">
-                                <a href="https://owasp.org/" target="_blank" class="btn btn-outline-primary btn-sm">OWASP</a>
-                                <a href="https://www.cert.ssi.gouv.fr/" target="_blank" class="btn btn-outline-primary btn-sm">CERT FR</a>
-                                <a href="https://www.cnil.fr/" target="_blank" class="btn btn-outline-primary btn-sm">CNIL</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="col-md-6 col-lg-4">
                     <div class="simple-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="me-3">
-                                <i class="bi bi-cloud-arrow-up" style="font-size: 2rem; color: #2563eb;"></i>
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div style="width:45px;height:45px;background:#eff6ff;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <i class="bi bi-flag-fill" style="font-size:1.4rem;color:#2563eb;"></i>
                             </div>
-                            <h3>Cloud & DevOps</h3>
+                            <div>
+                                <h5 style="margin:0;font-size:1rem;color:#1a1a1a;">ANSSI</h5>
+                                <small style="color:#6c757d;">cert.ssi.gouv.fr</small>
+                            </div>
                         </div>
-                        <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
-                            Évolution des solutions cloud, conteneurisation et pratiques DevOps pour le déploiement continu.
+                        <p style="color:#4b5563;font-size:0.88rem;margin:0;line-height:1.7;">
+                            L'Agence Nationale de la Sécurité des Systèmes d'Information. Publie les
+                            <strong>alertes et recommandations officielles</strong> françaises sur les cybermenaces et les bonnes pratiques.
                         </p>
-                        <div class="mb-3">
-                            <span class="tech-badge">Docker</span>
-                            <span class="tech-badge">CI/CD</span>
-                            <span class="tech-badge">Git Actions</span>
-                        </div>
-                        <div class="mb-3">
-                            <h6 style="color: #1a1a1a; margin-bottom: 10px;">Ressources :</h6>
-                            <div class="d-flex flex-wrap gap-2">
-                                <a href="https://www.docker.com/blog" target="_blank" class="btn btn-outline-primary btn-sm">Docker Blog</a>
-                                <a href="https://github.blog/" target="_blank" class="btn btn-outline-primary btn-sm">GitHub Blog</a>
-                                <a href="https://kubernetes.io/blog/" target="_blank" class="btn btn-outline-primary btn-sm">Kubernetes</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+
+                <div class="col-md-6 col-lg-4">
                     <div class="simple-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="me-3">
-                                <i class="bi bi-phone" style="font-size: 2rem; color: #2563eb;"></i>
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div style="width:45px;height:45px;background:#eff6ff;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <i class="bi bi-code-square" style="font-size:1.4rem;color:#2563eb;"></i>
                             </div>
-                            <h3>Web & Mobile</h3>
+                            <div>
+                                <h5 style="margin:0;font-size:1rem;color:#1a1a1a;">dev.to</h5>
+                                <small style="color:#6c757d;">dev.to</small>
+                            </div>
                         </div>
-                        <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
-                            Nouvelles tendances du développement web, PWA, frameworks modernes et expérience utilisateur.
+                        <p style="color:#4b5563;font-size:0.88rem;margin:0;line-height:1.7;">
+                            Communauté de développeurs. Je suis les articles sur les
+                            <strong>bonnes pratiques de sécurité dans le code</strong> :
+                            gestion des mots de passe, protection des API, validation des formulaires.
                         </p>
-                        <div class="mb-3">
-                            <span class="tech-badge">React</span>
-                            <span class="tech-badge">PWA</span>
-                            <span class="tech-badge">API REST</span>
-                        </div>
-                        <div class="mb-3">
-                            <h6 style="color: #1a1a1a; margin-bottom: 10px;">Ressources :</h6>
-                            <div class="d-flex flex-wrap gap-2">
-                                <a href="https://react.dev/blog" target="_blank" class="btn btn-outline-primary btn-sm">React Blog</a>
-                                <a href="https://developer.mozilla.org/fr/" target="_blank" class="btn btn-outline-primary btn-sm">MDN</a>
-                                <a href="https://web.dev/" target="_blank" class="btn btn-outline-primary btn-sm">Web.dev</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="simple-card">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div style="width:45px;height:45px;background:#eff6ff;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <i class="bi bi-youtube" style="font-size:1.4rem;color:#2563eb;"></i>
+                            </div>
+                            <div>
+                                <h5 style="margin:0;font-size:1rem;color:#1a1a1a;">LiveOverflow</h5>
+                                <small style="color:#6c757d;">YouTube</small>
+                            </div>
+                        </div>
+                        <p style="color:#4b5563;font-size:0.88rem;margin:0;line-height:1.7;">
+                            Chaîne YouTube spécialisée en hacking et sécurité. Explique les failles
+                            <strong>de façon concrète avec des démonstrations</strong>, ce qui m'aide à comprendre
+                            comment les éviter dans mon propre code.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="simple-card">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div style="width:45px;height:45px;background:#eff6ff;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <i class="bi bi-newspaper" style="font-size:1.4rem;color:#2563eb;"></i>
+                            </div>
+                            <div>
+                                <h5 style="margin:0;font-size:1rem;color:#1a1a1a;">Krebs on Security</h5>
+                                <small style="color:#6c757d;">krebsonsecurity.com</small>
+                            </div>
+                        </div>
+                        <p style="color:#4b5563;font-size:0.88rem;margin:0;line-height:1.7;">
+                            Blog de référence sur l'actualité des <strong>cyberattaques et failles découvertes</strong>
+                            dans les entreprises. Me permet de suivre les menaces réelles du moment.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="simple-card">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div style="width:45px;height:45px;background:#eff6ff;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <i class="bi bi-reddit" style="font-size:1.4rem;color:#2563eb;"></i>
+                            </div>
+                            <div>
+                                <h5 style="margin:0;font-size:1rem;color:#1a1a1a;">Reddit r/netsec</h5>
+                                <small style="color:#6c757d;">reddit.com/r/netsec</small>
+                            </div>
+                        </div>
+                        <p style="color:#4b5563;font-size:0.88rem;margin:0;line-height:1.7;">
+                            Communauté de professionnels de la sécurité réseau. Partage en temps réel
+                            les <strong>nouvelles vulnérabilités et outils</strong> de sécurité découverts dans le monde entier.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
