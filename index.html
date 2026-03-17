@@ -121,7 +121,7 @@
                             <p class="mb-2"><i class="bi bi-briefcase text-primary me-2"></i> Quick Source</p>
                             <p class="mb-0"><i class="bi bi-trophy text-primary me-2"></i> Futur ingénieur informatique</p>
                         </div>
-                        <a href="assets/docs/CV_Ilan_Dahan_Alternance%20copie.pdf" class="btn btn-primary w-100" download>
+                        <a href="assets/docs/CV_Ilan_Dahan_1%20copie.pdf" class="btn btn-primary w-100" download>
                             <i class="bi bi-download me-2"></i>Télécharger mon CV
                         </a>
                     </div>
@@ -404,7 +404,7 @@
                                     </div>
 
                                     <div id="pdf-viewer" style="width: 100%; height: 600px; background: white; border: 1px solid #d1d5db; border-radius: 8px; overflow: hidden;">
-                                        <iframe src="assets/docs/Votre-Partenaire-Strategique-en-Projets-Informatiques.pdf"
+                                        <iframe src="assets/docs/Votre-Partenaire-Strategique-en-Projets-Informatiques%20.pdf"
                                                 width="100%"
                                                 height="100%"
                                                 style="border: none;"
@@ -426,13 +426,13 @@
                                     <h5 style="color: #1a1a1a; margin-bottom: 20px;">Actions rapides</h5>
 
                                     <div class="d-grid gap-2">
-                                        <a href="assets/docs/Votre-Partenaire-Strategique-en-Projets-Informatiques.pdf"
+                                        <a href="assets/docs/Votre-Partenaire-Strategique-en-Projets-Informatiques%20.pdf"
                                            target="_blank"
                                            class="btn btn-outline-primary">
                                             <i class="bi bi-box-arrow-up-right me-2"></i>Ouvrir dans un nouvel onglet
                                         </a>
 
-                                        <a href="assets/docs/Votre-Partenaire-Strategique-en-Projets-Informatiques.pdf"
+                                        <a href="assets/docs/Votre-Partenaire-Strategique-en-Projets-Informatiques%20.pdf"
                                            download
                                            class="btn btn-success">
                                             <i class="bi bi-download me-2"></i>Télécharger le PDF
@@ -607,109 +607,97 @@
         <div class="container">
             <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>Veille Technologique</h2>
-                <p>Suivi des tendances et innovations technologiques</p>
+                <p>Focus sur la Cybersécurité et les vulnérabilités critiques</p>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-6" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-12" data-aos="fade-up">
                     <div class="simple-card">
-                        <div class="d-flex align-items-center mb-3">
+                        <div class="d-flex align-items-center mb-4">
                             <div class="me-3">
-                                <i class="bi bi-cpu" style="font-size: 2rem; color: #2563eb;"></i>
+                                <i class="bi bi-shield-exclamation" style="font-size: 2.5rem; color: #dc2626;"></i>
                             </div>
-                            <h3>Intelligence Artificielle</h3>
+                            <h3>Cybersécurité - Injection SQL : La faille la plus connue</h3>
                         </div>
-                        <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
-                            Suivi des avancées en IA générative, machine learning et intégration d'API IA dans les applications métiers.
+                        
+                        <p style="color: #1a1a1a; line-height: 1.8; margin-bottom: 25px; font-size: 1.1rem;">
+                            L'injection SQL reste l'une des vulnérabilités les plus dangereuses et les plus répandues dans le développement web. 
+                            Classée #1 dans l'OWASP Top 10 pendant des années, cette faille permet à des attaquants d'exécuter 
+                            des commandes SQL non autorisées, pouvant conduire au vol de données, à la modification ou à la suppression 
+                            complète de bases de données.
                         </p>
-                        <div class="mb-3">
-                            <span class="tech-badge">OpenAI API</span>
-                            <span class="tech-badge">LangChain</span>
-                            <span class="tech-badge">TensorFlow</span>
-                        </div>
-                        <div class="mb-3">
-                            <h6 style="color: #1a1a1a; margin-bottom: 10px;">Ressources :</h6>
-                            <div class="d-flex flex-wrap gap-2">
-                                <a href="https://openai.com/blog" target="_blank" class="btn btn-outline-primary btn-sm">OpenAI Blog</a>
-                                <a href="https://huggingface.co/blog" target="_blank" class="btn btn-outline-primary btn-sm">Hugging Face</a>
-                                <a href="https://www.tensorflow.org/blog" target="_blank" class="btn btn-outline-primary btn-sm">TensorFlow Blog</a>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <h5 style="color: #dc2626; margin-bottom: 15px;"><i class="bi bi-exclamation-triangle me-2"></i>Comment fonctionne l'attaque ?</h5>
+                                <p style="color: #1a1a1a; font-size: 0.95rem; line-height: 1.7;">
+                                    Un attaquant insère du code SQL malveillant dans des champs de formulaire (login, recherche, etc.). 
+                                    Si l'application ne valide pas les entrées, ce code s'exécute directement sur la base de données.
+                                </p>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 15px; margin-top: 10px;">
+                                    <code style="color: #dc2626; font-size: 0.9rem;">
+                                        ' OR '1'='1' --
+                                    </code>
+                                    <p style="margin: 10px 0 0 0; color: #1a1a1a; font-size: 0.85rem;">
+                                        Cette chaîne simple peut contourner une authentification
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 style="color: #dc2626; margin-bottom: 15px;"><i class="bi bi-shield-check me-2"></i>Comment s'en protéger ?</h5>
+                                <ul style="color: #1a1a1a; line-height: 2; font-size: 0.95rem;">
+                                    <li><strong>Requêtes préparées</strong> (prepared statements)</li>
+                                    <li><strong>ORM</strong> comme Doctrine ou Hibernate</li>
+                                    <li><strong>Validation stricte</strong> des entrées utilisateur</li>
+                                    <li><strong>Principe du moindre privilège</strong> sur la BDD</li>
+                                    <li><strong>Échappement</strong> des caractères spéciaux</li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="simple-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="me-3">
-                                <i class="bi bi-shield-check" style="font-size: 2rem; color: #2563eb;"></i>
+                        
+                        <div class="mb-4">
+                            <h5 style="color: #1a1a1a; margin-bottom: 15px;"><i class="bi bi-code-slash me-2 text-primary"></i>Exemples de protection dans différents langages</h5>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h6 style="color: #1a1a1a; margin-bottom: 10px;">PHP (PDO)</h6>
+                                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px;">
+                                        <code style="color: #1a1a1a; font-size: 0.8rem;">
+                                            $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");<br>
+                                            $stmt->execute([$email]);
+                                        </code>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 style="color: #1a1a1a; margin-bottom: 10px;">Python</h6>
+                                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px;">
+                                        <code style="color: #1a1a1a; font-size: 0.8rem;">
+                                            cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
+                                        </code>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 style="color: #1a1a1a; margin-bottom: 10px;">Java (PreparedStatement)</h6>
+                                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px;">
+                                        <code style="color: #1a1a1a; font-size: 0.8rem;">
+                                            PreparedStatement ps = conn.prepareStatement("SELECT * FROM users WHERE email = ?");<br>
+                                            ps.setString(1, email);
+                                        </code>
+                                    </div>
+                                </div>
                             </div>
-                            <h3>Cybersécurité</h3>
                         </div>
-                        <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
-                            Veille sur les menaces actuelles, meilleures pratiques de sécurité et protection des données applicatives.
-                        </p>
-                        <div class="mb-3">
-                            <span class="tech-badge">Cryptographie</span>
-                            <span class="tech-badge">OWASP</span>
-                            <span class="tech-badge">Sécurité API</span>
+                        
+                        <div class="alert alert-danger" style="border-color: #dc2626; background: #fef2f2;">
+                            <i class="bi bi-shield-exclamation-triangle me-2"></i>
+                            <strong>Impact réel :</strong> En 2023, des entreprises comme Equifax ont subi des pertes de millions de dollars 
+                            à cause d'injections SQL non corrigées. Cette faille reste la première cause de brèches de données dans les applications web.
                         </div>
-                        <div class="mb-3">
-                            <h6 style="color: #1a1a1a; margin-bottom: 10px;">Ressources :</h6>
+                        
+                        <div class="mt-4">
+                            <h5 style="color: #1a1a1a; margin-bottom: 15px;"><i class="bi bi-bookmark me-2 text-primary"></i>Ressources pour approfondir</h5>
                             <div class="d-flex flex-wrap gap-2">
-                                <a href="https://owasp.org/" target="_blank" class="btn btn-outline-primary btn-sm">OWASP</a>
+                                <a href="https://owasp.org/www-community/attacks/SQL_Injection" target="_blank" class="btn btn-outline-primary btn-sm">OWASP SQL Injection</a>
+                                <a href="https://portswigger.net/web-security/sql-injection" target="_blank" class="btn btn-outline-primary btn-sm">PortSwigger Guide</a>
                                 <a href="https://www.cert.ssi.gouv.fr/" target="_blank" class="btn btn-outline-primary btn-sm">CERT FR</a>
-                                <a href="https://www.cnil.fr/" target="_blank" class="btn btn-outline-primary btn-sm">CNIL</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="simple-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="me-3">
-                                <i class="bi bi-cloud-arrow-up" style="font-size: 2rem; color: #2563eb;"></i>
-                            </div>
-                            <h3>Cloud & DevOps</h3>
-                        </div>
-                        <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
-                            Évolution des solutions cloud, conteneurisation et pratiques DevOps pour le déploiement continu.
-                        </p>
-                        <div class="mb-3">
-                            <span class="tech-badge">Docker</span>
-                            <span class="tech-badge">CI/CD</span>
-                            <span class="tech-badge">Git Actions</span>
-                        </div>
-                        <div class="mb-3">
-                            <h6 style="color: #1a1a1a; margin-bottom: 10px;">Ressources :</h6>
-                            <div class="d-flex flex-wrap gap-2">
-                                <a href="https://www.docker.com/blog" target="_blank" class="btn btn-outline-primary btn-sm">Docker Blog</a>
-                                <a href="https://github.blog/" target="_blank" class="btn btn-outline-primary btn-sm">GitHub Blog</a>
-                                <a href="https://kubernetes.io/blog/" target="_blank" class="btn btn-outline-primary btn-sm">Kubernetes</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="simple-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="me-3">
-                                <i class="bi bi-phone" style="font-size: 2rem; color: #2563eb;"></i>
-                            </div>
-                            <h3>Web & Mobile</h3>
-                        </div>
-                        <p style="color: #1a1a1a; line-height: 1.7; margin-bottom: 20px;">
-                            Nouvelles tendances du développement web, PWA, frameworks modernes et expérience utilisateur.
-                        </p>
-                        <div class="mb-3">
-                            <span class="tech-badge">React</span>
-                            <span class="tech-badge">PWA</span>
-                            <span class="tech-badge">API REST</span>
-                        </div>
-                        <div class="mb-3">
-                            <h6 style="color: #1a1a1a; margin-bottom: 10px;">Ressources :</h6>
-                            <div class="d-flex flex-wrap gap-2">
-                                <a href="https://react.dev/blog" target="_blank" class="btn btn-outline-primary btn-sm">React Blog</a>
-                                <a href="https://developer.mozilla.org/fr/" target="_blank" class="btn btn-outline-primary btn-sm">MDN</a>
-                                <a href="https://web.dev/" target="_blank" class="btn btn-outline-primary btn-sm">Web.dev</a>
                             </div>
                         </div>
                     </div>
