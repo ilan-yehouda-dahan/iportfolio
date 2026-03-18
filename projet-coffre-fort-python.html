@@ -4,13 +4,10 @@
     <meta charset="utf-8">
     <title>Projet — Coffre-fort de mots de passe (Python) | Ilan Dahan</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <!-- Bootstrap / Icons / thème principal -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
 
-    <!-- Styles spécifiques à la page projet -->
     <style>
         .project-page {
             background: #f2f4f8; /* gris très clair */
@@ -141,21 +138,236 @@
             padding: 100px 0;
             overflow: clip;
             position: relative;}
+
+        .pw::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            border-radius: 24px 24px 0 0;
+        }
+
+        @media (max-width: 768px) {
+            .pw { padding: 30px 20px; border-radius: 20px; }
+        }
+
+        .pw-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: rgba(59,130,246,0.08);
+            color: #3b82f6;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 2px solid rgba(59,130,246,0.2);
+        }
+
+        .pw-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: #0f172a !important;
+            -webkit-text-fill-color: #0f172a !important;
+            background: none !important;
+        }
+
+        .pw-subtitle {
+            color: #64748b;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            max-width: 800px;
+        }
+
+        .pw-section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #0f172a !important;
+            -webkit-text-fill-color: #0f172a !important;
+            background: none !important;
+        }
+
+        .pw-section-title i { color: #3b82f6 !important; }
+
+        .pw-divider {
+            margin: 45px 0 35px;
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #e2e8f0 50%, transparent);
+        }
+
+        .pw-card {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 24px 28px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 0;
+        }
+
+        .pw-card h6 {
+            color: #3b82f6;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .pw-card ul { padding-left: 20px; margin-bottom: 0; }
+
+        .pw-card li {
+            color: #334155 !important;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .pw-card p { color: #64748b !important; margin-bottom: 0; }
+
+        .pw-card strong { color: #1e293b !important; }
+
+        .pw-card code {
+            background: #e0e7ff;
+            color: #4338ca;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-size: 0.88rem;
+        }
+
+        .pw-cmd {
+            background: #1e293b;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 12px 0;
+        }
+
+        .pw-cmd code {
+            background: transparent !important;
+            color: #e2e8f0 !important;
+            font-size: 0.95rem;
+            padding: 0;
+        }
+
+        .pw-image {
+            border-radius: 16px;
+            box-shadow: 0 14px 35px rgba(15,23,42,0.2);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            width: 100%;
+        }
+
+        .pw-image:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 50px rgba(15,23,42,0.25);
+        }
+
+        .pw-caption {
+            font-size: 0.82rem;
+            color: #94a3b8;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .pw-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+
+        .pw-pills li {
+            padding: 8px 18px;
+            border-radius: 25px;
+            border: 1.5px solid #cbd5e1;
+            background: #ffffff;
+            font-size: 13px;
+            font-weight: 500;
+            color: #475569;
+            transition: all 0.3s ease;
+        }
+
+        .pw-pills li:hover {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white !important;
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+
+        .pw-pills li i { margin-right: 5px; color: #3b82f6; }
+        .pw-pills li:hover i { color: white; }
+
+        .pw-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #64748b;
+            font-weight: 500;
+            padding: 8px 18px;
+            border-radius: 10px;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .pw-back:hover {
+            color: #3b82f6;
+            border-color: #3b82f6;
+            background: #eff6ff;
+            transform: translateX(-4px);
+        }
+
+        .pw-download {
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 1px dashed #cbd5e1;
+            text-align: center;
+        }
+
+        .pw-download h3 {
+            color: #0f172a !important;
+            -webkit-text-fill-color: #0f172a !important;
+            background: none !important;
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .pw-download p { color: #94a3b8; margin-bottom: 28px; }
+
+        .pw-download .note {
+            display: inline-block;
+            margin-top: 20px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 12px 22px;
+            font-size: 0.88rem;
+            color: #64748b;
+        }
+
+        .pw-download .note i { color: #3b82f6; }
     </style>
 </head>
 
 <body class="index-page project-page">
 
-<!-- Sidebar identique à Rosetta -->
 <header id="header" class="header dark-background d-flex flex-column">
     <div class="profile-img">
         <img src="assets/moi.jpg" alt="Photo de profil d'Ilan Dahan" class="img-fluid rounded-circle">
     </div>
-
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
         <h1 class="sitename">Ilan Dahan</h1>
     </a>
-
     <nav id="navmenu" class="navmenu">
         <ul>
             <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Accueil</a></li>
@@ -169,10 +381,8 @@
 </header>
 
 <main class="main">
-
     <section class="section">
         <div class="container">
-
             <div class="project-wrapper">
 
                 <!-- Lien retour -->
@@ -185,170 +395,170 @@
                     <div class="project-badge">
                         <i class="bi bi-shield-lock"></i> Projet de stage — 1ʳᵉ année BTS SIO SLAM
                     </div>
-                    <h1 class="project-title">Coffre-fort de mots de passe (Python)</h1>
+                    <h1 class="project-title">Coffre-fort de mots de passe sécurisé</h1>
                     <p class="project-subtitle">
-                        Application bureau permettant de stocker et gérer des mots de passe de manière sécurisée :
-                        création de compte, mot de passe maître, chiffrement des données et interface graphique
-                        pour ajouter, modifier, rechercher et copier les identifiants.
+                        Application desktop sécurisée développée en Python. 
+                        Elle permet de stocker, gérer et protéger des mots de passe de façon chiffrée localement.  
+                        Chaque utilisateur a un compte protégé par un mot de passe maître. 
+                        Les données sont chiffrées avec une clé dérivée du mot de passe maître, assurant la confidentialité.
                     </p>
 
                     <ul class="pill-list mt-3">
                         <li><i class="bi bi-code-slash me-1"></i>Python</li>
-                        <li><i class="bi bi-window-stack me-1"></i>Interface graphique (Tkinter)</li>
                         <li><i class="bi bi-shield-lock-fill me-1"></i>Chiffrement symétrique</li>
                         <li><i class="bi bi-filetype-key me-1"></i>Fichier chiffré <code>vault.enc</code></li>
                         <li><i class="bi bi-diagram-3 me-1"></i>Architecture modulaire</li>
                     </ul>
                 </div>
 
-                <hr class="project-divider">
+                <hr class="pw-divider">
 
-                <!-- Contexte / Objectifs + capture login -->
+                <!-- Contexte + capture login -->
                 <div class="row gy-4 align-items-start">
                     <div class="col-lg-6">
-                        <h2 class="project-section-title">
+                        <h2 class="pw-section-title">
                             <i class="bi bi-info-circle"></i> Contexte du projet
                         </h2>
-                        <div class="project-card mt-2">
-                            <p>
+                        <div class="pw-card mt-2">
+                            <p style="margin-bottom: 12px;">
                                 Projet réalisé pendant mon stage de première année de BTS SIO option SLAM.
-                                L’objectif était de fournir un petit outil interne permettant de stocker
-                                les accès (sites, comptes techniques, outils) de façon plus sécurisée que
-                                dans un fichier texte ou un tableur partagé.
+                                L'objectif était de fournir un outil interne permettant de stocker les accès
+                                (sites, comptes techniques, outils) de façon plus sécurisée qu'un fichier
+                                texte ou un tableur partagé.
                             </p>
-                            <p class="mb-0">
-                                L’application fonctionne en local sur le poste de l’utilisateur et repose sur
-                                un <strong>mot de passe maître</strong> pour déverrouiller le coffre-fort.
+                            <p>
+                                L'application fonctionne entièrement en local sur le poste de l'utilisateur
+                                et repose sur un <strong>mot de passe maître</strong> pour déverrouiller le coffre-fort.
                             </p>
                         </div>
 
-                        <h2 class="project-section-title mt-4">
+                        <h2 class="pw-section-title mt-4">
                             <i class="bi bi-bullseye"></i> Objectifs
                         </h2>
-                        <ul>
-                            <li>Remplacer les fichiers Excel / blocs-notes par un outil dédié.</li>
-                            <li>Protéger les mots de passe par chiffrement fort côté poste client.</li>
-                            <li>Proposer une interface simple pour les non-techniques.</li>
-                            <li>Faciliter la recherche et la mise à jour des identifiants.</li>
-                        </ul>
+                        <div class="pw-card mt-2">
+                            <ul>
+                                <li>Remplacer les fichiers Excel / blocs-notes par un outil dédié.</li>
+                                <li>Protéger les mots de passe par chiffrement fort côté poste client.</li>
+                                <li>Proposer une interface simple et accessible.</li>
+                                <li>Faciliter la recherche et la mise à jour des identifiants.</li>
+                            </ul>
+                        </div>
                     </div>
-
-                    <div class="col-lg-6 text-center text-lg-end">
+                    <div class="col-lg-6 text-center">
                         <img src="assets/img/projets/coffre-login.png"
-                             alt="Écran de connexion du coffre-fort de mots de passe"
-                             class="img-fluid project-image">
-                        <p class="project-caption">
-                            Écran de connexion : création de compte ou connexion avec un mot de passe maître.
-                        </p>
+                             alt="Écran de connexion du coffre-fort"
+                             class="pw-image">
+                        <p class="pw-caption">Écran de connexion : création de compte ou connexion avec un mot de passe maître.</p>
                     </div>
                 </div>
 
-                <hr class="project-divider">
+                <hr class="pw-divider">
 
-                <!-- Fonctionnalités principales + capture tableau -->
+                <!-- Fonctionnalités + capture dashboard -->
                 <div class="row gy-4 align-items-center">
                     <div class="col-lg-6 order-lg-1 order-2">
-                        <h2 class="project-section-title">
+                        <h2 class="pw-section-title">
                             <i class="bi bi-list-check"></i> Fonctionnalités principales
                         </h2>
-                        <div class="project-card mt-2">
+                        <div class="pw-card mt-2">
                             <ul>
-                                <li><strong>Authentification :</strong> création de compte utilisateur et
-                                    vérification du mot de passe maître (hashé et salé).</li>
-                                <li><strong>Gestion des entrées :</strong> ajout, modification et suppression
-                                    de lignes (site, login, mot de passe, catégorie).</li>
-                                <li><strong>Recherche rapide :</strong> champ de recherche pour filtrer les
-                                    entrées par site ou login.</li>
-                                <li><strong>Générateur de mot de passe :</strong> bouton pour créer un mot de
-                                    passe aléatoire complexe et le remplir automatiquement.</li>
-                                <li><strong>Copie sécurisée :</strong> bouton pour copier le mot de passe
-                                    sélectionné dans le presse-papiers.</li>
+                                <li><strong>Création de compte</strong> avec mot de passe maître et confirmation</li>
+                                <li><strong>Connexion sécurisée</strong> avec verrouillage après 5 tentatives échouées</li>
+                                <li><strong>Gestion du coffre</strong> : ajout, modification, suppression d'entrées</li>
+                                <li><strong>Catégorisation</strong> des mots de passe (Perso, Travail, Banque…)</li>
+                                <li><strong>Générateur de mot de passe</strong> fort intégré (lettres, chiffres, symboles)</li>
+                                <li><strong>Recherche instantanée</strong> dans la liste par site, login ou catégorie</li>
+                                <li><strong>Copie rapide</strong> du mot de passe dans le presse-papiers</li>
+                                <li><strong>Déconnexion</strong> sécurisée avec effacement des données en mémoire</li>
+                                <li><strong>Stockage local chiffré</strong> dans <code>vault.enc</code></li>
                             </ul>
-                            <p class="mb-0">
-                                Toutes les données visibles dans le tableau sont chargées depuis un fichier
-                                chiffré et ré-écrites de façon sécurisée après chaque modification.
-                            </p>
                         </div>
                     </div>
-
                     <div class="col-lg-6 order-lg-2 order-1 text-center">
                         <img src="assets/img/projets/coffre-dashboard.png%20.png"
-                             alt="Interface principale du coffre-fort de mots de passe"
-                             class="img-fluid project-image">
-                        <p class="project-caption">
-                            Interface principale : tableau des mots de passe avec recherche, génération et actions rapides.
-                        </p>
+                             alt="Interface principale du coffre-fort"
+                             class="pw-image">
+                        <p class="pw-caption">Interface principale : tableau des mots de passe avec recherche, génération et actions rapides.</p>
                     </div>
                 </div>
 
-                <hr class="project-divider">
+                <hr class="pw-divider">
 
-                <!-- Partie technique & fichiers sensibles -->
+                <!-- Technique + Compétences -->
                 <div class="row gy-4">
                     <div class="col-lg-6">
-                        <h2 class="project-section-title">
+                        <h2 class="pw-section-title">
                             <i class="bi bi-gear-wide-connected"></i> Partie technique
                         </h2>
-                        <div class="project-card mt-2">
+                        <div class="pw-card mt-2 mb-3">
+                            <h6>Prérequis</h6>
+                            <ul>
+                                <li>Python 3.8 ou supérieur</li>
+                                <li>Tkinter (inclus avec Python)</li>
+                                <li>Packages : <code>bcrypt</code>, <code>cryptography</code></li>
+                            </ul>
+                            <h6 class="mt-3">Installation des dépendances</h6>
+                            <div class="pw-cmd">
+                                <code>pip install bcrypt cryptography</code>
+                            </div>
+                        </div>
+                        <div class="pw-card">
                             <h6>Architecture</h6>
                             <ul>
-                                <li>Fichier principal <code>main.py</code> : interface Tkinter et logique métier.</li>
-                                <li>Module <code>crypto_utils.py</code> : toutes les fonctions de chiffrement / déchiffrement.</li>
-                                <li>Fichiers sensibles :
-                                    <ul>
-                                        <li><code>salt.bin</code> : sel utilisé pour dériver la clé à partir du mot de passe maître.</li>
-                                        <li><code>vault.enc</code> : contenu du coffre chiffré (sites, logins, mots de passe).</li>
-                                        <li><code>vault.env</code> : variables d’environnement liées au coffre (config locale).</li>
-                                    </ul>
-                                </li>
+                                <li><code>main.py</code> : interface Tkinter, logique métier et gestion des utilisateurs</li>
+                                <li><code>crypto_utils.py</code> : dérivation de clé PBKDF2 + chiffrement Fernet</li>
+                                <li><code>salt.bin</code> : sel aléatoire pour dériver la clé maître</li>
+                                <li><code>vault.enc</code> : contenu du coffre chiffré en AES</li>
                             </ul>
-
                             <h6 class="mt-3">Sécurité</h6>
-                            <ul class="mb-0">
-                                <li>Utilisation d’une clé dérivée du mot de passe maître avec un sel stocké en binaire.</li>
-                                <li>Chiffrement symétrique via une librairie de cryptographie Python.</li>
-                                <li>Aucune donnée en clair sur le disque : seul le contenu déchiffré est en mémoire.</li>
-                                <li>Mot de passe maître stocké sous forme de hash (pas en clair).</li>
+                            <ul style="margin-bottom:0;">
+                                <li>Clé AES 256 bits dérivée via <strong>PBKDF2-HMAC-SHA256</strong> (100 000 itérations)</li>
+                                <li>Chiffrement symétrique <strong>Fernet</strong> (AES-128-CBC + HMAC)</li>
+                                <li>Aucune donnée en clair sur le disque</li>
+                                <li>Mot de passe maître hashé avec <strong>bcrypt</strong></li>
                             </ul>
                         </div>
                     </div>
-
                     <div class="col-lg-6">
-                        <h2 class="project-section-title">
+                        <h2 class="pw-section-title">
                             <i class="bi bi-lightbulb"></i> Compétences & apports
                         </h2>
-                        <div class="project-card mt-2">
+                        <div class="pw-card mt-2">
                             <ul>
-                                <li>Mise en place d’une interface graphique complète avec Tkinter.</li>
-                                <li>Découverte et utilisation de bonnes pratiques de chiffrement côté client.</li>
-                                <li>Organisation d’un projet Python en modules réutilisables.</li>
-                                <li>Gestion d’un mini-projet de A à Z : besoin, maquettes, développement, tests.</li>
-                                <li>Sensibilisation à la protection de données sensibles en entreprise.</li>
+                                <li>Conception et développement d'une interface graphique desktop avec <strong>Tkinter</strong>.</li>
+                                <li>Mise en œuvre de bonnes pratiques de chiffrement côté client (PBKDF2, Fernet, bcrypt).</li>
+                                <li>Organisation d'un projet Python en modules réutilisables (<code>main.py</code> / <code>crypto_utils.py</code>).</li>
+                                <li>Gestion complète d'un projet de A à Z : besoin, développement, tests.</li>
+                                <li>Sensibilisation à la sécurité des données sensibles en entreprise.</li>
                             </ul>
-                            <p class="mb-0">
-                                Ce projet m’a permis de faire le lien entre la <strong>programmation Python</strong> vue en cours
-                                et des problématiques très concrètes de <strong>sécurité des mots de passe</strong> en entreprise.
+                            <p>
+                                Ce projet m'a permis de faire le lien entre la
+                                <strong>programmation Python</strong> vue en cours et des problématiques
+                                concrètes de <strong>sécurité des mots de passe</strong> en entreprise.
                             </p>
                         </div>
                     </div>
-
                 </div>
-                <div class="project-wrapper">
-                    <h2 class="text-center">Présentation de l'entreprise</h2>
-                    <p class="text-center">
-                        Découvrez la présentation complète de l'entreprise en téléchargeant le document PDF ci-dessous.
-                    </p>
-                    <div class="text-center">
-                        <a href="assets/docs/Expertise-en-Developpement-and-Securite-Informatique.pdf" class="btn btn-primary" download>
-                            <i class="bi bi-file-earmark-arrow-down"></i> Télécharger le PDF
-                        </a>
+
+                <div class="row mt-5" data-aos="fade-up">
+                    <div class="col-12 text-center">
+                        <div class="simple-card">
+                            <h3 class="mb-4"><i class="bi bi-building me-2"></i>Présentation de l'entreprise</h3>
+                            <p class="text-muted mb-4">
+                                Découvrez la présentation complète de l'entreprise où j'ai effectué mon stage.
+                            </p>
+                            <div class="d-flex gap-3 justify-content-center">
+                                <a href="assets/docs/Expertise-en-Developpement-and-Securite-Informatique.pdf" class="btn btn-primary btn-lg" download>
+                                    <i class="bi bi-file-earmark-arrow-down me-2"></i>Télécharger le PDF
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
+            </div><!-- /.pw -->
+        </div><!-- /.container -->
     </section>
-
 </main>
 
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
