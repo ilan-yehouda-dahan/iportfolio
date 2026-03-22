@@ -398,9 +398,9 @@
                     </div>
                     <h1 class="project-title">Coffre-fort de mots de passe sécurisé</h1>
                     <p class="project-subtitle">
-                        Application desktop sécurisée développée en Python. 
-                        Elle permet de stocker, gérer et protéger des mots de passe de façon chiffrée localement.  
-                        Chaque utilisateur a un compte protégé par un mot de passe maître. 
+                        Application desktop sécurisée développée en Python.
+                        Elle permet de stocker, gérer et protéger des mots de passe de façon chiffrée localement.
+                        Chaque utilisateur a un compte protégé par un mot de passe maître.
                         Les données sont chiffrées avec une clé dérivée du mot de passe maître, assurant la confidentialité.
                     </p>
 
@@ -410,6 +410,49 @@
                         <li><i class="bi bi-filetype-key me-1"></i>Fichier chiffré <code>vault.enc</code></li>
                         <li><i class="bi bi-diagram-3 me-1"></i>Architecture modulaire</li>
                     </ul>
+                </div>
+
+                <hr class="pw-divider">
+
+                <!-- Présentation de l'entreprise -->
+                <div class="row gy-4 align-items-start">
+                    <div class="col-lg-12">
+                        <h2 class="pw-section-title">
+                            <i class="bi bi-building"></i> Présentation de l'entreprise
+                        </h2>
+                        <div class="pw-card mt-2">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="mb-2"><strong>Entreprise de Cybersécurité</strong></h6>
+                                    <p class="mb-3"><em>Spécialiste en pentests et audits de sécurité</em></p>
+                                    
+                                    <h6 class="mb-2">Informations clés</h6>
+                                    <ul>
+                                        <li><strong>Localisation</strong> : La Défense, France</li>
+                                        <li><strong>Statut</strong> : SAS (Société par Actions Simplifiée)</li>
+                                        <li><strong>Spécialisation</strong> : Pentests et audits de cybersécurité</li>
+                                        <li><strong>Stage</strong> : Juin 2025</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="mb-2">Expertises et services</h6>
+                                    <ul>
+                                        <li><strong>Pentests</strong> : Tests d'intrusion sur applications et infrastructures</li>
+                                        <li><strong>Audits de sécurité</strong> : Analyse complète des vulnérabilités</li>
+                                        <li><strong>Tests d'intrusion</strong> : Simulations d'attaques réelles</li>
+                                        <li><strong>Conseil en sécurité</strong> : Stratégie de protection des données</li>
+                                    </ul>
+                                    
+                                    <h6 class="mb-2 mt-3">Positionnement</h6>
+                                    <p class="mb-0">
+                                        Entreprise spécialisée reconnue dans le domaine de la cybersécurité, 
+                                        intervenant auprès de clients exigeants pour sécuriser leurs systèmes 
+                                        et applications contre les menaces actuelles.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <hr class="pw-divider">
@@ -449,7 +492,7 @@
                         <a href="assets/img/projets/coffre-login.png" data-gall="coffre-project" class="glightbox">
                             <img src="assets/img/projets/coffre-login.png"
                                  alt="Écran de connexion du coffre-fort"
-                                 class="pw-image">
+                                 class="img-fluid project-image">
                         </a>
                         <p class="pw-caption">Écran de connexion : création de compte ou connexion avec un mot de passe maître.</p>
                     </div>
@@ -465,8 +508,8 @@
                         </h2>
                         <div class="pw-card mt-2">
                             <ul>
-                                <li><strong>Création de compte</strong> avec mot de passe maître et confirmation</li>
-                                <li><strong>Connexion sécurisée</strong> avec verrouillage après 5 tentatives échouées</li>
+                                <li><strong>Création de compte</strong> avec mot de passe maître</li>
+                                <li><strong>Connexion sécurisée</strong> au coffre-fort</li>
                                 <li><strong>Gestion du coffre</strong> : ajout, modification, suppression d'entrées</li>
                                 <li><strong>Catégorisation</strong> des mots de passe (Perso, Travail, Banque…)</li>
                                 <li><strong>Générateur de mot de passe</strong> fort intégré (lettres, chiffres, symboles)</li>
@@ -498,30 +541,15 @@
                         <div class="pw-card mt-2 mb-3">
                             <h6>Prérequis</h6>
                             <ul>
-                                <li>Python 3.8 ou supérieur</li>
-                                <li>Tkinter (inclus avec Python)</li>
-                                <li>Packages : <code>bcrypt</code>, <code>cryptography</code></li>
+                                <li><strong>Python 3.8</strong> ou supérieur : langage principal de développement</li>
+                                <li><strong>Tkinter</strong> : interface graphique desktop (inclus avec Python)</li>
+                                <li><strong>Bibliothèques</strong> : cryptographie Python pour le chiffrement</li>
+                                <li><strong>Stockage</strong> : fichiers chiffrés localement sur le poste</li>
                             </ul>
                             <h6 class="mt-3">Installation des dépendances</h6>
                             <div class="pw-cmd">
-                                <code>pip install bcrypt cryptography</code>
+                                <code>pip install cryptography</code>
                             </div>
-                        </div>
-                        <div class="pw-card">
-                            <h6>Architecture</h6>
-                            <ul>
-                                <li><code>main.py</code> : interface Tkinter, logique métier et gestion des utilisateurs</li>
-                                <li><code>crypto_utils.py</code> : dérivation de clé PBKDF2 + chiffrement Fernet</li>
-                                <li><code>salt.bin</code> : sel aléatoire pour dériver la clé maître</li>
-                                <li><code>vault.enc</code> : contenu du coffre chiffré en AES</li>
-                            </ul>
-                            <h6 class="mt-3">Sécurité</h6>
-                            <ul style="margin-bottom:0;">
-                                <li>Clé AES 256 bits dérivée via <strong>PBKDF2-HMAC-SHA256</strong> (100 000 itérations)</li>
-                                <li>Chiffrement symétrique <strong>Fernet</strong> (AES-128-CBC + HMAC)</li>
-                                <li>Aucune donnée en clair sur le disque</li>
-                                <li>Mot de passe maître hashé avec <strong>bcrypt</strong></li>
-                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -530,16 +558,13 @@
                         </h2>
                         <div class="pw-card mt-2">
                             <ul>
-                                <li>Conception et développement d'une interface graphique desktop avec <strong>Tkinter</strong>.</li>
-                                <li>Mise en œuvre de bonnes pratiques de chiffrement côté client (PBKDF2, Fernet, bcrypt).</li>
-                                <li>Organisation d'un projet Python en modules réutilisables (<code>main.py</code> / <code>crypto_utils.py</code>).</li>
-                                <li>Gestion complète d'un projet de A à Z : besoin, développement, tests.</li>
-                                <li>Sensibilisation à la sécurité des données sensibles en entreprise.</li>
+                                <li>Développement d'une application <strong>desktop</strong> avec Python et Tkinter</li>
+                                <li>Mise en place de <strong>mesures de sécurité</strong> pour protéger les données</li>
                             </ul>
                             <p>
-                                Ce projet m'a permis de faire le lien entre la
-                                <strong>programmation Python</strong> vue en cours et des problématiques
-                                concrètes de <strong>sécurité des mots de passe</strong> en entreprise.
+                                Ce projet m'a permis de développer mes compétences en 
+                                <strong>développement Python</strong> tout en travaillant sur des problématiques
+                                réelles de <strong>sécurité informatique</strong>.
                             </p>
                         </div>
                     </div>
