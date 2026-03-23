@@ -196,7 +196,8 @@
                     </div>
                     <h1 class="project-title">GestTravaux Pro - Desktop</h1>
                     <p class="project-subtitle">
-                        Application desktop développée en JavaFX pour les gestionnaires du syndic IMMOSYNC.
+                        Application desktop développée en JavaFX pour les gestionnaires et administrateurs du syndic IMMOSYNC.
+                        Pilotage complet des chantiers, gestion des comptes, workflow devis et prise de décision.
                     </p>
 
                     <ul class="pill-list mt-3">
@@ -204,7 +205,44 @@
                         <li><i class="bi bi-database me-1"></i>PostgreSQL</li>
                         <li><i class="bi bi-window me-1"></i>Interface desktop</li>
                         <li><i class="bi bi-shield-lock me-1"></i>Connexion sécurisée BDD</li>
+                        <li><i class="bi bi-people me-1"></i>Gestion des rôles</li>
                     </ul>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Accès et authentification -->
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-1-circle"></i> Accès et authentification
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                L'application desktop nécessite une authentification sécurisée :
+                            </p>
+                            <ul>
+                                <li><strong>Connexion base de données</strong> : accès direct PostgreSQL.</li>
+                                <li><strong>Identifiants sécurisés</strong> : chiffrement des credentials.</li>
+                                <li><strong>Interface de login</strong> : écran d'authentification professionnel.</li>
+                            </ul>
+                            <p class="mb-0">
+                                Une fois authentifié, le gestionnaire accède au tableau de bord
+                                avec synchronisation temps réel des données de l'application web.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2 order-1 text-center">
+                        <a href="assets/img/projets/loginJava.png" data-gall="java-project" class="glightbox">
+                            <img src="assets/img/projets/loginJava.png"
+                                 alt="Page de connexion application desktop GestTravaux Pro"
+                                 class="img-fluid project-image">
+                        </a>
+                        <p class="project-caption">
+                            Écran d'authentification de l'application desktop JavaFX
+                            avec connexion sécurisée à la base de données PostgreSQL.
+                        </p>
+                    </div>
                 </div>
 
                 <hr class="project-divider">
@@ -216,18 +254,19 @@
                             <i class="bi bi-exclamation-circle"></i> Rôle de l'application desktop
                         </h2>
                         <p>
-                            L'application desktop JavaFX est destinée aux gestionnaires de la société IMMOSYNC 
-                            pour piloter l'ensemble des chantiers et prendre les décisions stratégiques 
-                            basées sur l'analyse des devis reçus.
+                            L'application desktop JavaFX est destinée aux <strong>gestionnaires</strong> et <strong>administrateurs</strong> du syndic IMMOSYNC.
+                            Elle centralise le pilotage des chantiers et la prise de décision sur les devis.
                         </p>
 
                         <h2 class="project-section-title mt-4">
                             <i class="bi bi-bullseye"></i> Objectifs spécifiques
                         </h2>
                         <ul>
-                            <li>Centraliser la gestion de tous les chantiers en une interface.</li>
-                            <li>Faciliter la prise de décision pour les gestionnaires.</li>
-                            <li>Assurer la cohérence des données avec l'application web.</li>
+                            <li>Créer et gérer tous les comptes : entrepreneurs, inspecteurs, propriétaires.</li>
+                            <li>Créer les chantiers et les assigner à un inspecteur.</li>
+                            <li>Réceptionner les rapports d'inspection et définir un devis type à envoyer aux entrepreneurs.</li>
+                            <li>Accepter ou refuser les contre-devis soumis par les entrepreneurs.</li>
+                            <li>Assurer la cohérence des données avec l'application web Symfony.</li>
                         </ul>
                     </div>
 
@@ -249,56 +288,19 @@
                 <div class="row gy-4 align-items-center">
                     <div class="col-lg-6 order-lg-1 order-2">
                         <h2 class="project-section-title">
-                            <i class="bi bi-1-circle"></i> Accès et authentification
-                        </h2>
-                        <div class="project-card mt-2">
-                            <p>
-                                L'application desktop nécessite une authentification sécurisée :
-                            </p>
-                            <ul>
-                                <li><strong>Connexion base de données</strong> : accès direct PostgreSQL.</li>
-                                <li><strong>Identifiants sécurisés</strong> : chiffrement des credentials.</li>
-                                <li><strong>Interface de login</strong> : écran d'authentification professionnel.</li>
-                            </ul>
-                            <p class="mb-0">
-                                Une fois authentifié, le gestionnaire accède au tableau de bord 
-                                avec synchronisation temps réel des données de l'application web.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 order-lg-2 order-1 text-center">
-                        <a href="assets/img/projets/loginJava.png" data-gall="java-project" class="glightbox">
-                            <img src="assets/img/projets/loginJava.png"
-                                 alt="Page de connexion application desktop GestTravaux Pro"
-                                 class="img-fluid project-image">
-                        </a>
-                        <p class="project-caption">
-                            Écran d'authentification de l'application desktop JavaFX 
-                            avec connexion sécurisée à la base de données PostgreSQL.
-                        </p>
-                    </div>
-                </div>
-
-                <hr class="project-divider">
-
-                <!-- Fonctionnalités principales -->
-                <div class="row gy-4 align-items-center">
-                    <div class="col-lg-6 order-lg-1 order-2">
-                        <h2 class="project-section-title">
                             <i class="bi bi-2-circle"></i> Fonctionnalités de gestion
                         </h2>
                         <div class="project-card mt-2">
-                            <p>
-                                L'application desktop offre des fonctionnalités avancées de gestion :
-                            </p>
+                            <p><strong>Le gestionnaire</strong> dispose de toutes les fonctionnalités de pilotage :</p>
                             <ul>
-                                <li><strong>Tableau de bord</strong> : vue d'ensemble de tous les chantiers</li>
-                                <li><strong>Gestion des devis</strong> reçus par les entrepreneurs</li>
-                                <li><strong>Interface de validation</strong> des chantiers</li>
+                                <li><strong>Gestion des comptes</strong> : création et gestion des comptes entrepreneurs, inspecteurs et propriétaires.</li>
+                                <li><strong>Gestion des chantiers</strong> : création d'un chantier et assignation à un inspecteur.</li>
+                                <li><strong>Workflow devis</strong> : après réception du rapport d'inspection, définition d'un devis type avec les prestations à réaliser, envoyé à un entrepreneur. Si l'entrepreneur soumet un contre-devis, le gestionnaire décide de l'accepter ou le refuser.</li>
+                                <li><strong>Gestion des prestations</strong> : création et paramétrage des prestations disponibles.</li>
                             </ul>
                             <p class="mb-0">
-                                Les gestionnaires peuvent ainsi piloter efficacement l'activité 
-                                et prendre des décisions éclairées basées sur des données objectives.
+                                <strong>L'administrateur</strong> dispose des mêmes droits que le gestionnaire,
+                                avec en plus la possibilité de <strong>créer des comptes gestionnaires</strong>.
                             </p>
                         </div>
                     </div>
@@ -309,7 +311,7 @@
                                  class="img-fluid project-image">
                         </a>
                         <p class="project-caption">
-                            Module d'analyse comparative des devis avec critères multiples 
+                            Module d'analyse comparative des devis avec critères multiples
                             et aide à la décision pour les gestionnaires.
                         </p>
                     </div>
@@ -328,17 +330,17 @@
                                 L'application desktop repose sur une architecture Java robuste :
                             </p>
                             <ul>
-                                <li><strong>JavaFX</strong> : interface moderne et responsive pour desktop.</li>
-                                <li><strong>Connexion PostgreSQL</strong> : accès direct à la base de données partagée.</li>
+                                <li><strong>JavaFX</strong> : interface moderne pour desktop.</li>
+                                <li><strong>Connexion PostgreSQL partagée</strong> : accès direct à la même base de données que l'application Symfony.</li>
                                 <li><strong>Architecture MVC</strong> : séparation logique métier et présentation.</li>
-                                <li><strong>Synchronisation</strong> : échanges temps réel avec application web.</li>
+                                <li><strong>Gestion des rôles</strong> : gestionnaire et administrateur avec droits distincts.</li>
                             </ul>
 
                             <h6 class="mt-3 mb-1">Compétences Java mises en avant :</h6>
                             <ul class="mb-0">
-                                <li>Développement d'applications desktop.</li>
-                                <li>Gestion de base de données avec Hibernate.</li>
-                                <li>Conception d'interfaces utilisateur avec JavaFX.</li>
+                                <li>Développement d'applications desktop avec JavaFX.</li>
+                                <li>Connexion et manipulation de base de données PostgreSQL.</li>
+                                <li>Conception d'interfaces utilisateur métier.</li>
                             </ul>
                         </div>
                     </div>
@@ -349,10 +351,13 @@
                         </h2>
                         <div class="project-card mt-2">
                             <ul class="mb-0">
-                                <li>Tableau de bord avec vue d'ensemble des chantiers</li>
-                                <li>Gestion et suivi des devis reçus</li>
-                                <li>Interface de validation des chantiers</li>
-                                <li>Connexion à la base de données PostgreSQL partagée</li>
+                                <li>Tableau de bord gestionnaire avec vue d'ensemble des chantiers</li>
+                                <li>Création et gestion des comptes (inspecteurs, entrepreneurs, propriétaires)</li>
+                                <li>Assignation des chantiers aux inspecteurs</li>
+                                <li>Définition et envoi de devis type aux entrepreneurs</li>
+                                <li>Acceptation ou refus des contre-devis entrepreneurs</li>
+                                <li>Compte administrateur avec création de comptes gestionnaires</li>
+                                <li>Connexion à la base de données PostgreSQL partagée avec Symfony</li>
                             </ul>
                         </div>
                     </div>

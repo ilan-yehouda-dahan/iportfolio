@@ -196,18 +196,53 @@
                     </div>
                     <h1 class="project-title">GENIA</h1>
                     <p class="project-subtitle">
-                        Interface frontend complète pour une solution d'intelligence artificielle locale.
-                        Développée en collaboration avec Scope.io qui fournit le backend IA (modules VLLM, mini ChatGPT).
-                        Notre rôle : conception et développement de l'interface utilisateur en Twig/HTML avec intégration API.
+                        Interface développée avec Symfony pour permettre aux entreprises d'utiliser une IA en interne,
+                        sans que leurs données ne quittent leurs serveurs.
+                        Réalisée en collaboration avec Scope.io qui fournit le moteur d'intelligence artificielle.
                     </p>
 
                     <ul class="pill-list ">
-                        <li><i class="bi bi-code-slash me-1"></i>PHP / Twig</li>
+                        <li><i class="bi bi-code-slash me-1"></i>PHP / Symfony</li>
+                        <li><i class="bi bi-file-earmark-code me-1"></i>Twig</li>
                         <li><i class="bi bi-window me-1"></i>HTML / CSS</li>
                         <li><i class="bi bi-plug me-1"></i>Intégration API Scope.io</li>
-                        <li><i class="bi bi-box me-1"></i>Docker</li>
-                        <li><i class="bi bi-shield-lock me-1"></i>Architecture locale sécurisée</li>
+                        <li><i class="bi bi-shield-lock me-1"></i>IA locale sécurisée</li>
                     </ul>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Étape 1 : Authentification et navigation -->
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-1-circle"></i> Authentification sécurisée et navigation
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                L'application commence par une page de connexion sécurisée :
+                            </p>
+                            <ul>
+                                <li>Formulaire d'authentification avec email et mot de passe.</li>
+                                <li>Interface professionnelle adaptée au contexte entreprise.</li>
+                                <li>Accès direct à l'espace de travail après connexion.</li>
+                            </ul>
+                            <p class="mb-0">
+                                Les sessions sont gérées localement, sans aucune dépendance à des services externes,
+                                ce qui garantit la confidentialité des accès.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2 order-1 text-center">
+                        <a href="assets/img/projets/loginGenia.jpg" data-gall="genia-project" class="glightbox">
+                            <img src="assets/img/projets/loginGenia.jpg"
+                                 alt="Page de connexion GENIA"
+                                 class="img-fluid project-image">
+                        </a>
+                        <p class="project-caption">
+                            Page de connexion sécurisée de l'application GENIA.
+                        </p>
+                    </div>
                 </div>
 
                 <hr class="project-divider">
@@ -219,19 +254,21 @@
                             <i class="bi bi-exclamation-circle"></i> Problématique
                         </h2>
                         <p>
-                            Les entreprises ont besoin d'une interface professionnelle pour exploiter les IA locales,
-                            mais elles n'ont pas toujours les compétences techniques pour développer une frontend
-                            qui communique efficacement avec les systèmes IA complexes.
+                            Beaucoup d'entreprises veulent utiliser l'intelligence artificielle, mais ne peuvent pas
+                            envoyer leurs données vers des services externes comme ChatGPT. Ces données sont souvent
+                            sensibles : informations clients, documents internes, données confidentielles.
+                            Elles ont donc besoin d'une solution qui fonctionne <strong>entièrement en interne</strong>,
+                            sur leurs propres serveurs, pour garantir qu'aucune donnée ne sorte de l'entreprise.
                         </p>
 
                         <h2 class="project-section-title mt-4">
                             <i class="bi bi-bullseye"></i> Objectifs
                         </h2>
                         <ul>
-                            <li>Créer une interface intuitive pour les utilisateurs non techniques.</li>
-                            <li>Faciliter l'interaction avec l'IA locale fournie par Scope.io.</li>
-                            <li>Gérer l'organisation des documents et dossiers utilisateurs.</li>
-                            <li>Assurer une expérience utilisateur fluide sans JavaScript complexe.</li>
+                            <li>Fournir une interface intuitive permettant aux employés d'utiliser l'IA au quotidien.</li>
+                            <li>Permettre la gestion et le partage de documents en interne.</li>
+                            <li>Offrir un chat IA pour interroger ses documents, obtenir des résumés et reformuler des textes.</li>
+                            <li>Garantir que toutes les données restent sur les serveurs de l'entreprise.</li>
                         </ul>
                     </div>
 
@@ -250,42 +287,6 @@
 
                 <hr class="project-divider">
 
-                <!-- Étape 1 : Authentification et navigation -->
-                <div class="row gy-4 align-items-center">
-                    <div class="col-lg-6 order-lg-1 order-2">
-                        <h2 class="project-section-title">
-                            <i class="bi bi-1-circle"></i> Authentification sécurisée et navigation
-                        </h2>
-                        <div class="project-card mt-2">
-                            <p>
-                                L'application commence par une page de connexion sécurisée :
-                            </p>
-                            <ul>
-                                <li>Formulaire d'authentification avec email et mot de passe.</li>
-                                <li>Option "Se souvenir de mes informations" pour faciliter l'accès.</li>
-                                <li>Interface professionnelle avec branding CAPADYN/AdaGenIA.</li>
-                                <li>Accès direct à l'espace de travail après connexion.</li>
-                            </ul>
-                            <p class="mb-0">
-                                Toutes les communications sont chiffrées et les sessions gérées localement 
-                                sans dépendance à des services externes.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 order-lg-2 order-1 text-center">
-                        <a href="assets/img/projets/loginGenia.jpg" data-gall="genia-project" class="glightbox">
-                            <img src="assets/img/projets/loginGenia.jpg"
-                                 alt="Page de connexion GENIA"
-                                 class="img-fluid project-image">
-                        </a>
-                        <p class="project-caption">
-                            Page de connexion sécurisée avec option de mémorisation des informations.
-                        </p>
-                    </div>
-                </div>
-
-                <hr class="project-divider">
-
                 <!-- Étape 2 : Gestion des dossiers et documents -->
                 <div class="row gy-4 align-items-start">
                     <div class="col-lg-6">
@@ -297,14 +298,13 @@
                                 L'interface principale permet d'organiser le travail de manière structurée :
                             </p>
                             <ul>
-                                <li><strong>Mes Dossiers</strong> : Création et gestion des projets avec bouton "Nouveau dossier".</li>
-                                <li><strong>Dossiers Partagés</strong> : Collaboration en équipe avec accès contrôlé.</li>
-                                <li><strong>Mes Documents</strong> : Upload de fichiers PDF comme "leadership.pdf".</li>
-                                <li><strong>Mes Notes</strong> : Annotations personnelles sur les documents.</li>
+                                <li><strong>Mes Dossiers</strong> : création et gestion de dossiers personnels.</li>
+                                <li><strong>Dossiers Partagés</strong> : partage de documents avec son équipe.</li>
+                                <li><strong>Mes Documents</strong> : import de fichiers PDF directement dans l'interface.</li>
                             </ul>
                             <p class="mb-0">
-                                Chaque dossier affiche la date de création et le nombre de documents, 
-                                permettant une navigation rapide et intuitive.
+                                Toute l'organisation reste en interne sur les serveurs de l'entreprise,
+                                sans qu'aucun document ne soit envoyé vers l'extérieur.
                             </p>
                         </div>
                     </div>
@@ -335,18 +335,14 @@
                                 Le cœur de l'application : l'interface conversationnelle avec l'IA :
                             </p>
                             <ul>
-                                <li><strong>Zone de chat</strong> : "Commencez à écrire..." pour poser des questions.</li>
-                                <li><strong>Mode conversationnel</strong> : Dialogue naturel avec l'IA.</li>
-                                <li><strong>Expliquer+</strong> : Explications contextuelles approfondies.</li>
-                                <li><strong>Utilisation des résumés</strong> : Génération et exploitation automatique.</li>
+                                <li><strong>Chat IA</strong> : l'utilisateur pose des questions sur ses documents directement dans l'interface.</li>
+                                <li><strong>Résumés</strong> : demande de résumé automatique d'un document importé.</li>
+                                <li><strong>Rédaction et reformulation</strong> : l'IA aide à rédiger ou reformuler des textes.</li>
                             </ul>
-
-                            <h6 class=" mb-1">Options avancées :</h6>
-                            <ul class="mb-0">
-                                <li><strong>Niveau d'expertise</strong> : Adaptation des réponses au contexte utilisateur.</li>
-                                <li><strong>Questions suggérées</strong> : Suggestions basées sur le contenu des documents.</li>
-                                <li><strong>Indicateur de documents</strong> : "Docs 0/1" montrant les fichiers utilisés.</li>
-                            </ul>
+                            <p class="mb-0">
+                                Tout se fait via des appels API vers le moteur IA de Scope.io,
+                                qui tourne en local sur les serveurs de l'entreprise.
+                            </p>
                         </div>
                     </div>
 
@@ -357,19 +353,18 @@
                         <div class="project-card mt-2">
                             <h6>Stack technique</h6>
                             <ul>
-                                <li>Frontend : PHP / Twig pour les templates HTML.</li>
-                                <li>Backend IA : Fourni par Scope.io (modules VLLM, mini ChatGPT).</li>
-                                <li>Intégration : Communication API avec le backend IA.</li>
-                                <li>Docker : Containerisation pour déploiement simplifié.</li>
-                                <li>HTML/CSS : Interface responsive sans JavaScript complexe.</li>
+                                <li><strong>Symfony</strong> : framework PHP utilisé pour structurer l'application.</li>
+                                <li><strong>Twig</strong> : moteur de templates pour générer les vues HTML.</li>
+                                <li><strong>HTML / CSS</strong> : interface responsive et professionnelle.</li>
+                                <li><strong>API Scope.io</strong> : communication avec le moteur IA via des appels API.</li>
                             </ul>
 
-                            <h6 class="">Compétences mises en avant</h6>
+                            <h6>Compétences mises en avant</h6>
                             <ul class="mb-0">
-                                <li>Développement frontend en Twig/HTML avec intégration API.</li>
+                                <li>Développement frontend avec Symfony et Twig.</li>
+                                <li>Intégration d'une API externe (Scope.io).</li>
                                 <li>Conception d'interface utilisateur intuitive et professionnelle.</li>
-                                <li>Collaboration avec Scope.io pour l'intégration backend IA.</li>
-                                <li>Gestion de l'organisation des documents et dossiers utilisateurs.</li>
+                                <li>Compréhension des enjeux de sécurité et confidentialité des données en entreprise.</li>
                             </ul>
                         </div>
                     </div>

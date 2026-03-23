@@ -196,9 +196,9 @@
                     </div>
                     <h1 class="project-title">GestTravaux Pro - Web</h1>
                     <p class="project-subtitle">
-                        Application web développée avec Symfony pour la digitalisation des travaux immobiliers. 
-                        Interface pour inspecteurs, entrepreneurs et propriétaires avec gestion complète 
-                        des chantiers, devis et communications.
+                        Application web mobile-first développée avec Symfony pour le syndic IMMOSYNC.
+                        Interface adaptée selon le rôle : inspecteurs terrain, entrepreneurs et propriétaires,
+                        avec dépôt de documents, carte interactive et gestion complète des devis.
                     </p>
 
                     <ul class="pill-list mt-3">
@@ -207,88 +207,13 @@
                         <li><i class="bi bi-window me-1"></i>HTML / CSS / JavaScript</li>
                         <li><i class="bi bi-palette me-1"></i>Bootstrap</li>
                         <li><i class="bi bi-shield-lock me-1"></i>Authentification sécurisée</li>
+                        <li><i class="bi bi-geo-alt me-1"></i>Carte interactive Leaflet</li>
                     </ul>
                 </div>
 
                 <hr class="project-divider">
 
-                <!-- Contexte et objectifs -->
-                <div class="row gy-4 align-items-start">
-                    <div class="col-lg-6">
-                        <h2 class="project-section-title">
-                            <i class="bi bi-exclamation-circle"></i> Contexte du projet
-                        </h2>
-                        <p>
-                            Dans le cadre du projet GestTravaux Pro pour le syndic IMMOSYNC, 
-                            j'ai développé l'application web Symfony qui sert d'interface principale 
-                            pour les différents acteurs de la gestion des travaux immobiliers.
-                        </p>
-
-                        <h2 class="project-section-title mt-4">
-                            <i class="bi bi-bullseye"></i> Objectifs de l'application web
-                        </h2>
-                        <ul>
-                            <li>Fournir une interface intuitive pour inspecteurs, entrepreneurs et propriétaires.</li>
-                            <li>Permettre la consultation des chantiers selon le rôle de chaque utilisateur.</li>
-                            <li>Faciliter le dépôt de documents (photos, diagnostics énergétiques).</li>
-                            <li>Centraliser les communications et les validations en temps réel.</li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-6 text-center text-lg-end">
-                        <!-- Carrousel Bootstrap -->
-                        <div id="projectCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"></button>
-                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"></button>
-                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"></button>
-                            </div>
-                            
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <a href="assets/img/projets/appeldoffre-entrepreneur.png" data-gall="project-carousel" class="glightbox">
-                                        <img src="assets/img/projets/appeldoffre-entrepreneur.png" 
-                                             alt="Appel d'offre entrepreneur" 
-                                             class="d-block w-100 project-image">
-                                    </a>
-                                </div>
-                                
-                                <div class="carousel-item">
-                                    <a href="assets/img/projets/devis-entrepreneur.png" data-gall="project-carousel" class="glightbox">
-                                        <img src="assets/img/projets/devis-entrepreneur.png" 
-                                             alt="Devis entrepreneur" 
-                                             class="d-block w-100 project-image">
-                                    </a>
-                                </div>
-                                
-                                <div class="carousel-item">
-                                    <a href="assets/img/projets/dashboardEntrepreneur.png" data-gall="project-carousel" class="glightbox">
-                                        <img src="assets/img/projets/dashboardEntrepreneur.png" 
-                                             alt="Dashboard entrepreneur" 
-                                             class="d-block w-100 project-image">
-                                    </a>
-                                </div>
-                            </div>
-                            
-                            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                                <span class="visually-hidden">Précédent</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                                <span class="visually-hidden">Suivant</span>
-                            </button>
-                        </div>
-                        <p class="project-caption">
-                            Interface web Symfony avec tableau de bord principal 
-                            et accès personnalisé selon le rôle utilisateur.
-                        </p>
-                    </div>
-                </div>
-
-                <hr class="project-divider">
-
-                <!-- Fonctionnalités par rôle -->
+                <!-- Étape 1 : Authentification et accès -->
                 <div class="row gy-4 align-items-center">
                     <div class="col-lg-6 order-lg-1 order-2">
                         <h2 class="project-section-title">
@@ -305,7 +230,7 @@
                                 <li><strong>Sessions sécurisées</strong> : timeout automatique et déconnexion.</li>
                             </ul>
                             <p class="mb-0">
-                                Chaque utilisateur accède ensuite à son tableau de bord personnalisé 
+                                Chaque utilisateur accède ensuite à son tableau de bord personnalisé
                                 selon son rôle (inspecteur, entrepreneur, propriétaire, gestionnaire).
                             </p>
                         </div>
@@ -317,8 +242,84 @@
                                  class="img-fluid project-image">
                         </a>
                         <p class="project-caption">
-                            Page d'authentification de l'application web Symfony 
+                            Page d'authentification de l'application web Symfony
                             avec interface professionnelle et sécurisée.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Contexte et objectifs -->
+                <div class="row gy-4 align-items-start">
+                    <div class="col-lg-6">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-exclamation-circle"></i> Contexte du projet
+                        </h2>
+                        <p>
+                            Dans le cadre du projet GestTravaux Pro pour le syndic IMMOSYNC,
+                            j'ai développé l'application web Symfony qui sert d'interface principale
+                            pour les différents acteurs de la gestion des travaux immobiliers.
+                        </p>
+
+                        <h2 class="project-section-title mt-4">
+                            <i class="bi bi-bullseye"></i> Objectifs de l'application web
+                        </h2>
+                        <ul>
+                            <li>Fournir une interface mobile-first pour les acteurs terrain (inspecteurs, entrepreneurs, propriétaires).</li>
+                            <li>Permettre à l'inspecteur de soumettre son rapport directement depuis le chantier.</li>
+                            <li>Permettre à l'entrepreneur de consulter les appels d'offres et soumettre ses propres devis.</li>
+                            <li>Centraliser les données en temps réel avec l'application desktop Java.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-6 text-center text-lg-end">
+                        <!-- Carrousel Bootstrap -->
+                        <div id="projectCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"></button>
+                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"></button>
+                            </div>
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a href="assets/img/projets/appeldoffre-entrepreneur.png" data-gall="project-carousel" class="glightbox">
+                                        <img src="assets/img/projets/appeldoffre-entrepreneur.png"
+                                             alt="Appel d'offre entrepreneur"
+                                             class="d-block w-100 project-image">
+                                    </a>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <a href="assets/img/projets/devis-entrepreneur.png" data-gall="project-carousel" class="glightbox">
+                                        <img src="assets/img/projets/devis-entrepreneur.png"
+                                             alt="Devis entrepreneur"
+                                             class="d-block w-100 project-image">
+                                    </a>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <a href="assets/img/projets/dashboardEntrepreneur.png" data-gall="project-carousel" class="glightbox">
+                                        <img src="assets/img/projets/dashboardEntrepreneur.png"
+                                             alt="Dashboard entrepreneur"
+                                             class="d-block w-100 project-image">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                                <span class="visually-hidden">Précédent</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                                <span class="visually-hidden">Suivant</span>
+                            </button>
+                        </div>
+                        <p class="project-caption">
+                            Interface web Symfony avec tableau de bord principal
+                            et accès personnalisé selon le rôle utilisateur.
                         </p>
                     </div>
                 </div>
@@ -336,13 +337,13 @@
                                 L'application web adapte son interface selon le profil utilisateur :
                             </p>
                             <ul>
-                                <li><strong>Inspecteurs</strong> : consultation chantiers assignés, ajout observations, photos, documents.</li>
-                                <li><strong>Entrepreneurs</strong> : consultation demandes travaux, envoi devis en ligne.</li>
-                                <li><strong>Propriétaires</strong> : suivi travaux, validation décisions, consultation documents.</li>
+                                <li><strong>Inspecteur</strong> : tableau de bord avec chantiers en attente, inspections réalisées et total assigné. Sur le terrain, il dépose ses fichiers (photos, PDF, documents), rédige son observation et valide l'inspection. Il dispose aussi d'une <strong>carte interactive</strong> pour localiser précisément le bien immobilier.</li>
+                                <li><strong>Entrepreneur</strong> : tableau de bord avec appels d'offres disponibles, devis envoyés et activité totale. Sur un appel d'offre, il voit le détail des prestations avec le prix estimé, peut saisir son propre prix et sa durée, ajouter un commentaire, puis accepter le devis tel quel, envoyer son contre-devis ou refuser. Il consulte aussi l'historique de ses devis avec leur statut (en attente, accepté, refusé).</li>
+                                <li><strong>Propriétaire</strong> : consultation de l'état de ses chantiers en cours.</li>
                             </ul>
                             <p class="mb-0">
-                                Chaque rôle dispose d'un tableau de bord personnalisé avec les actions 
-                                pertinentes et les informations adaptées à ses besoins spécifiques.
+                                Chaque rôle dispose d'un tableau de bord personnalisé avec uniquement les actions
+                                et informations pertinentes pour son profil.
                             </p>
                         </div>
                     </div>
@@ -354,33 +355,33 @@
                                 <button type="button" data-bs-target="#inspecteurCarousel" data-bs-slide-to="1"></button>
                                 <button type="button" data-bs-target="#inspecteurCarousel" data-bs-slide-to="2"></button>
                             </div>
-                            
+
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <a href="assets/img/projets/dashboardInspecteur.png" data-gall="inspecteur-carousel" class="glightbox">
-                                        <img src="assets/img/projets/dashboardInspecteur.png" 
-                                             alt="Dashboard inspecteur" 
+                                        <img src="assets/img/projets/dashboardInspecteur.png"
+                                             alt="Dashboard inspecteur"
                                              class="d-block w-100 project-image">
                                     </a>
                                 </div>
-                                
+
                                 <div class="carousel-item">
                                     <a href="assets/img/projets/inspecte-inspecteur.png" data-gall="inspecteur-carousel" class="glightbox">
-                                        <img src="assets/img/projets/inspecte-inspecteur.png" 
-                                             alt="Inspection inspecteur" 
+                                        <img src="assets/img/projets/inspecte-inspecteur.png"
+                                             alt="Inspection inspecteur"
                                              class="d-block w-100 project-image">
                                     </a>
                                 </div>
-                                
+
                                 <div class="carousel-item">
                                     <a href="assets/img/projets/inspection-inspecteur.png" data-gall="inspecteur-carousel" class="glightbox">
-                                        <img src="assets/img/projets/inspection-inspecteur.png" 
-                                             alt="Rapport inspection" 
+                                        <img src="assets/img/projets/inspection-inspecteur.png"
+                                             alt="Rapport inspection"
                                              class="d-block w-100 project-image">
                                     </a>
                                 </div>
                             </div>
-                            
+
                             <button class="carousel-control-prev" type="button" data-bs-target="#inspecteurCarousel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon"></span>
                                 <span class="visually-hidden">Précédent</span>
@@ -391,7 +392,7 @@
                             </button>
                         </div>
                         <p class="project-caption">
-                            Interfaces adaptées selon le rôle : inspecteur, entrepreneur, 
+                            Interfaces adaptées selon le rôle : inspecteur, entrepreneur,
                             propriétaire et gestionnaire avec accès spécifiques.
                         </p>
                     </div>
@@ -411,16 +412,16 @@
                             </p>
                             <ul>
                                 <li><strong>Structure MVC</strong> : séparation claire entre modèles, vues et contrôleurs.</li>
-                                <li><strong>Base de données PostgreSQL</strong> : accès centralisé via Doctrine ORM.</li>
-                                <li><strong>Système d'authentification</strong> : gestion sécurisée des rôles et permissions.</li>
-                                <li><strong>API REST</strong> : endpoints pour communication avec application desktop.</li>
+                                <li><strong>Base de données PostgreSQL partagée</strong> : accès via Doctrine ORM, commune avec l'application Java.</li>
+                                <li><strong>Système d'authentification</strong> : gestion sécurisée des rôles et permissions (Symfony Security).</li>
+                                <li><strong>Carte interactive</strong> : intégration Leaflet.js pour la localisation des biens immobiliers.</li>
                             </ul>
 
                             <h6 class="mt-3 mb-1">Compétences Symfony mises en avant :</h6>
                             <ul class="mb-0">
-                                <li>Développement d'applications web professionnelles.</li>
+                                <li>Développement d'applications web professionnelles mobile-first.</li>
                                 <li>Gestion de base de données avec Doctrine ORM.</li>
-                                <li>Sécurité et gestion des droits d'accès.</li>
+                                <li>Sécurité et gestion des droits d'accès par rôle.</li>
                                 <li>Conception d'interfaces responsive avec Bootstrap.</li>
                             </ul>
                         </div>
@@ -433,17 +434,18 @@
                         <div class="project-card mt-2">
                             <h6>Modules développés</h6>
                             <ul>
-                                <li>Gestion des chantiers avec statuts</li>
-                                <li>Système de dépôt de documents et photos</li>
-                                <li>Interface de dépôt de devis pour les entrepreneurs</li>
-                                <li>Tableau de bord personnalisé selon le rôle utilisateur</li>
+                                <li>Tableau de bord personnalisé par rôle (inspecteur, entrepreneur, propriétaire)</li>
+                                <li>Interface d'inspection terrain : dépôt de fichiers, rédaction d'observation, validation</li>
+                                <li>Carte interactive Leaflet pour la localisation des biens</li>
+                                <li>Interface appel d'offre : consultation des prestations, saisie de contre-devis</li>
+                                <li>Historique des devis avec statuts (en attente, accepté, refusé)</li>
                             </ul>
 
                             <h6 class="mt-3">Compétences Symfony mises en œuvre :</h6>
                             <ul class="mb-0">
                                 <li>Développement d'applications web avec architecture MVC.</li>
                                 <li>Gestion des rôles et permissions avec Symfony Security.</li>
-                                <li>Intégration de base de données PostgreSQL.</li>
+                                <li>Intégration de base de données PostgreSQL partagée.</li>
                                 <li>Création d'interfaces responsives avec Bootstrap.</li>
                             </ul>
                         </div>
