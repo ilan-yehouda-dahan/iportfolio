@@ -634,18 +634,15 @@
                             <div class="col-md-6">
                                 <h5 style="color: #dc2626; margin-bottom: 15px;"><i class="bi bi-exclamation-triangle me-2"></i>Comment fonctionne l'attaque ?</h5>
                                 <p style="color: #1a1a1a; font-size: 0.95rem; line-height: 1.7;">
-                                    Un attaquant insère du code SQL malveillant dans des champs de formulaire. Si l'application ne valide pas les entrées,
-                                    ce code s'exécute directement sur la base de données, permettant de contourner les sécurités.
+                                    Un attaquant insère du code SQL malveillant dans des champs de formulaire. Si l'application ne protège pas les entrées,
+                                    ce code s'exécute directement sur la base de données.
                                 </p>
                             </div>
                             <div class="col-md-6">
                                 <h5 style="color: #dc2626; margin-bottom: 15px;"><i class="bi bi-shield-check me-2"></i>Comment s'en protéger ?</h5>
                                 <ul style="color: #1a1a1a; line-height: 2; font-size: 0.95rem;">
                                     <li><strong>Requêtes préparées</strong> (prepared statements)</li>
-                                    <li><strong>ORM</strong> comme Doctrine ou Hibernate</li>
-                                    <li><strong>Validation stricte</strong> des entrées utilisateur</li>
-                                    <li><strong>Principe du moindre privilège</strong> sur la BDD</li>
-                                    <li><strong>Échappement</strong> des caractères spéciaux</li>
+                                    <li><strong>Frameworks modernes</strong> : Symfony (PHP)</li>
                                 </ul>
                             </div>
                         </div>
