@@ -274,80 +274,6 @@
                     </div>
 
                     <div class="col-lg-6 text-center text-lg-end">
-                        <!-- Carrousel Bootstrap -->
-                        <div id="projectCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"></button>
-                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"></button>
-                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"></button>
-                            </div>
-
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <a href="assets/img/projets/appeldoffre-entrepreneur.png" data-gall="project-carousel" class="glightbox">
-                                        <img src="assets/img/projets/appeldoffre-entrepreneur.png"
-                                             alt="Appel d'offre entrepreneur"
-                                             class="d-block w-100 project-image">
-                                    </a>
-                                </div>
-
-                                <div class="carousel-item">
-                                    <a href="assets/img/projets/devis-entrepreneur.png" data-gall="project-carousel" class="glightbox">
-                                        <img src="assets/img/projets/devis-entrepreneur.png"
-                                             alt="Devis entrepreneur"
-                                             class="d-block w-100 project-image">
-                                    </a>
-                                </div>
-
-                                <div class="carousel-item">
-                                    <a href="assets/img/projets/dashboardEntrepreneur.png" data-gall="project-carousel" class="glightbox">
-                                        <img src="assets/img/projets/dashboardEntrepreneur.png"
-                                             alt="Dashboard entrepreneur"
-                                             class="d-block w-100 project-image">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                                <span class="visually-hidden">Précédent</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                                <span class="visually-hidden">Suivant</span>
-                            </button>
-                        </div>
-                        <p class="project-caption">
-                            Interface web Symfony avec tableau de bord principal
-                            et accès personnalisé selon le rôle utilisateur.
-                        </p>
-                    </div>
-                </div>
-
-                <hr class="project-divider">
-
-                <!-- Fonctionnalités par rôle -->
-                <div class="row gy-4 align-items-center">
-                    <div class="col-lg-6 order-lg-1 order-2">
-                        <h2 class="project-section-title">
-                            <i class="bi bi-2-circle"></i> Fonctionnalités par rôle
-                        </h2>
-                        <div class="project-card mt-2">
-                            <p>
-                                L'application web adapte son interface selon le profil utilisateur :
-                            </p>
-                            <ul>
-                                <li><strong>Inspecteur</strong> : tableau de bord avec chantiers en attente, inspections réalisées et total assigné. Sur le terrain, il dépose ses fichiers (photos, PDF, documents), rédige son observation et valide l'inspection. Il dispose aussi d'une <strong>carte interactive</strong> pour localiser précisément le bien immobilier.</li>
-                                <li><strong>Entrepreneur</strong> : tableau de bord avec appels d'offres disponibles, devis envoyés et activité totale. Sur un appel d'offre, il voit le détail des prestations avec le prix estimé, peut saisir son propre prix et sa durée, ajouter un commentaire, puis accepter le devis tel quel, envoyer son contre-devis ou refuser. Il consulte aussi l'historique de ses devis avec leur statut (en attente, accepté, refusé).</li>
-                                <li><strong>Propriétaire</strong> : consultation de l'état de ses chantiers en cours.</li>
-                            </ul>
-                            <p class="mb-0">
-                                Chaque rôle dispose d'un tableau de bord personnalisé avec uniquement les actions
-                                et informations pertinentes pour son profil.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 order-lg-2 order-1 text-center">
                         <!-- Carrousel Bootstrap Inspecteur -->
                         <div id="inspecteurCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
                             <div class="carousel-indicators">
@@ -394,6 +320,80 @@
                         <p class="project-caption">
                             Interfaces adaptées selon le rôle : inspecteur, entrepreneur,
                             propriétaire et gestionnaire avec accès spécifiques.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="project-divider">
+
+                <!-- Fonctionnalités par rôle -->
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <h2 class="project-section-title">
+                            <i class="bi bi-2-circle"></i> Fonctionnalités par rôle
+                        </h2>
+                        <div class="project-card mt-2">
+                            <p>
+                                L'application web adapte son interface selon le profil utilisateur :
+                            </p>
+                            <ul>
+                                <li><strong>Inspecteur</strong> : tableau de bord avec chantiers en attente, inspections réalisées et total assigné. Sur le terrain, il dépose ses fichiers (photos, PDF, documents), rédige son observation et valide l'inspection. Il dispose aussi d'une <strong>carte interactive</strong> pour localiser précisément le bien immobilier.</li>
+                                <li><strong>Entrepreneur</strong> : tableau de bord avec appels d'offres disponibles, devis envoyés et activité totale. Sur un appel d'offre, il voit le détail des prestations avec le prix estimé, peut saisir son propre prix et sa durée, ajouter un commentaire, puis accepter le devis tel quel, envoyer son contre-devis ou refuser. Il consulte aussi l'historique de ses devis avec leur statut (en attente, accepté, refusé).</li>
+                                <li><strong>Propriétaire</strong> : consultation de l'état de ses chantiers en cours.</li>
+                            </ul>
+                            <p class="mb-0">
+                                Chaque rôle dispose d'un tableau de bord personnalisé avec uniquement les actions
+                                et informations pertinentes pour son profil.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2 order-1 text-center">
+                        <!-- Carrousel Bootstrap Entrepreneur -->
+                        <div id="projectCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"></button>
+                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"></button>
+                            </div>
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a href="assets/img/projets/appeldoffre-entrepreneur.png" data-gall="project-carousel" class="glightbox">
+                                        <img src="assets/img/projets/appeldoffre-entrepreneur.png"
+                                             alt="Appel d'offre entrepreneur"
+                                             class="d-block w-100 project-image">
+                                    </a>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <a href="assets/img/projets/devis-entrepreneur.png" data-gall="project-carousel" class="glightbox">
+                                        <img src="assets/img/projets/devis-entrepreneur.png"
+                                             alt="Devis entrepreneur"
+                                             class="d-block w-100 project-image">
+                                    </a>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <a href="assets/img/projets/dashboardEntrepreneur.png" data-gall="project-carousel" class="glightbox">
+                                        <img src="assets/img/projets/dashboardEntrepreneur.png"
+                                             alt="Dashboard entrepreneur"
+                                             class="d-block w-100 project-image">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                                <span class="visually-hidden">Précédent</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                                <span class="visually-hidden">Suivant</span>
+                            </button>
+                        </div>
+                        <p class="project-caption">
+                            Interface web Symfony avec tableau de bord principal
+                            et accès personnalisé selon le rôle utilisateur.
                         </p>
                     </div>
                 </div>
